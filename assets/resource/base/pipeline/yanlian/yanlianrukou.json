@@ -1,0 +1,20 @@
+{
+    "yanlianrukou": {
+        "next": [
+            "biandui1"
+        ]
+    },
+    "yanlianjieshu": {
+        "doc": "刷检非编队",
+        "roi": [
+            789,
+            437,
+            131,
+            141
+        ],
+        "action": "Click",
+        "next": [
+            "bianduij"
+        ]
+    }
+}

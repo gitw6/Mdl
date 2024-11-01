@@ -8,8 +8,9 @@
             "name": "桌面端",
             "type": "Win32",
             "win32": {
-                "class_regex": ".*",
-                "window_regex": "Visual Studio"
+                "method": "Search",
+                "class_name": ".*",
+                "window_name": "Visual Studio"
             }
         }
     ],
@@ -17,54 +18,829 @@
         {
             "name": "官服",
             "path": [
-                "{PROJECT_DIR}/resource"
+                "{PROJECT_DIR}/resource/base"
             ]
         },
         {
             "name": "B 服",
             "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/bilibili"
             ]
         }
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "打开游戏",
+            "entry": "StartUp"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
+            "name": "远征迎接日课和关通知",
+            "entry": "远征迎接日课"
+        },
+        {
+            "name": "远征前习合,换编队配置,没有樱吹雪的换下",
+            "entry": "luanwurukou"
+        },
+        {
+            "name": "远征日课，四个队伍均已返回",
+            "entry": "出阵日课"
+        },
+        {
+            "name": "刀装中上解体,单",
+            "entry": "daozhuang",
+            "param": {
+                "daozhuangjieshu": {
+                    "next": "backhome"
+                }
+            }
+        },
+        {
+            "name": "刀装中上一键解体,三队不要送出去远征",
+            "entry": "daozhuang",
+            "param": {
+                "hechengkaishi": {
+                    "next": [
+                        "neifan"
+                    ]
+                },
+                "shuajianfeijieshu": {
+                    "doc": "刷完检非之后,做活动任务还是直接领日课奖励",
+                    "next": [
+                        "renwurukou"
+                    ]
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": [
+                        "jianfeichuzhen"
+                    ]
+                },
+                "yijianlingqu1": {
+                    "doc": "做完日课,做活动next,huodongchuzhen"
+                }
+            }
+        },
+        {
+            "name": "锻刀日课-刀位空,锻刀三次，刀解一次;刀位不空,刀解三个,可能会多刀解几个",
+            "entry": "duandaorike",
+            "param": {
+                "daojiekaishi": {
+                    "next": "backhome"
+                },
+                "naxindao_duandao": {
+                    "next": [
+                        "wanchenganniu",
+                        "backhome"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "刀装日课，刀装制作三个，需留有三个空",
+            "entry": "daozhuangrike",
+            "param": {
+                "zhizuodaozhuang": {
+                    "runout_next": "backhome"
+                }
+            }
+        },
+        {
+            "name": "合成日课，合一个，不包含乱舞",
+            "entry": "hechengrike",
+            "param": {
+                "hechengkaishi": {
+                    "next": "backhome"
+                }
+            }
+        },
+        {
+            "name": "领万屋礼物，等待三队归来后再演练",
+            "entry": "wanwurike",
+            "param": {
+                "qiehuan2": {
+                    "next": "backhome"
+                }
+            }
+        },
+        {
+            "name": "演练日课",
+            "entry": "yanlianrukou",
             "option": [
-                "任务选项1"
+                "演练入口"
+            ],
+            "param": {
+                "yanlianjieshu": {
+                    "next": [
+                        "backhome"
+                    ]
+                },
+                "backhome": {
+                    "next": []
+                }
+            }
+        },
+        {
+            "name": "刷检非，编辑检非部队,相应队员需持有相应刀装",
+            "entry": "bianduij",
+            "param": {
+                "jianfeishi": {
+                    "next": "jianfeichuzhen"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": "jianfeichuzhen"
+                },
+                "shuajianfeijieshu": {
+                    "doc": "默认刷到检非后停止",
+                    "next": [
+                        "backhome"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "编辑记录4队到3队",
+            "entry": "bianduij",
+            "param": {
+                "jianfeishi": {
+                    "next": []
+                }
+            }
+        },
+        {
+            "name": "已编辑三队，刷检非5-2,木炭玉钢冷却材",
+            "entry": "jianfeichuzhen",
+            "param": {
+                "yuanzhengjinxingzhong": {
+                    "next": "jianfeichuzhen"
+                }
+            }
+        },
+        {
+            "name": "任务奖励-日常,月常,活动",
+            "entry": "renwurukou",
+            "option": [
+                "*常"
             ]
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
+            "name": "刷普通地图,需已编辑好第三队",
+            "entry": "putongchuzhen",
             "option": [
-                "任务选项1"
+                "普通地图选择",
+                "是否打检非"
             ],
-            "pipeline_override": {}
+            "param": {
+                "yuanzhengjinxingzhong": {
+                    "next": "putongchuzhen"
+                },
+                "Close_djlw": {
+                    "next": "Sub_StartUp"
+                }
+            }
+        },
+        {
+            "name": "活动:江户城",
+            "entry": "huodongchuzhen",
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "jianghurukou"
+                }
+            },
+            "option": [
+                "是否补充令牌-江户城"
+            ]
+        },
+        {
+            "name": "活动：战扩",
+            "entry": "huodongchuzhen",
+            "option": [
+                "战扩地图选择"
+            ],
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "zhankuorukou"
+                }
+            }
+        },
+        {
+            "name": "活动:地下城",
+            "entry": "huodongchuzhen",
+            "option": [
+                "层数选择"
+            ],
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "dixiarukou"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": []
+                }
+            }
+        },
+        {
+            "name": "活动:秘宝之里-花牌",
+            "entry": "huodongchuzhen",
+            "option": [
+                "是否补充令牌-秘宝之里"
+            ],
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "mibaorukou"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": "huodongchuzhen"
+                }
+            }
+        },
+        {
+            "name": "秘宝出错-剩余多回",
+            "entry": "shengyuduohuim",
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "mibaorukou"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": "huodongchuzhen"
+                },
+                "jikechuzhen3": {
+                    "next": [
+                        "buchonglingpai",
+                        "shuatum",
+                        "zhandouzhongm",
+                        "mibaochuzhenqueren",
+                        "team_select3a3",
+                        "jikechuzhen3",
+                        "zhengbeidaozhuangzhankuo",
+                        "zhongshangchuzhenjingao"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "秘宝出错-战斗结果继续",
+            "entry": "zhandoujieguom",
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "mibaorukou"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": "huodongchuzhen"
+                },
+                "jikechuzhen3": {
+                    "next": [
+                        "buchonglingpai",
+                        "shuatum",
+                        "zhandouzhongm",
+                        "mibaochuzhenqueren",
+                        "team_select3a3",
+                        "jikechuzhen3",
+                        "zhengbeidaozhuangzhankuo",
+                        "zhongshangchuzhenjingao"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "编辑记录二队到三队",
+            "entry": "bianduiact2to3"
+        },
+        {
+            "name": "自动修复-重伤中伤",
+            "entry": "zidongxiufu"
+        },
+        {
+            "name": "三队编队清零,自动编队刷花,极化未极化自选",
+            "entry": "bianduiy",
+            "param": {
+                "zhuanbbeidaozhuangwanbi": {
+                    "next": "shuayinghua",
+                    "doc": "运行到装备刀装完毕的一定是疲劳度不满的"
+                }
+            },
+            "option": [
+                "樱吹雪模式"
+            ]
+        },
+        {
+            "name": "三队刷樱花，先将需要刷花的角色放到三队，单个",
+            "entry": "shuayinghua",
+            "param": {
+                "yuanzhengjinxingzhong": {
+                    "next": "shuayinghua"
+                }
+            },
+            "option": [
+                "樱吹雪模式"
+            ]
+        },
+        {
+            "name": "换三队中伤重伤的为极化刀剑,暂时被废弃",
+            "entry": "huanbiandui",
+            "param": {
+                "tihuan1": {
+                    "next": "tihuan2"
+                },
+                "tihuan50": {
+                    "next": [
+                        "tihuan5_1",
+                        "zuohua"
+                    ]
+                },
+                "zuohua": {
+                    "next": [
+                        "tihuan5_1",
+                        "zuohua"
+                    ]
+                },
+                "tihuan5_1": {
+                    "next": [
+                        "zhuangtaishibie",
+                        "huandaozhuang"
+                    ]
+                },
+                "zhuanbbeidaozhuangwanbi": {
+                    "next": [
+                        "budaozhuang"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "三队远征4-4,睡前远征,不记录三队配置",
+            "entry": "shuiqianyuanzhengbiandui"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "Close_djlw"
         }
     ],
     "option": {
-        "任务选项1": {
+        "战扩地图选择": {
             "cases": [
                 {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
+                    "name": "石切丸搜索",
+                    "param": {
+                        "zhankuorukou": {
+                            "next": "a1"
                         }
                     }
                 },
                 {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
+                    "name": "岩融搜索",
+                    "param": {
+                        "zhankuorukou": {
+                            "next": "a2"
+                        }
+                    }
+                },
+                {
+                    "name": "大般若长光搜索",
+                    "param": {
+                        "zhankuorukou": {
+                            "next": "a3"
+                        }
+                    }
+                },
+                {
+                    "name": "骚速剑搜索",
+                    "param": {
+                        "zhankuorukou": {
+                            "next": "a4"
+                        }
+                    }
+                }
+            ]
+        },
+        "普通地图选择": {
+            "cases": [
+                {
+                    "name": "3-3 木炭玉钢 练低级刀和薙刀",
+                    "param": {
+                        "putong2": {
+                            "next": "chapter3_3"
+                        },
+                        "putongchuzhen1": {
+                            "next": [
+                                "chapter3_3",
+                                "chapter3"
+                            ]
+                        },
+                        "putong1": {
+                            "next": [
+                                "chapter3_enter",
+                                "putongyouh",
+                                "putongyou"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "4-3 木炭玉钢冷却材 资源多城管少",
+                    "param": {
+                        "putong2": {
+                            "next": "chapter4_3"
+                        },
+                        "putongchuzhen1": {
+                            "next": [
+                                "chapter4_3",
+                                "chapter4"
+                            ]
+                        },
+                        "putong1": {
+                            "next": [
+                                "chapter4_enter",
+                                "putongyouh",
+                                "putongyou"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "7-1 木炭玉钢委托符 练高等级刀",
+                    "param": {
+                        "putong2": {
+                            "next": "chapter7_1"
+                        },
+                        "putong1": {
+                            "next": [
+                                "chapter7_enter",
+                                "putongyouh",
+                                "putongyou"
+                            ]
+                        },
+                        "putongchuzhen1": {
+                            "next": [
+                                "chapter7_1",
+                                "chapter7"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "2-4 无伤刷委托符",
+                    "param": {
+                        "putong2": {
+                            "next": [
+                                "chapter2_4"
+                            ]
+                        },
+                        "putongchuzhen1": {
+                            "next": [
+                                "chapter2_4",
+                                "chapter2"
+                            ]
+                        },
+                        "putong1": {
+                            "next": [
+                                "chapter2_enter",
+                                "putongyouh",
+                                "putongyou"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "樱吹雪模式": {
+            "cases": [
+                {
+                    "name": "极化模式",
+                    "param": {
+                        "tihuan1": {
+                            "next": "tihuan2"
+                        },
+                        "tihuan50": {
+                            "next": [
+                                "tihuan5_1",
+                                "zuohua"
+                            ]
+                        },
+                        "zuohua": {
+                            "next": [
+                                "tihuan5_1",
+                                "zuohua"
+                            ]
+                        },
+                        "shuayinghua": {
+                            "doc": "shuayinghua,times_limit被废除,暂时用疲劳度选择刷樱花结束"
+                        }
+                    }
+                },
+                {
+                    "name": "未极化模式,有可能选中修复状态的刀剑,推荐未极化刀剑远征和无伤活动为主",
+                    "param": {
+                        "tihuan1": {
+                            "next": "tihuan2_1"
+                        },
+                        "tihuan50": {
+                            "next": [
+                                "tihuan5_2",
+                                "zuohua"
+                            ]
+                        },
+                        "zuohua": {
+                            "next": [
+                                "tihuan5_2",
+                                "zuohua"
+                            ]
+                        },
+                        "shuayinghua": {}
+                    }
+                }
+            ]
+        },
+        "层数选择": {
+            "cases": [
+                {
+                    "name": "10层,刷博多",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweishang"
+                        },
+                        "shiweishang": {
+                            "next": "shiweishang",
+                            "times_limit": 2,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "20层,刷后藤",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweishang"
+                        },
+                        "shiweishang": {
+                            "next": "shiweishang",
+                            "times_limit": 3,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "30层,刷信浓",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweishang"
+                        },
+                        "shiweishang": {
+                            "next": "shiweishang",
+                            "times_limit": 4,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "40层,刷包丁",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweixia"
+                        },
+                        "shiweixia": {
+                            "next": "shiweixia",
+                            "times_limit": 5,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "50层,刷毛利",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweixia"
+                        },
+                        "shiweixia": {
+                            "next": "shiweixia",
+                            "times_limit": 4,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "51层,刷白山",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweixia"
+                        },
+                        "shiweixia": {
+                            "next": "shiweixia",
+                            "times_limit": 4,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "times_limit": 2,
+                            "next": "geweishang",
+                            "runout_next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "89层,刷白山",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweixia"
+                        },
+                        "shiweixia": {
+                            "next": "shiweixia",
+                            "times_limit": 1,
+                            "runout_next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "95刷鬼丸国纲",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "geweixia"
+                        },
+                        "geweixia": {
+                            "next": "geweixia",
+                            "times_limit": 4,
+                            "runout_next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
+                    "name": "刷图模式or99层,鬼丸,白山",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "dixiabuduixuanze"
+                        }
+                    }
+                }
+            ]
+        },
+        "*常": {
+            "cases": [
+                {
+                    "name": "日常",
+                    "param": {
+                        "renwurukou": {
+                            "next": "richangrenwu"
+                        }
+                    }
+                },
+                {
+                    "name": "月常",
+                    "param": {
+                        "renwurukou": {
+                            "next": "yuechangrenwu"
+                        }
+                    }
+                },
+                {
+                    "name": "活动",
+                    "param": {
+                        "renwurukou": {
+                            "next": "huodongrenwu"
+                        }
+                    }
+                },
+                {
+                    "name": "主线:在其他奖励前执行",
+                    "param": {
+                        "renwurukou": {
+                            "next": "zhuxian"
+                        }
+                    }
+                }
+            ]
+        },
+        "演练入口": {
+            "cases": [
+                {
+                    "name": "记录3队到2队,演练",
+                    "param": {
+                        "yanlianrukou": {
+                            "next": "biandui"
+                        }
+                    }
+                },
+                {
+                    "name": "清空3队配置,演练",
+                    "param": {
+                        "yanlianrukou": {
+                            "next": "biandui1"
+                        }
+                    }
+                },
+                {
+                    "name": "3队已配置,演练",
+                    "param": {
+                        "yanlianrukou": {
+                            "next": "yanlian2"
+                        }
+                    }
+                }
+            ]
+        },
+        "是否补充令牌-江户城": {
+            "cases": [
+                {
+                    "name": "补充令牌后无次数限制",
+                    "param": {
+                        "jikechuzhen3": {
+                            "next": [
+                                "buchonglingpai",
+                                "shuatuj",
+                                "zhandouzhongj",
+                                "jianghuchuzhenqueren",
+                                "jikechuzhen3",
+                                "zhengbeidaozhuangzhankuo",
+                                "zhongshangchuzhenjingao"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不补充",
+                    "param": {
+                        "jikechuzhen3": {
+                            "next": [
+                                "quxiaolingpai",
+                                "shuatuj",
+                                "zhandouzhongj",
+                                "jianghuchuzhenqueren",
+                                "jikechuzhen3",
+                                "zhengbeidaozhuangzhankuo",
+                                "zhongshangchuzhenjingao"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否补充令牌-秘宝之里": {
+            "cases": [
+                {
+                    "name": "小判消耗",
+                    "param": {
+                        "jikechuzhen3": {
+                            "next": [
+                                "buchonglingpai",
+                                "shuatum",
+                                "zhandouzhongm",
+                                "mibaochuzhenqueren",
+                                "team_select3a3",
+                                "jikechuzhen3",
+                                "zhengbeidaozhuangzhankuo",
+                                "zhongshangchuzhenjingao"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不补充",
+                    "param": {
+                        "jikechuzhen3": {
+                            "next": [
+                                "quxiaolingpai",
+                                "shuatum",
+                                "zhandouzhongm",
+                                "mibaochuzhenqueren",
+                                "team_select3a3",
+                                "jikechuzhen3",
+                                "zhengbeidaozhuangzhankuo",
+                                "zhongshangchuzhenjingao"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否打检非": {
+            "cases": [
+                {
+                    "name": "不打",
+                    "param": {
+                        "jianfeichuxianp": {
+                            "next": "Close_djlw"
+                        }
+                    }
+                },
+                {
+                    "name": "打",
+                    "param": {
+                        "jianfeichuxianp": {
+                            "next": [
+                                "zhandouzhongp",
+                                "zhandoujieguop"
+                            ]
                         }
                     }
                 }

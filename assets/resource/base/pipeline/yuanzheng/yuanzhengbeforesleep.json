@@ -1,0 +1,75 @@
+{
+    "shuiqianyuanzheng": {
+        "doc": "只做三队的,其他的手动,入口在biandui,shuiqianyuanzhengbiandui",
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务，next chapter4",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "shuiqianyuanzheng1"
+    },
+    "shuiqianyuanzheng1": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzheng.png",
+        "action": "Click",
+        "roi": [
+            165,
+            373,
+            321,
+            277
+        ],
+        "next": "shuiqianyuanzheng2"
+    },
+    "shuiqianyuanzheng2": {
+        "doc": "由于地图每次进来都会回到鸟羽,所以先主地图,再次地图",
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter4.png",
+        "roi": [
+            577,
+            156,
+            209,
+            180
+        ],
+        "action": "Click",
+        "next": "shuiqianyuanzheng3"
+    },
+    "shuiqianyuanzheng3": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\4_4.png",
+        "roi": [
+            443,
+            435,
+            330,
+            154
+        ],
+        "action": "Click",
+        "next": [
+            "shuiqianyuanzheng3",
+            "shuiqianteam3"
+        ]
+    },
+    "shuiqianteam3": {
+        "recognition": "TemplateMatch",
+        "doc": "远征或出阵时team3的roi和丸内编队的时候不一样,这个是远征和出阵时的roi",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            143,
+            338,
+            131,
+            256
+        ],
+        "action": "Click",
+        "next": [
+            "yuanzhengkaishi4",
+            "shuiqianteam3"
+        ]
+    }
+}

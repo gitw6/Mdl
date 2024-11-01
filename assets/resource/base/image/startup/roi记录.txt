@@ -1,0 +1,226 @@
+startgame 
+original roi: [411, 511, 441, 100]
+amplified roi: [361, 461, 541, 200]
+
+closeannouncement
+original roi: [998, 29, 60, 66]
+amplified roi: [948, 0, 160, 166]
+
+homeflag
+original roi: [1155, 649, 125, 66]
+amplified roi: [1055, 554, 225, 166]
+
+backhome
+original roi: [1158, 658, 119, 54]
+amplified roi: [1061, 566, 219, 154]
+
+yuanzheng
+original roi: [829, 471, 68, 49]
+amplified roi: [779, 421, 168, 149]
+
+close1
+original roi: [850, 642, 36, 32]
+amplified roi: [800, 588, 136, 132]
+
+close1_1
+original roi: [851, 643, 32, 30]
+amplified roi: [801, 590, 132, 130]
+
+chuzhen
+original roi: [1174, 78, 87, 52]
+amplified roi: [1093, 28, 187, 152]
+
+team1
+original roi: [185, 63, 38, 151]
+amplified roi: [135, 13, 138, 251]
+
+yuanzhengkaishi
+original roi: [830, 598, 198, 73]
+amplified roi: [780, 547, 298, 173]
+
+team2
+original roi: [187, 227, 35, 147]
+amplified roi: [137, 177, 135, 247]
+
+team3
+original roi: [190, 391, 34, 151]
+amplified roi: [140, 341, 134, 251]
+
+team4
+original roi: [185, 556, 42, 139]
+amplified roi: [135, 481, 142, 239]
+
+duandao
+original roi: [1167, 228, 97, 52]
+amplified roi: [1083, 178, 197, 152]
+
+duandaoanniu
+original roi: [879, 155, 69, 53]
+amplified roi: [829, 105, 169, 153]
+
+duandaokaishi
+original roi: [827, 617, 194, 66]
+amplified roi: [777, 554, 294, 166]
+
+daojie
+original roi: [101, 237, 31, 143]
+amplified roi: [51, 187, 131, 243]
+
+daojiexuanze
+original roi: [971, 132, 66, 54]
+amplified roi: [921, 82, 166, 154]
+
+daojiekaishi
+original roi: [916, 680, 130, 28]
+amplified roi: [866, 592, 230, 128]
+
+daozhuang
+original roi: [1169, 295, 103, 51]
+amplified roi: [1077, 245, 203, 151]
+
+daozhuangjieti
+original roi: [97, 240, 36, 136]
+amplified roi: [47, 190, 136, 236]
+
+daozhuangzhizuo
+original roi: [706, 611, 99, 76]
+amplified roi: [656, 544, 199, 176]
+
+hecheng
+original roi: [1158, 429, 115, 57]
+amplified roi: [1065, 379, 215, 157]
+
+issuo
+original roi: [158, 155, 23, 23]
+amplified roi: [108, 105, 123, 123]
+
+hechengqueding
+original roi: [681, 677, 134, 31]
+amplified roi: [631, 589, 234, 131]
+
+hechengkaishi
+original roi: [790, 623, 236, 66]
+amplified roi: [740, 554, 336, 166]
+
+qiehuan
+original roi: [1156, 3, 115, 48]
+amplified roi: [1065, 0, 215, 148]
+
+yanlian
+original roi: [768, 409, 199, 199]
+amplified roi: [718, 359, 299, 299]
+
+faqitiaozhan
+original roi: [882, 175, 143, 46]
+amplified roi: [832, 125, 243, 146]
+
+homeflag ÇïÌï
+original roi: [579, 255, 110, 102]
+amplified roi: [529, 205, 210, 202]
+
+updating
+original roi: [550, 681, 118, 27]
+amplified roi: [500, 593, 218, 127]
+
+gameloading
+original roi: [3, 655, 61, 53]
+amplified roi: [0, 567, 161, 153]
+
+lingliwu1
+original roi: [887, 75, 47, 58]
+amplified roi: [837, 25, 147, 158]
+
+lingliwuwan
+original roi: [798, 568, 189, 71]
+amplified roi: [748, 518, 289, 171]
+
+chapter1_1
+original roi: [137, 331, 253, 50]
+amplified roi: [87, 281, 353, 150]
+
+chapter2_3
+original roi: [136, 489, 195, 55]
+amplified roi: [86, 439, 295, 155]
+
+chapter2_2
+original roi: [486, 331, 269, 51]
+amplified roi: [436, 281, 369, 151]
+
+4_4
+original roi: [493, 485, 230, 54]
+amplified roi: [443, 435, 330, 154]
+
+shi
+original roi: [412, 370, 208, 49]
+amplified roi: [362, 320, 308, 149]
+
+duandao3
+original roi: [388, 121, 237, 423]
+amplified roi: [338, 71, 337, 523]
+
+
+original roi: [520, 318, 65, 49]
+amplified roi: [470, 268, 165, 149]
+
+original roi: [988, 335, 61, 47]
+amplified roi: [938, 285, 161, 147]
+
+original roi: [523, 227, 59, 46]
+amplified roi: [473, 177, 159, 146]
+
+
+
+确定
+
+original roi: [962, 113, 68, 68]
+amplified roi: [912, 63, 168, 168]
+
+original roi: [961, 219, 74, 61]
+amplified roi: [911, 169, 174, 161]
+
+original roi: [968, 308, 66, 56]
+amplified roi: [918, 258, 166, 156]
+
+original roi: [968, 412, 65, 49]
+amplified roi: [918, 362, 165, 149]
+
+original roi: [962, 501, 74, 53]
+amplified roi: [912, 451, 174, 153]
+
+original roi: [966, 597, 69, 52]
+amplified roi: [916, 547, 169, 152]
+
+
+
+zhong
+ [177, 534, 261, 127]
+ [471, 552, 159, 145]
+=[]
+
+ shang
+
+修复工坊
+[
+320,
+82,
+361,
+216
+],
+[
+322,
+230,
+363,
+215
+],
+[
+322,
+375,
+364,
+222
+],
+[
+327,
+507,
+359,
+213
+]

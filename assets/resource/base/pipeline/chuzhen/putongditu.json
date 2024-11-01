@@ -1,0 +1,422 @@
+{
+    "putongchuzhen": {
+        "doc": "已编辑三队，刷检非入口",
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "putongchuzhen1"
+    },
+    "putongchuzhen1": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            465,
+            92,
+            270,
+            272
+        ],
+        "template": "出阵\\chuzhen.png",
+        "action": "Click"
+    },
+    "chapter2": {
+        "next": [
+            "chapter2_enter",
+            "putong1",
+            "putongzuo"
+        ]
+    },
+    "chapter2_enter": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\chapter2.png",
+        "roi": [
+            271,
+            151,
+            210,
+            173
+        ],
+        "action": "Click",
+        "next": "putong2"
+    },
+    "chapter3": {
+        "next": [
+            "chapter3_enter",
+            "putong1",
+            "putongzuo"
+        ]
+    },
+    "chapter3_enter": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\chapter3.png",
+        "roi": [
+            141,
+            152,
+            205,
+            173
+        ],
+        "action": "Click",
+        "next": "putong2"
+    },
+    "chapter3_3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\putongtu\\3-3.png",
+            "出阵\\putongtu\\3-3_1.png"
+        ],
+        "action": "Click",
+        "threshold": 0.98,
+        "roi": [
+            88,
+            278,
+            775,
+            406
+        ],
+        "next": [
+            "jikechuzhen2",
+            "putongteam",
+            "chapter3_3"
+        ]
+    },
+    "chapter4": {
+        "next": [
+            "chapter4_enter",
+            "putong1",
+            "putongzuo"
+        ]
+    },
+    "chapter4_enter": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\chapter4.png",
+        "roi": [
+            271,
+            150,
+            205,
+            173
+        ],
+        "action": "Click",
+        "next": "putong2"
+    },
+    "chapter4_3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\putongtu\\4-3.png",
+            "出阵\\putongtu\\4-3_1.png"
+        ],
+        "action": "Click",
+        "threshold": 0.98,
+        "roi": [
+            88,
+            278,
+            775,
+            406
+        ],
+        "next": [
+            "jikechuzhen2",
+            "putongteam",
+            "chapter4_3"
+        ]
+    },
+    "chapter7": {
+        "next": [
+            "chapter7_enter",
+            "putong1",
+            "putongzuo"
+        ]
+    },
+    "chapter7_enter": {
+        "roi": [
+            273,
+            154,
+            205,
+            173
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\chapter7.png",
+        "action": "Click",
+        "next": "putong2"
+    },
+    "chapter7_1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\putongtu\\7-1.png",
+            "出阵\\putongtu\\7-1_1.png"
+        ],
+        "action": "Click",
+        "threshold": 0.98,
+        "next": [
+            "jikechuzhen2",
+            "putongteam",
+            "chapter7_1"
+        ]
+    },
+    "chapter2_4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\putongtu\\2-4.png",
+            "出阵\\putongtu\\2-4_1.png"
+        ],
+        "action": "Click",
+        "threshold": 0.98,
+        "next": [
+            "jikechuzhen2",
+            "putongteam",
+            "chapter2_4"
+        ]
+    },
+    "putong2": {
+        "next_doc": "set in code."
+    },
+    "putongteam": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": [
+            "jikechuzhen2",
+            "putongteam"
+        ]
+    },
+    "jikechuzhen2": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            782,
+            548,
+            295,
+            171
+        ],
+        "template": "出阵\\jiekchuzhen.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 400,
+        "next": [
+            "shuatup",
+            "putongteam",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao"
+        ]
+    },
+    "shuatup": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1106,
+            0,
+            174,
+            372
+        ],
+        "template": [
+            "出阵\\shuatu.png",
+            "出阵\\putongtu\\shuatup.png"
+        ],
+        "next": [
+            "jianfeichuxianp",
+            "suodishibaip",
+            "zhandouzhongp",
+            "zhandoujieguop",
+            "shuatup",
+            "putongjieshu"
+        ]
+    },
+    "suodishibaip": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png"
+        ],
+        "action": "Click",
+        "next": [
+            "suodishibaip",
+            "zhandouzhongp"
+        ]
+    },
+    "zhandoujieguop": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            927,
+            468,
+            125,
+            160
+        ],
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "action": "Click",
+        "next": [
+            "jixujinjunp",
+            "naxindaop",
+            "putongjieshu",
+            "zhandoujieguop"
+        ]
+    },
+    "naxindaop": {
+        "roi": [
+            901,
+            525,
+            315,
+            192
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\naxindao.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1
+        },
+        "next": [
+            "jixujinjunp",
+            "putongjieshu"
+        ]
+    },
+    "jixujinjunp": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\jixujinjun.png",
+        "roi": [
+            677,
+            369,
+            241,
+            238
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1
+        },
+        "next": [
+            "shuatup",
+            "putongjieshu",
+            "zhongshangjinggao",
+            "jixujinjunp"
+        ]
+    },
+    "jianfeichuxianp": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\jianfei.png",
+            "出阵\\jianfei2.png"
+        ],
+        "roi": [
+            405,
+            0,
+            403,
+            352
+        ],
+        "target": [
+            983,
+            583,
+            162,
+            137
+        ],
+        "action": "Click"
+    },
+    "zhandouzhongp": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\zhandouzhong.png",
+            "出阵\\activity\\zhankuo\\zhandouzhonga.png"
+        ],
+        "roi": [
+            919,
+            0,
+            188,
+            139
+        ],
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "suodishibaip",
+            "jianfeichuxianp",
+            "zhandouzhongp",
+            "zhandoujieguop"
+        ]
+    },
+    "putongjieshu": {
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "yuanzhengyingjie",
+            "yuanzhengjinxingzhong",
+            "yuanzheng1dui",
+            "yuanzheng2dui",
+            "yuanzheng4dui",
+            "neifanxia1"
+        ]
+    },
+    "putongyou": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\putongyou.png",
+        "roi": [
+            724,
+            146,
+            132,
+            183
+        ],
+        "action": "Click"
+    },
+    "putongyouh": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\putongyou.png",
+        "roi": [
+            396,
+            146,
+            132,
+            183
+        ],
+        "action": "Click"
+    },
+    "putong1": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\chapter1.png",
+        "roi": [
+            134,
+            151,
+            209,
+            172
+        ]
+    },
+    "putongzuo": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\putongzuo.png",
+        "roi": [
+            88,
+            149,
+            132,
+            178
+        ],
+        "action": "Click"
+    }
+}

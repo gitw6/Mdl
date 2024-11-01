@@ -1,0 +1,240 @@
+{
+    "YuanZheng": {
+        "doc": "白天推荐的四队远征，一队2-3，二队2-4，三队1-1，四队4-4",
+        "next": [
+            "enter_yuanzheng"
+        ]
+    },
+    "enter_yuanzheng": {
+        "doc": "远征日常",
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzheng.png",
+        "action": "Click",
+        "roi": [
+            779,
+            421,
+            168,
+            149
+        ],
+        "next_doc": "Set in code."
+    },
+    "yuanzheng_chapter1": {
+        "doc": "维新的记忆",
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter1.png",
+        "action": "Click",
+        "roi": [
+            140,
+            160,
+            203,
+            172
+        ],
+        "next": [
+            "targetstagename"
+        ]
+    },
+    "yuanzheng_chapter2": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter2.png",
+        "action": "Click",
+        "roi": [
+            282,
+            160,
+            210,
+            171
+        ]
+    },
+    "yuanzheng_chapter3": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter3.png",
+        "action": "Click",
+        "roi": [
+            429,
+            156,
+            209,
+            179
+        ],
+        "next": [
+            "targetstagename"
+        ]
+    },
+    "chapter4_1": {
+        "recognition": "OCR",
+        "expected": [
+            "比山延历寺"
+        ],
+        "roi": [
+            446,
+            434,
+            319,
+            153
+        ],
+        "action": "Click",
+        "next": [
+            "chapter4_1",
+            "team_select4"
+        ]
+    },
+    "yuanzheng_chapter4": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter4.png",
+        "roi": [
+            577,
+            156,
+            209,
+            180
+        ],
+        "action": "Click",
+        "next": [
+            "targetstagename",
+            "chapter4_1"
+        ]
+    },
+    "yuanzheng_chapter5": {
+        "next": [
+            "you",
+            "yuanzheng_chapter5e"
+        ]
+    },
+    "you": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\you.png",
+        "roi": [
+            747,
+            157,
+            129,
+            175
+        ],
+        "action": "Click",
+        "next": "yuanzheng_chapter5e"
+    },
+    "yuanzheng_chapter5e": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter5.png",
+        "action": "Click",
+        "roi": [
+            575,
+            157,
+            213,
+            177
+        ],
+        "next": [
+            "targetstagename"
+        ]
+    },
+    "targetstagename": {
+        "recognition": "OCR",
+        "text_doc": "Set in code.",
+        "action": "Click"
+    },
+    "team_select": {
+        "next_doc": "Set in code."
+    },
+    "team_select1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team1.png",
+            "team1_1.png"
+        ],
+        "roi": [
+            135,
+            13,
+            138,
+            251
+        ],
+        "action": "Click",
+        "next": "yuanzhengorchuzhen"
+    },
+    "team_select2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team2.png",
+            "team2_1.png"
+        ],
+        "roi": [
+            137,
+            177,
+            135,
+            247
+        ],
+        "action": "Click",
+        "next": "yuanzhengorchuzhen"
+    },
+    "team_select3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "yuanzhengorchuzhen"
+    },
+    "team_select4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team4.png",
+            "team4_1.png"
+        ],
+        "roi": [
+            135,
+            481,
+            142,
+            239
+        ],
+        "action": "Click",
+        "next": "yuanzhengorchuzhen"
+    },
+    "yuanzhengorchuzhen": {
+        "next": [
+            "yuanzhengkaishi",
+            "jikechuzhen"
+        ]
+    },
+    "yuanzhengkaishi": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "远征\\yuanzhengkaishi.png",
+            "远征\\yuanzhengkaishi_black.png"
+        ],
+        "roi": [
+            780,
+            547,
+            298,
+            173
+        ],
+        "action": "Click",
+        "next": [
+            "shi"
+        ]
+    },
+    "shi": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzhengshi.png",
+        "roi": [
+            362,
+            320,
+            308,
+            149
+        ],
+        "action": "Click",
+        "post_delay": 1800,
+        "next": "backhome"
+    },
+    "jikechuzhen": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            782,
+            548,
+            295,
+            171
+        ],
+        "template": "出阵\\jiekchuzhen.png",
+        "action": "Click"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "dailyTask": {
+        "doc": "丸内事务-锻刀三把，刀解一把，刀装三把，刀装刀解不知道，合成一次，乱舞手动，内番手动，丸外事务-演练派遣胜利三次，出阵胜利10次战胜首领,检非违使1次,远征派遣和成功三次",
+        "next": [
+            "出阵日课"
+        ]
+    },
+   
+    "manle": {
+        "doc": "手动刀装解体，刀装解体不在日课，暂未完成",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\daozhuang\\manle.png",
+            "丸内事务\\daozhuang\\manle1.png",
+            "丸内事务\\daozhuang\\manle2.png"
+        ],
+        "roi": [
+            798,
+            26,
+            269,
+            130
+        ]
+    },
+    "ziyuandian": {},
+    "wangdian": {},
+    "丸外事务": {
+        "action": "Swipe",
+        "begin": [
+            779,
+            321,
+            168,
+            149
+        ],
+        "end": [
+            779,
+            421,
+            168,
+            149
+        ],
+        "duration": 1000,
+        "next_doc": "Set in code."
+    }
+}

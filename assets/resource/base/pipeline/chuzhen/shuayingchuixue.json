@@ -1,0 +1,632 @@
+{
+    "shuayinghua": {
+        "doc": "自动极化编队，但是非极化刀需手动编到三队,next,shuayinghua1,times_limit,4",
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "shuayinghua1"
+    },
+    "shuayinghua1": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            465,
+            92,
+            270,
+            272
+        ],
+        "template": "出阵\\chuzhen.png",
+        "post_wait_freezes": {
+            "time": 800,
+            "method": 3
+        },
+        "action": "Click",
+        "next": [
+            "hanguan",
+            "shuayinghuac1",
+            "menuzuo"
+        ]
+    },
+    "shuayinghuac1": {
+        "doc": "维新的记忆",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\chapter1.png",
+        "action": "Click",
+        "roi": [
+            134,
+            151,
+            209,
+            172
+        ],
+        "next": [
+            "hanguan"
+        ]
+    },
+    "menuzuo": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\menuzuo.png",
+        "roi": [
+            88,
+            147,
+            131,
+            183
+        ],
+        "action": "Click",
+        "next": [
+            "menuzuo",
+            "shuayinghuac1"
+        ]
+    },
+    "hanguan": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\hanguan.png",
+            "出阵\\hanguan_l.png"
+        ],
+        "roi": [
+            103,
+            292,
+            182,
+            150
+        ],
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "action": "Click",
+        "next": [
+            "yinghuajikechuzhen",
+            "shuayinghuat",
+            "hanguan"
+        ]
+    },
+    "shuayinghuat": {
+        "roi": [
+            137,
+            339,
+            139,
+            250
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\team3.png",
+            "出阵\\activity\\zhankuo\\team3_black.png"
+        ],
+        "action": "Click",
+        "next": "yinghuajikechuzhen"
+    },
+    "yinghuajikechuzhen": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            782,
+            548,
+            295,
+            171
+        ],
+        "template": "出阵\\jiekchuzhen.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "shuatuy",
+            "shuayinghuat",
+            "zhandoujieguoy"
+        ]
+    },
+    "shuatuy": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "roi": [
+            1112,
+            0,
+            168,
+            367
+        ],
+        "template": [
+            "出阵\\shuatu.png",
+            "出阵\\shuatuy.png"
+        ],
+        "next": [
+            "shuatuy",
+            "suodizhongy",
+            "suodishibaiy",
+            "zhandoujieguoy"
+        ]
+    },
+    "suodizhongy": {
+        "roi": [
+            0,
+            506,
+            194,
+            214
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\suodizhong.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "suodizhongy",
+            "suodishibaiy",
+            "zhandoujieguoy"
+        ]
+    },
+    "suodishibaiy": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png",
+            "出阵\\suodishibai_z.png"
+        ],
+        "action": "Click",
+        "next": [
+            "suodishibaiy",
+            "zhandouzhongy"
+        ]
+    },
+    "zhandouzhongy": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\zhandouzhong.png",
+        "roi": [
+            919,
+            0,
+            188,
+            139
+        ],
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "action": "DoNothing",
+        "next": [
+            "zhandouzhongy",
+            "zhandoujieguoy"
+        ]
+    },
+    "zhandoujieguoy": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            677,
+            369,
+            241,
+            238
+        ],
+        "action": "Click",
+        "next": [
+            "jixujinjuny",
+            "shuatuy",
+            "zhandoujieguoy",
+            "bianduiy",
+            "yuanzhengyingjie",
+            "naxindaoy"
+        ]
+    },
+    "naxindaoy": {
+        "roi": [
+            901,
+            525,
+            315,
+            192
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\naxindao.png",
+        "action": "Click",
+        "post_delay": 200,
+        "next": [
+            "jixujinjuny",
+            "bianduiy",
+            "yuanzhengyingjie"
+        ]
+    },
+    "jixujinjuny": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\jixujinjun.png",
+        "roi": [
+            677,
+            369,
+            241,
+            238
+        ],
+        "action": "Click",
+        "next": [
+            "shuatuy"
+        ]
+    },
+    "zidongshuayinghuabiandui": {
+        "doc": "shuayinghuachuzhen 的runoutnext",
+        "recognition": "TemplateMatch",
+        "template": "startup\\homeflag.png",
+        "action": "Swipe",
+        "begin": [
+            600,
+            400,
+            400,
+            400
+        ],
+        "end": [
+            800,
+            400,
+            400,
+            400
+        ],
+        "duration": 1000,
+        "post_delay": 1500,
+        "next": [
+            "zidongshuayinghuabiandui",
+            "huanyingchuixueteam"
+        ]
+    },
+    "huanyingchuixueteam": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\team3.png",
+            "出阵\\activity\\zhankuo\\team3_black.png"
+        ],
+        "roi": [
+            49,
+            345,
+            139,
+            250
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "shuahuaxuanze"
+    },
+    "shuahuaxuanze": {
+        "roi": [
+            916,
+            69,
+            172,
+            163
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\duandao\\daojiexuanze.png"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "pilaodu1_100",
+            "shuayinghua"
+        ],
+        "doc": "可以插一个查看疲劳度,卸载装备,之后再执行替换"
+    },
+    "pilaodu1_100": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\pilaodu100.png",
+        "threshold": 0.95,
+        "roi": [
+            757,
+            391,
+            342,
+            132
+        ],
+        "next": "tihuan"
+    },
+    "xiedaozhuang": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\quanbuxiezhuang.png",
+        "roi": [
+            665,
+            530,
+            250,
+            139
+        ],
+        "action": "Click",
+        "next": "tihuan"
+    },
+    "tihuan": {
+        "roi": [
+            885,
+            530,
+            211,
+            136
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\tihuan.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": "tihuan1"
+    },
+    "shuahuabiandui": {
+        "roi": [
+            916,
+            69,
+            172,
+            163
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\biandui\\shuahuaxuanze1.png"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": "tihuan1",
+        "doc": "可以插一个卸载装备之后再执行替换,查看疲劳度"
+    },
+    "tihuan1": {
+        "roi": [
+            98,
+            596,
+            241,
+            124
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\tihuan1.png",
+            "丸内事务\\biandui\\shaixuanzhong.png"
+        ],
+        "action": "Click",
+        "next": [
+            "tihuan2"
+        ]
+    },
+    "tihuan2": {
+        "doc": "极化,未极化可选",
+        "roi": [
+            405,
+            414,
+            247,
+            148
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\tihuan2.png",
+        "action": "Click",
+        "next": "tihuan3"
+    },
+    "tihuan2_1": {
+        "doc": "未极化",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\weijihua.png",
+        "roi": [
+            194,
+            415,
+            246,
+            146
+        ],
+        "action": "Click",
+        "next": "tihuan3"
+    },
+    "tihuan3": {
+        "doc": "樱吹雪",
+        "roi": [
+            840,
+            409,
+            250,
+            140
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\tihuan3.png",
+        "action": "Click",
+        "next": "tihuan4"
+    },
+    "tihuan4": {
+        "doc": "确定",
+        "roi": [
+            837,
+            484,
+            256,
+            148
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\tihuan4.png",
+        "action": "Click",
+        "next": "tihuan5"
+    },
+    "tihuan5": {
+        "doc": "最右",
+        "roi": [
+            623,
+            590,
+            130,
+            130
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\tihuan5.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "tihuan50",
+            "tihuan5"
+        ]
+    },
+    "tihuan50": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\tihuan50.png",
+        "roi": [
+            623,
+            590,
+            130,
+            130
+        ],
+        "action": "DoNothing",
+        "next": [
+            "tihuan5_1",
+            "zuohua"
+        ]
+    },
+    "tihuan5_2": {
+        "roi": [
+            52,
+            83,
+            151,
+            637
+        ],
+        "recognition": "TemplateMatch",
+        "threshold": 0.9,
+        "template": "丸内事务\\biandui\\weijihua_issuo.png",
+        "target_offset": [
+            862,
+            -26,
+            21,
+            9
+        ],
+        "action": "Click",
+        "next": "shuayinghuadaozhuang"
+    },
+    "tihuan5_1": {
+        "doc": "筛选不是修复和远征状态的刀剑,极化右侧有五瓣樱,未极化暂时没有识别方法",
+        "doc": "[302,541,143,159],[299,451,146,147],[303,355,147,152],[ 298, 260,149,150],[298,168,149,149],[302,72, 144,147]",
+        "roi": [
+            290,
+            64,
+            166,
+            637
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\wubanying.png",
+        "threshold": 0.4,
+        "green_mask": true,
+        "target_offset": [
+            613,
+            -1,
+            17,
+            11
+        ],
+        "action": "Click",
+        "next": [
+            "shuayinghuadaozhuang",
+            "tihuan5_1"
+        ]
+    },
+    "zuohua": {
+        "action": "Swipe",
+        "begin": [
+            280,
+            487,
+            124,
+            143
+        ],
+        "end": [
+            776,
+            455,
+            132,
+            147
+        ],
+        "duration": 500,
+        "next": [
+            "tihuan5_1",
+            "zuohua"
+        ]
+    },
+    "tihuan6": {
+        "doc": "试用，暂时不能区别修复",
+        "doc": "[911,169,174,161],[918,258,166,156],[918,362,165,149],[912,451,174,153],[916,547,169,152]",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\tihuan6.png",
+        "roi": [
+            902,
+            55,
+            195,
+            665
+        ],
+        "action": "Click",
+        "next": "shuayinghuadaozhuang"
+    },
+    "shuayinghuadaozhuang": {
+        "roi": [
+            912,
+            63,
+            168,
+            168
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\daojiexuanze.png",
+        "doc": "查看疲劳度,满了就停止刷樱花",
+        "action": "Click",
+        "next": [
+            "pilaodu"
+        ]
+    },
+    "pilaodu": {
+        "doc": "疲劳度100结束,疲劳度未满继续",
+        "roi": [
+            756,
+            390,
+            150,
+            128
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\pilaodu.png",
+        "next": [
+            "pilaodu100",
+            "daozhuangempty",
+            "shuayinghua"
+        ]
+    },
+    "pilaodu100": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\pilaodu100.png",
+        "threshold": 0.95,
+        "roi": [
+            757,
+            391,
+            342,
+            132
+        ]
+    },
+    "daozhuangempty": {
+        "roi": [
+            486,
+            156,
+            344,
+            270
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\daozhuangempty.png",
+        "next": "zidongzhuangbeidaozhuang"
+    },
+    "zidongzhuangbeidaozhuang": {
+        "roi": [
+            841,
+            23,
+            259,
+            132
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\zidongzhuangbeidaozhuang.png",
+        "action": "Click",
+        "next": "zhuanbbeidaozhuangwanbi"
+    },
+    "zhuanbbeidaozhuangwanbi": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\daozhuangwanbi.png",
+        "target": [
+            490,
+            401,
+            308,
+            150
+        ],
+        "roi": [
+            313,
+            140,
+            661,
+            434
+        ],
+        "action": "Click"
+    }
+}

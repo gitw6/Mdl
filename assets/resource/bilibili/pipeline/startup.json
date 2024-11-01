@@ -1,0 +1,7 @@
+{
+    "Sub_Start_djlw": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": " com.youzu.djlw.bili/org.cocos2dx.lua.AppActivity"
+    }
+}

@@ -1,0 +1,802 @@
+{
+    "yanlian2": {
+        "doc": "自动识别5d1",
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": "yanlian12"
+    },
+    "yanlian12": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanlian.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "faqitiaozhan1",
+            "faqitiaozhan2",
+            "faqitiaozhan3",
+            "faqitiaozhan4",
+            "faqitiaozhan5"
+        ],
+        "timeout_next": "yanlianjieshu"
+    },
+    "faqitiaozhan1": {
+        "doc": "测试中,暂时会在第三次演练后卡在结算界面 818,117,271,600; ",
+        "doc": "[824, 123, 252, 152],[827, 242, 242, 139],[828, 349, 254, 142],[830, 453, 249, 150],[822, 564, 256, 146]",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\faqitiaozhan.png"
+        ],
+        "roi": [
+            824,
+            123,
+            252,
+            152
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 400
+        },
+        "post_delay": 400,
+        "next": [
+            "5d1_1",
+            "jinruyanlian_1"
+        ]
+    },
+    "faqitiaozhan2": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\faqitiaozhan.png",
+        "roi": [
+            827,
+            242,
+            242,
+            139
+        ],
+        "action": "Click",
+        "post_delay": 400,
+        "post_wait_freezes": {
+            "time": 400
+        },
+        "next": [
+            "5d1_2",
+            "jinruyanlian_2"
+        ]
+    },
+    "faqitiaozhan3": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\faqitiaozhan.png",
+        "roi": [
+            828,
+            349,
+            254,
+            142
+        ],
+        "action": "Click",
+        "post_delay": 400,
+        "post_wait_freezes": {
+            "time": 400
+        },
+        "next": [
+            "5d1_3",
+            "jinruyanlian_3"
+        ]
+    },
+    "faqitiaozhan4": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\faqitiaozhan.png",
+        "roi": [
+            830,
+            453,
+            249,
+            150
+        ],
+        "action": "Click",
+        "post_delay": 400,
+        "post_wait_freezes": {
+            "time": 400
+        },
+        "next": [
+            "5d1_4",
+            "jinruyanlian_4"
+        ]
+    },
+    "faqitiaozhan5": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\faqitiaozhan.png",
+        "roi": [
+            822,
+            564,
+            256,
+            146
+        ],
+        "post_delay": 400,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 400
+        },
+        "next": [
+            "5d1_5",
+            "jinruyanlian_5"
+        ]
+    },
+    "5d1_1": {
+        "doc": "5个90级以上的极化刀剑带一个不知名刀剑",
+        "green_mask": true,
+        "roi": [
+            395,
+            157,
+            303,
+            563
+        ],
+        "threshold": 0.9,
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "演练\\5d1.png",
+        "next": "jinruyanlianf_1"
+    },
+    "5d1_2": {
+        "doc": "5个90级以上的极化刀剑带一个不知名刀剑",
+        "green_mask": true,
+        "roi": [
+            395,
+            157,
+            303,
+            563
+        ],
+        "threshold": 0.9,
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "演练\\5d1.png",
+        "next": "jinruyanlianf_2"
+    },
+    "5d1_3": {
+        "doc": "5个90级以上的极化刀剑带一个不知名刀剑",
+        "green_mask": true,
+        "roi": [
+            395,
+            157,
+            303,
+            563
+        ],
+        "threshold": 0.9,
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "演练\\5d1.png",
+        "next": "jinruyanlianf_3"
+    },
+    "5d1_4": {
+        "doc": "5个90级以上的极化刀剑带一个不知名刀剑",
+        "green_mask": true,
+        "roi": [
+            395,
+            157,
+            303,
+            563
+        ],
+        "threshold": 0.9,
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "演练\\5d1.png",
+        "next": "jinruyanlianf_4"
+    },
+    "5d1_5": {
+        "doc": "5个90级以上的极化刀剑带一个不知名刀剑",
+        "green_mask": true,
+        "roi": [
+            395,
+            157,
+            303,
+            563
+        ],
+        "threshold": 0.9,
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "演练\\5d1.png",
+        "next": "jinruyanlianf_5"
+    },
+    "jinruyanlianf_1": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlianf.png",
+        "roi": [
+            639,
+            542,
+            203,
+            178
+        ],
+        "action": "Click",
+        "next": "faqitiaozhan2"
+    },
+    "jinruyanlianf_2": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlianf.png",
+        "roi": [
+            639,
+            542,
+            203,
+            178
+        ],
+        "action": "Click",
+        "next": "faqitiaozhan3"
+    },
+    "jinruyanlianf_3": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlianf.png",
+        "roi": [
+            639,
+            542,
+            203,
+            178
+        ],
+        "action": "Click",
+        "next": "faqitiaozhan4"
+    },
+    "jinruyanlianf_4": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlianf.png",
+        "roi": [
+            639,
+            542,
+            203,
+            178
+        ],
+        "action": "Click",
+        "next": "faqitiaozhan5"
+    },
+    "jinruyanlianf_5": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlianf.png",
+        "roi": [
+            639,
+            542,
+            203,
+            178
+        ],
+        "action": "Click",
+        "next": "yanlianjieshu"
+    },
+    "jinruyanlian_1": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlian.png",
+        "action": "Click",
+        "roi": [
+            783,
+            540,
+            294,
+            180
+        ],
+        "next": [
+            "yanliankaishi_1",
+            "team_select3y_1"
+        ]
+    },
+    "jinruyanlian_2": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlian.png",
+        "action": "Click",
+        "roi": [
+            783,
+            540,
+            294,
+            180
+        ],
+        "next": "team_select3y_2"
+    },
+    "jinruyanlian_3": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlian.png",
+        "action": "Click",
+        "roi": [
+            783,
+            540,
+            294,
+            180
+        ],
+        "next": "team_select3y_3"
+    },
+    "jinruyanlian_4": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlian.png",
+        "action": "Click",
+        "roi": [
+            783,
+            540,
+            294,
+            180
+        ],
+        "next": "team_select3y_4"
+    },
+    "jinruyanlian_5": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jinruyanlian.png",
+        "action": "Click",
+        "roi": [
+            783,
+            540,
+            294,
+            180
+        ],
+        "next": "team_select3y_5"
+    },
+    "team_select3y_1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "yanliankaishi_1"
+    },
+    "team_select3y_2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "yanliankaishi_2"
+    },
+    "team_select3y_3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "yanliankaishi_3"
+    },
+    "team_select3y_4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "yanliankaishi_4"
+    },
+    "team_select3y_5": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            136,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "yanliankaishi_5"
+    },
+    "yanliankaishi_1": {
+        "roi": [
+            783,
+            543,
+            295,
+            177
+        ],
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanliankaishi.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 500,
+        "doc": "time等待测量",
+        "next": [
+            "yanlianzhong_1"
+        ]
+    },
+    "yanliankaishi_2": {
+        "roi": [
+            783,
+            543,
+            295,
+            177
+        ],
+        "threshold": 0.9,
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanliankaishi.png",
+        "action": "Click",
+        "post_delay": 500,
+        "doc": "time等待测量",
+        "next": [
+            "yanlianzhong_2"
+        ]
+    },
+    "yanliankaishi_3": {
+        "roi": [
+            783,
+            543,
+            295,
+            177
+        ],
+        "threshold": 0.9,
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanliankaishi.png",
+        "action": "Click",
+        "post_delay": 500,
+        "doc": "time等待测量",
+        "next": [
+            "yanlianzhong_3"
+        ]
+    },
+    "yanliankaishi_4": {
+        "roi": [
+            783,
+            543,
+            295,
+            177
+        ],
+        "threshold": 0.9,
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanliankaishi.png",
+        "action": "Click",
+        "post_delay": 500,
+        "doc": "time等待测量",
+        "next": [
+            "yanlianzhong_4"
+        ]
+    },
+    "yanliankaishi_5": {
+        "roi": [
+            783,
+            543,
+            295,
+            177
+        ],
+        "threshold": 0.9,
+        "post_delay": 500,
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanliankaishi.png",
+        "action": "Click",
+        "doc": "time等待测量",
+        "next": [
+            "yanlianzhong_5"
+        ]
+    },
+    "yanlianzhong_1": {
+        "roi": [
+            0,
+            506,
+            194,
+            214
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\suodizhong.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "yanlianzhong_1",
+            "yanliansuodishibai_1",
+            "yanlianjieshu_1"
+        ]
+    },
+    "yanlianzhong_2": {
+        "roi": [
+            0,
+            506,
+            194,
+            214
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\suodizhong.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "yanlianzhong_2",
+            "yanliansuodishibai_2",
+            "yanlianjieshu_2"
+        ]
+    },
+    "yanlianzhong_3": {
+        "roi": [
+            0,
+            506,
+            194,
+            214
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\suodizhong.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "yanlianzhong_3",
+            "yanliansuodishibai_3",
+            "yanlianjieshu_3"
+        ]
+    },
+    "yanlianzhong_4": {
+        "roi": [
+            0,
+            506,
+            194,
+            214
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\suodizhong.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "yanlianzhong_4",
+            "yanliansuodishibai_4",
+            "yanlianjieshu_4"
+        ]
+    },
+    "yanlianzhong_5": {
+        "roi": [
+            0,
+            506,
+            194,
+            214
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\suodizhong.png",
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "yanlianzhong_5",
+            "yanliansuodishibai_5",
+            "yanlianjieshu_5"
+        ]
+    },
+    "yanliansuodishibai_1": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png",
+            "出阵\\suodishibai_z.png"
+        ],
+        "action": "Click",
+        "next": [
+            "yanliansuodishibai_1",
+            "yanlianzhong_1"
+        ]
+    },
+    "yanliansuodishibai_2": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png",
+            "出阵\\suodishibai_z.png"
+        ],
+        "action": "Click",
+        "next": [
+            "yanliansuodishibai_2",
+            "yanlianzhong_2"
+        ]
+    },
+    "yanliansuodishibai_3": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png",
+            "出阵\\suodishibai_z.png"
+        ],
+        "action": "Click",
+        "next": [
+            "yanliansuodishibai_3",
+            "yanlianzhong_3"
+        ]
+    },
+    "yanliansuodishibai_4": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png",
+            "出阵\\suodishibai_z.png"
+        ],
+        "action": "Click",
+        "next": [
+            "yanliansuodishibai_4",
+            "yanlianzhong_4"
+        ]
+    },
+    "yanliansuodishibai_5": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png",
+            "出阵\\suodishibai_z.png"
+        ],
+        "action": "Click",
+        "next": [
+            "yanliansuodishibai_5",
+            "yanlianzhong_5"
+        ]
+    },
+    "yanlianjieshu_1": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            789,
+            437,
+            131,
+            141
+        ],
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "action": "Click",
+        "next": [
+            "faqitiaozhan2",
+            "yanlianjieshu_1"
+        ]
+    },
+    "yanlianjieshu_2": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            789,
+            437,
+            131,
+            141
+        ],
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "action": "Click",
+        "next": [
+            "faqitiaozhan3",
+            "yanlianjieshu_2"
+        ]
+    },
+    "yanlianjieshu_3": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            789,
+            437,
+            131,
+            141
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "faqitiaozhan4",
+            "yanlianjieshu_3"
+        ]
+    },
+    "yanlianjieshu_4": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            789,
+            437,
+            131,
+            141
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "faqitiaozhan5",
+            "yanlianjieshu_4"
+        ]
+    },
+    "yanlianjieshu_5": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            789,
+            437,
+            131,
+            141
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": "yanlianjieshu"
+    }
+}

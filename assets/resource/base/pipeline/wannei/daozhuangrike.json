@@ -1,0 +1,57 @@
+{
+    "daozhuangrike": {
+        "doc": "刀装三个，入口-daozhuangrike",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\daozhuang\\daozhuang.png",
+            "丸内事务\\daozhuang\\daozhuang_black.png"
+        ],
+        "roi": [
+            1077,
+            245,
+            203,
+            151
+        ],
+        "action": "Click",
+        "doc": "进入，开始刀装日课，next,zhizuodaozhuang",
+        "next": "zhizuodaozhuang"
+    },
+    "zhizuodaozhuang": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\daozhuang\\daozhuangzhizuo.png",
+        "doc": "times_limit,3;runout_next,hecheng",
+        "action": "Click",
+        "roi": [
+            656,
+            544,
+            199,
+            176
+        ],
+        "post_delay": 1000,
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": "daozhuangzhuangtai"
+    },
+    "daozhuangzhuangtai": {
+        "doc": "刀装制作结果",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\daozhuang\\daozhuangchenggong.png",
+            "丸内事务\\daozhuang\\daozhuangzhuangtai2.png"
+        ],
+        "roi": [
+            183,
+            130,
+            356,
+            186
+        ],
+        "times_limit": 2,
+        "action": "Click",
+        "next": "zhizuodaozhuang",
+        "post_delay": 500,
+        "runout_next": [
+            "hechengrike"
+        ]
+    }
+}

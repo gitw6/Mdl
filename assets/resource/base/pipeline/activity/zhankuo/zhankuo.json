@@ -1,0 +1,429 @@
+{
+    "zhongshangjinggaoa": {
+        "doc": "重伤警告，否，返回本丸",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhongshangjinggao.png",
+        "roi": [
+            308,
+            137,
+            658,
+            444
+        ],
+        "target": [
+            614,
+            407,
+            304,
+            143
+        ],
+        "action": "Click",
+        "next": [
+            "fanhuibenwana1",
+            "fanhuibenwana2"
+        ]
+    },
+    "zhankuorukou": {
+        "roi": [
+            442,
+            147,
+            413,
+            182
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhankuo.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1
+        },
+        "next_doc": "Set in code.",
+        "next": [
+            "a4"
+        ]
+    },
+    "a1": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\a1.png",
+        "roi": [
+            226,
+            232,
+            178,
+            149
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "team_select3a1",
+            "a1"
+        ]
+    },
+    "a2": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\a2.png",
+        "roi": [
+            517,
+            226,
+            180,
+            149
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "a2",
+            "team_select3a1"
+        ]
+    },
+    "a3": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\a3.png",
+        "roi": [
+            298,
+            373,
+            180,
+            155
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "a3",
+            "team_select3a1"
+        ]
+    },
+    "a4": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\a4.png",
+        "roi": [
+            553,
+            379,
+            175,
+            145
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "a4",
+            "team_select3a1"
+        ]
+    },
+    "team_select3a1": {
+        "doc": "战扩部队选择",
+        "roi": [
+            137,
+            339,
+            139,
+            250
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\team3.png",
+            "出阵\\activity\\zhankuo\\team3_black.png"
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "jikechuzhena",
+            "team_select3a1"
+        ]
+    },
+    "jikechuzhena": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            782,
+            548,
+            295,
+            171
+        ],
+        "template": "出阵\\jiekchuzhen.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 500,
+        "next": [
+            "shuatua",
+            "dixiachuzhenqueren",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao",
+            "team_select3a1"
+        ]
+    },
+    "zhongshangchuzhenjingao": {
+        "roi": [
+            353,
+            190,
+            578,
+            250
+        ],
+        "target": [
+            620,
+            400,
+            282,
+            150
+        ],
+        "action": "Click",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhongshangchuzhenjingago.png",
+        "next": "backhome"
+    },
+    "zhengbeidaozhuangzhankuo": {
+        "roi": [
+            362,
+            190,
+            567,
+            239
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\zhengbeidaozhuangzhankuo.png",
+        "doc": "整备刀装的target roi [349,410,305,141]，刀装没满就出阵,继续出阵的target [628, 401, 301, 149],没写完",
+        "target": [
+            349,
+            410,
+            305,
+            141
+        ],
+        "action": "Click",
+        "doc": "将编队配置配入三队",
+        "next": "backhome"
+    },
+    "shuatua": {
+        "green_mask": true,
+        "post_delay": 1500,
+        "post_wait_freezes": {
+            "time": 100,
+            "threshold": 0.87
+        },
+        "recognition": "TemplateMatch",
+        "roi": [
+            1112,
+            0,
+            168,
+            367
+        ],
+        "template": [
+            "出阵\\shuatu.png",
+            "出阵\\putongtu\\shuatup.png"
+        ],
+        "next": [
+            "ziyuandian1",
+            "huzhizhu",
+            "shuatua",
+            "suodishibaia",
+            "zhandouzhonga"
+        ]
+    },
+    "suodishibaia": {
+        "doc": "索敌失败",
+        "roi": [
+            98,
+            71,
+            401,
+            303
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\suodishibai.png",
+            "出阵\\suodishibai_s.png"
+        ],
+        "action": "Click",
+        "next": [
+            "suodishibaia",
+            "zhandouzhonga"
+        ]
+    },
+    "shoucitongguana": {
+        "roi": [
+            0,
+            0,
+            1280,
+            720
+        ],
+        "target": [
+            1073,
+            579,
+            130,
+            127
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\shoucitongguana.png",
+        "action": "Click",
+        "green_mask": true,
+        "next": [
+            "shoucitongguana",
+            "shuatua",
+            "huodongchuzhen"
+        ]
+    },
+    "zhandouzhonga": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\zhandouzhonga.png",
+            "出阵\\zhandouzhong.png",
+            "出阵\\activity\\dixia\\zhandouzhong.png"
+        ],
+        "roi": [
+            919,
+            0,
+            188,
+            139
+        ],
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "suodishibaia",
+            "zhandouzhonga",
+            "zhandoujieguoa"
+        ]
+    },
+    "zhandoujieguoa": {
+        "doc": "由于审神者经验值有时候会被立绘挡住，所以改到左侧",
+        "doc": "队长重伤自动返回",
+        "doc": "虚假伤害时注意移出bianji2act2to3",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            702,
+            548,
+            169,
+            145
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "jixujinjuna",
+            "jixuyanlian",
+            "naxindaoa",
+            "yuanzhengyingjie",
+            "huzhizhu",
+            "huode",
+            "shoucitongguana",
+            "zhandoujieguoa"
+        ]
+    },
+    "naxindaoa": {
+        "roi": [
+            901,
+            525,
+            315,
+            192
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\naxindao.png",
+        "action": "Click",
+        "next": [
+            "jixujinjuna",
+            "huode",
+            "zhandoujieguoa",
+            "jixuyanlian",
+            "huodongchuzhen"
+        ]
+    },
+    "jixujinjuna": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\jixujinjun.png",
+        "roi": [
+            677,
+            369,
+            241,
+            238
+        ],
+        "action": "Click",
+        "next": [
+            "shuatua",
+            "zhongshangjinggaoa"
+        ]
+    },
+    "ziyuandian1": {
+        "roi": [
+            841,
+            44,
+            155,
+            167
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\ziyuandian1.png",
+        "action": "Click",
+        "next": "shuatua"
+    },
+    "chongfua": {
+        "action": "Swipe",
+        "begin": [
+            750,
+            540,
+            114,
+            126
+        ],
+        "end": [
+            750,
+            387,
+            114,
+            126
+        ],
+        "duration": 1000
+    },
+    "jixuyanlian": {
+        "doc": "e1耗时4m2s,e2耗时6m32s  6m50 9m42         一千圈e1即2天19时,一千圈e2即4天8h13m20s",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\jixuyanlian.png",
+        "roi": [
+            671,
+            235,
+            256,
+            260
+        ],
+        "action": "Click",
+        "times_limit": 1000,
+        "post_delay": 1000,
+        "next": [
+            "shuatua",
+            "zhongshangjinggao"
+        ],
+        "runout_next": "fanhuibenwana1"
+    },
+    "fanhuibenwana1": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\fanhuibenwan.png",
+        "roi": [
+            1022,
+            231,
+            258,
+            264
+        ],
+        "action": "Click",
+        "next": "fanhuibenwanquerena"
+    },
+    "fanhuibenwana2": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\fanhuibenwan.png",
+        "roi": [
+            1049,
+            374,
+            231,
+            231
+        ],
+        "action": "Click",
+        "next": "fanhuibenwanquerena"
+    },
+    "fanhuibenwanquerena": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\fanhuibenwanqueren.png",
+        "roi": [
+            371,
+            405,
+            304,
+            144
+        ],
+        "action": "Click",
+        "post_wait_freezes": 800,
+        "doc": "第一次四队，重伤回来换2队，三队留着远征，一队演练用 next ,bianduiact2to3",
+        "next": [
+            "yuanzhengyingjie",
+            "yuanzhengjinxingzhong"
+        ]
+    }
+}

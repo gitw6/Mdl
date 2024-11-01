@@ -1,0 +1,108 @@
+{
+    "luanwurukou": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1065,
+            379,
+            215,
+            157
+        ],
+        "action": "Click",
+        "template": [
+            "丸内事务\\hecheng\\hecheng.png",
+            "丸内事务\\hecheng\\hecheng_black.png"
+        ],
+        "post_wait_freezes": 1,
+        "doc": "由于大部分合成满了，日课合一个就够了,next,hecheng1",
+        "next": "xihe"
+    },
+    "xihe": {
+        "roi": [
+            53,
+            181,
+            140,
+            248
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\luanwu\\xihe.png",
+        "threshold": 0.6,
+        "action": "Click",
+        "next": [
+            "xihe_issuo",
+            "backhome"
+        ]
+    },
+    "xihe_issuo": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\hecheng\\issuo.png",
+        "action": "Click",
+        "threshold": 0.76,
+        "roi": [
+            106,
+            61,
+            125,
+            649
+        ],
+        "next": "yijianxuanze"
+    },
+    "yijianxuanze": {
+        "roi": [
+            743,
+            465,
+            331,
+            169
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\luanwu\\yijianxuanze.png",
+        "action": "Click",
+        "next": "xihekaishi"
+    },
+    "xihekaishi": {
+        "roi": [
+            746,
+            554,
+            330,
+            166
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\luanwu\\xihekaishi.png",
+        "action": "Click",
+        "post_wait_freezes": 300,
+        "next": [
+            "luanwudengjidacheng",
+            "yijianxuanze",
+            "xihefanhui"
+        ]
+    },
+    "luanwudengjidacheng": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\luanwu\\luanwudengjidacheng.png",
+        "green_mask": true,
+        "roi": [
+            331,
+            117,
+            607,
+            471
+        ],
+        "target": [
+            481,
+            396,
+            313,
+            149
+        ],
+        "action": "Click",
+        "next": "xihefanhui"
+    },
+    "xihefanhui": {
+        "roi": [
+            67,
+            25,
+            236,
+            128
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\luanwu\\xihefanhui.png",
+        "action": "Click",
+        "next": "xihe"
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "huanbiandui": {
+        "doc": "将三队重伤中伤换下,并补满刀装,暂时被废弃",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "huanbiandui2"
+        ]
+    },
+    "huanbiandui2": {
+        "doc": "第三部队中伤重伤识别",
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            345,
+            132,
+            242
+        ],
+        "action": "Click",
+        "next": [
+            "zhuangtaishibie",
+            "huandaozhuang",
+            "backhome"
+        ]
+    },
+    "zhuangtaishibie": {
+        "doc": "中伤重伤刀剑换下,当有一个以上的重伤中伤时会导致已在编队的队员被换到不同槽位",
+        "recognition": "TemplateMatch",
+        "roi": [
+            260,
+            66,
+            163,
+            639
+        ],
+        "template": [
+            "丸内事务\\biandui\\huanbiandui\\zhongshang1.png",
+            "丸内事务\\biandui\\huanbiandui\\zhongshang2.png"
+        ],
+        "threshold": 0.8,
+        "target_offset": [
+            613,
+            -1,
+            17,
+            11
+        ],
+        "action": "Click",
+        "next": [
+            "tihuan"
+        ]
+    },
+    "huandaozhuang": {
+        "doc": "补完掉的刀装",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\huanbiandui\\xianshizhuangbei.png",
+        "roi": [
+            612,
+            592,
+            224,
+            128
+        ],
+        "action": "Click",
+        "next": [
+            "kongdaozhuang"
+        ]
+    },
+    "kongdaozhuang": {
+        "next": [
+            "kongdaozhuang2",
+            "kongdaozhuang3",
+            "backhome"
+        ]
+    },
+    "kongdaozhuang2": {
+        "doc": "空刀装的刀剑选择",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\biandui\\huanbiandui\\2daowei1.png",
+            "丸内事务\\biandui\\huanbiandui\\2daowei2.png"
+        ],
+        "roi": [
+            509,
+            61,
+            488,
+            613
+        ],
+        "threshold": 0.8,
+        "green_mask": true,
+        "target_offset": [
+            405,
+            8,
+            -222,
+            17
+        ],
+        "action": "Click",
+        "next": [
+            "zidongzhuangbeidaozhuang"
+        ]
+    },
+    "kongdaozhuang3": {
+        "recognition": "TemplateMatch",
+        "green_mask": true,
+        "threshold": 0.8,
+        "template": [
+            "丸内事务\\biandui\\huanbiandui\\3daowei1.png",
+            "丸内事务\\biandui\\huanbiandui\\3daowei2.png",
+            "丸内事务\\biandui\\huanbiandui\\3daowei3.png"
+        ],
+        "target_offset": [
+            402,
+            9,
+            -297,
+            25
+        ],
+        "action": "Click",
+        "next": [
+            "zidongzhuangbeidaozhuang"
+        ]
+    },
+    "budaozhuang": {
+        "doc": "补刀装,装备完毕,查看编队是否有其他刀剑刀装未满",
+        "recognition": "DirectHit",
+        "roi": [
+            292,
+            404,
+            136,
+            151
+        ],
+        "action": "Click",
+        "next": [
+            "kongdaozhuang"
+        ]
+    }
+}

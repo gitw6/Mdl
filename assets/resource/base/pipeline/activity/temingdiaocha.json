@@ -1,0 +1,14 @@
+{
+    "qingyingjiafu": {
+        "roi": [
+            440,
+            143,
+            415,
+            191
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\temingdiaocha\\qingyingjiafu.png",
+        "action": "Click",
+        "next_doc": "set in code."
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "renwurukou": {
+        "roi": [
+            1095,
+            524,
+            185,
+            158
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\renwu\\renwu.png",
+        "action": "Click",
+        "next": "richangrenwu"
+    },
+    "zhuxian": {
+        "roi": [
+            896,
+            62,
+            186,
+            651
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\renwu\\dacheng.png",
+        "action": "Click",
+        "next": [
+            "zhuxian",
+            "backhome"
+        ]
+    },
+    "richangrenwu": {
+        "roi": [
+            47,
+            181,
+            140,
+            209
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\renwu\\richangrenwu.png",
+        "action": "Click",
+        "next": "yijianlingqu"
+    },
+    "yuechangrenwu": {
+        "roi": [
+            53,
+            380,
+            128,
+            169
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\renwu\\yuechangrenwu.png",
+        "action": "Click",
+        "next": "yijianlingqu"
+    },
+    "huodongrenwu": {
+        "roi": [
+            49,
+            540,
+            138,
+            165
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\renwu\\huodongrenwu.png",
+        "action": "Click",
+        "next": "yijianlingqu"
+    },
+    "yijianlingqu": {
+        "roi": [
+            858,
+            586,
+            219,
+            134
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\renwu\\yijianlingqu.png",
+        "action": "Click",
+        "next": [
+            "yijianlingqu1"
+        ]
+    },
+    "yijianlingqu1": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\lingliwu1.png",
+        "roi": [
+            848,
+            48,
+            153,
+            156
+        ],
+        "action": "Click",
+        "next": "backhome"
+    }
+}

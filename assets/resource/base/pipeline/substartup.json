@@ -1,0 +1,72 @@
+{
+    "Sub_StartUp": {
+        "action": "StartApp",
+        "package": " com.youzu.djlw.bili/org.cocos2dx.lua.AppActivity",
+        "timeout": 100000,
+        "next": [
+            "startgame1"
+        ]
+    },
+    "startgame1": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\startgame.png",
+        "roi": [
+            361,
+            461,
+            541,
+            200
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "startgame1",
+            "远征迎接",
+            "closegai"
+        ]
+    },
+    "远征迎接": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\yuanzhengdiqu.png",
+        "roi": [
+            0,
+            0,
+            221,
+            137
+        ],
+        "target": [
+            924,
+            619,
+            101,
+            101
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "远征迎接日课",
+            "closegai"
+        ]
+    },
+    "closegai": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\closeannouncement.png",
+        "roi": [
+            948,
+            0,
+            160,
+            166
+        ],
+        "action": "Click",
+        "next": [
+            "closegai",
+            "neifanxia1",
+            "yuanzhengjinxingzhong",
+            "yuanzheng1dui",
+            "yuanzheng2dui",
+            "yuanzheng4dui"
+        ]
+    }
+}

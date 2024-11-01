@@ -1,0 +1,77 @@
+{
+    "huodongchuzhen": {
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务，由于此活动是真伤所以正在考虑演练几圈后返回本丸自动修复，再出阵zhankuochuzhen自动修复做另一个入口，在task设置循环",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "huodongchuzhen1"
+    },
+    "huodongchuzhen1": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            465,
+            92,
+            270,
+            272
+        ],
+        "template": "出阵\\chuzhen.png",
+        "post_wait_freezes": {
+            "time": 1,
+            "method": 3
+        },
+        "action": "Click",
+        "next_doc": "set in code.",
+        "next": [
+            "mibaorukou"
+        ]
+    },
+    "team_select3a3": {
+        "doc": "江户城部队选择",
+        "roi": [
+            137,
+            339,
+            139,
+            250
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\team3.png",
+            "出阵\\activity\\zhankuo\\team3_black.png"
+        ],
+        "action": "Click",
+        "next": [
+            "jikechuzhen3",
+            "team_select3a3"
+        ]
+    },
+    "jikechuzhen3": {
+        "doc": "江户城出阵确认,使用小判",
+        "recognition": "TemplateMatch",
+        "roi": [
+            782,
+            548,
+            295,
+            171
+        ],
+        "template": "出阵\\jiekchuzhen.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "buchonglingpai",
+            "shuatum",
+            "zhandouzhongm",
+            "mibaochuzhenqueren",
+            "team_select3a3",
+            "jikechuzhen3",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao"
+        ]
+    }
+}

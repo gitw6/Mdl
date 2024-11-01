@@ -1,0 +1,136 @@
+{
+    "dixiarukou": {
+        "roi": [
+            440,
+            143,
+            415,
+            191
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\dixiarukou.png",
+        "action": "Click",
+        "next_doc": "set in code."
+    },
+    "shiweixia": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\shiweixia.png",
+        "roi": [
+            498,
+            445,
+            147,
+            135
+        ],
+        "action": "Click"
+    },
+    "geweixia": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\shiweixia.png",
+        "roi": [
+            602,
+            447,
+            135,
+            137
+        ],
+        "action": "Click"
+    },
+    "geweishang": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\geweishang.png",
+        "roi": [
+            600,
+            271,
+            135,
+            135
+        ],
+        "action": "Click"
+    },
+    "shiweishang": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\geweishang.png",
+        "roi": [
+            502,
+            268,
+            131,
+            135
+        ],
+        "action": "Click"
+    },
+    "dixiabuduixuanze": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\buduixuanze.png",
+        "roi": [
+            819,
+            541,
+            252,
+            145
+        ],
+        "action": "Click",
+        "post_delay": 300,
+        "next": "team_select3a2"
+    },
+    "team_select3a2": {
+        "doc": "地下城部队选择",
+        "roi": [
+            137,
+            339,
+            139,
+            250
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\team3.png",
+            "出阵\\activity\\zhankuo\\team3_black.png"
+        ],
+        "action": "Click",
+        "post_delay": 300,
+        "next": [
+            "jikechuzhena",
+            "team_select3a2"
+        ]
+    },
+    "dixiachuzhenqueren": {
+        "roi": [
+            367,
+            303,
+            302,
+            145
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\dixiachuzhenqueren.png",
+        "action": "Click",
+        "next": [
+            "huzhizhu",
+            "shuatua"
+        ]
+    },
+    "huzhizhu": {
+        "roi": [
+            804,
+            335,
+            140,
+            133
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\huzhizhu.png",
+        "action": "Click",
+        "next": [
+            "huzhizhu",
+            "huode",
+            "shuatua",
+            "zhandouzhonga",
+            "zhandoujieguoa"
+        ]
+    },
+    "huode": {
+        "roi": [
+            922,
+            493,
+            358,
+            227
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\huode.png",
+        "action": "Click",
+        "next": "jixujinjuna"
+    }
+}

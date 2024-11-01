@@ -1,0 +1,544 @@
+{
+    "biandui": {
+        "doc": "自动记录三队到二队，并演练，如三队已记录到二队，可以从",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "doc": "next,biandui2",
+        "next": "biandui2"
+    },
+    "biandui2": {
+        "doc": "3队演练，先存队伍到2，再演练，再回队伍，再刷城管",
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            345,
+            132,
+            242
+        ],
+        "action": "Click",
+        "next": "jilu2dui",
+        "doc": "next,jilu2dui"
+    },
+    "jilu2dui": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jilu2dui.png",
+        "action": "Click",
+        "roi": [
+            230,
+            592,
+            223,
+            128
+        ],
+        "next": "jilu2dui2",
+        "doc": "next,jilu2dui2",
+        "doc": "打开编辑队伍页面"
+    },
+    "jilu2dui2": {
+        "doc": "划到第二队，存储队伍到二队",
+        "action": "Swipe",
+        "begin": [
+            781,
+            497,
+            116,
+            101
+        ],
+        "end": [
+            411,
+            445,
+            109,
+            103
+        ],
+        "duration": 1000,
+        "next": "jinxingjilu"
+    },
+    "jinxingjilu": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\jingxingjilu.png",
+        "roi": [
+            620,
+            576,
+            301,
+            144
+        ],
+        "action": "Click",
+        "next": "jilushi"
+    },
+    "jilushi": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            348,
+            570,
+            316,
+            150
+        ],
+        "template": "丸内事务\\biandui\\jilushi.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "bianjiyanlianjilu"
+    },
+    "biandui1": {
+        "doc": "不记录三队配置直接演练的入口",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "doc": "next,biandui2",
+        "next": "biandui12"
+    },
+    "biandui12": {
+        "doc": "3队演练，先存队伍到2，再演练，再回队伍，再刷城管",
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            345,
+            132,
+            242
+        ],
+        "action": "Click",
+        "next": "bianjiyanlianjilu",
+        "doc": "next,jilu2dui"
+    },
+    "bianjiyanlianjilu": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jilu2dui.png",
+        "action": "Click",
+        "roi": [
+            230,
+            592,
+            223,
+            128
+        ],
+        "next": "bianjibudui",
+        "doc": "next,jilu2dui2"
+    },
+    "bianjibudui": {
+        "roi": [
+            366,
+            579,
+            298,
+            141
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\bianjibudui.png",
+        "action": "Click",
+        "next": "yanlianshi"
+    },
+    "yanlianshi": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            348,
+            570,
+            316,
+            150
+        ],
+        "template": "丸内事务\\biandui\\jilushi.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "yanlian2"
+    },
+    "bianduij": {
+        "doc": "*********检非编队自动编队入口，将4队编入三队",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "doc": "next,biandui2",
+        "next": [
+            "shuajianfeibiandui",
+            "bianduij"
+        ]
+    },
+    "shuajianfeibiandui": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "jilubuduij"
+    },
+    "jilubuduij": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jilu2dui.png",
+        "action": "Click",
+        "roi": [
+            230,
+            592,
+            223,
+            128
+        ],
+        "next": "jilu2dui2j",
+        "post_delay": 500,
+        "doc": "next,jilu2dui2"
+    },
+    "jilu2dui2j": {
+        "roi": [
+            669,
+            549,
+            132,
+            121
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\jilu2dui2j.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 400,
+        "next": [
+            "jilu2dui2j",
+            "bianji2dui2j"
+        ]
+    },
+    "jilu2dui2j1": {
+        "doc": "编辑二队到三队,划到第二页",
+        "action": "Swipe",
+        "begin": [
+            781,
+            497,
+            116,
+            101
+        ],
+        "end": [
+            411,
+            445,
+            109,
+            103
+        ],
+        "duration": 1000,
+        "next": "bianji2dui2j"
+    },
+    "bianji2dui2j": {
+        "roi": [
+            366,
+            579,
+            298,
+            141
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\bianjibudui.png",
+        "action": "Click",
+        "next": "jianfeishi"
+    },
+    "jianfeishi": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            348,
+            570,
+            316,
+            150
+        ],
+        "template": "丸内事务\\biandui\\jilushi.png",
+        "action": "Click",
+        "post_delay": 1500,
+        "next_doc": "set in code.",
+        "next": [
+            "jianfeichuzhen"
+        ]
+    },
+    "bianduiact2to3": {
+        "doc": "*********战扩编队自动编队入口，将二队编入三队,4队重伤后2队编入3队",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "doc": "next,biandui2",
+        "next": "shuahuodongbianduiact2to3"
+    },
+    "shuahuodongbianduiact2to3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "jilubuduiact2to3"
+    },
+    "jilubuduiact2to3": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jilu2dui.png",
+        "action": "Click",
+        "roi": [
+            230,
+            592,
+            223,
+            128
+        ],
+        "next": "jilu2dui2act2to3",
+        "doc": "next,jilu2dui2"
+    },
+    "jilu2dui2act2to3": {
+        "doc": "编辑二队到三队",
+        "action": "Swipe",
+        "begin": [
+            781,
+            497,
+            116,
+            101
+        ],
+        "end": [
+            411,
+            445,
+            109,
+            103
+        ],
+        "duration": 1000,
+        "next": "bianji2dui2act2to3"
+    },
+    "bianji2dui2act2to3": {
+        "roi": [
+            366,
+            579,
+            298,
+            141
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\bianjibudui.png",
+        "action": "Click",
+        "next": "huodonghuanduishi"
+    },
+    "huodonghuanduishi": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            348,
+            570,
+            316,
+            150
+        ],
+        "template": "丸内事务\\biandui\\jilushi.png",
+        "action": "Click",
+        "post_delay": 1500,
+        "doc": "可以换成活动入口huodongchuzhen,但是不能选层数,所以重伤后换2队应该接下一个地下活动,不同的option"
+    },
+    "shuiqianyuanzhengbiandui": {
+        "doc": "睡前远征编队,三队to三队",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "next": "shuiqianbianduiteam3"
+    },
+    "shuiqianbianduiteam3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": "shuiqianjiluteam3"
+    },
+    "shuiqianjiluteam3": {
+        "recognition": "TemplateMatch",
+        "template": "演练\\jilu2dui.png",
+        "action": "Click",
+        "roi": [
+            230,
+            592,
+            223,
+            128
+        ],
+        "next": "shuiqianhuadaodierye"
+    },
+    "shuiqianhuadaodierye": {
+        "doc": "编辑二队到三队",
+        "action": "Swipe",
+        "begin": [
+            781,
+            497,
+            116,
+            101
+        ],
+        "end": [
+            411,
+            445,
+            109,
+            103
+        ],
+        "duration": 1000,
+        "next": "shuiqianhuadaodierye",
+        "post_delay": 500,
+        "times_limit": 2,
+        "runout_next": "querenhuadaodisanye"
+    },
+    "querenhuadaodisanye": {
+        "roi": [
+            596,
+            543,
+            127,
+            131
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\bianji3dui.png",
+        "next": "shuiqianbianji3to3"
+    },
+    "shuiqianbianji3to3": {
+        "roi": [
+            366,
+            579,
+            298,
+            141
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\bianjibudui.png",
+        "action": "Click",
+        "next": "shuiqianbianji3to3shi"
+    },
+    "shuiqianbianji3to3shi": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            348,
+            570,
+            316,
+            150
+        ],
+        "template": "丸内事务\\biandui\\jilushi.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "shuiqianyuanzheng"
+    },
+    "bianduiy": {
+        "doc": "三队编队清零",
+        "recognition": "TemplateMatch",
+        "template": [
+            "演练\\biandui.png",
+            "演练\\biandui_black.png"
+        ],
+        "roi": [
+            1090,
+            95,
+            190,
+            154
+        ],
+        "action": "Click",
+        "doc": "next,biandui2",
+        "next": "bianduiy1"
+    },
+    "bianduiy1": {
+        "doc": "next,bianduiy2;next,查看疲劳度",
+        "recognition": "TemplateMatch",
+        "template": [
+            "team3.png",
+            "team3_1.png"
+        ],
+        "roi": [
+            49,
+            343,
+            138,
+            245
+        ],
+        "action": "Click",
+        "next": [
+            "yijiesan",
+            "bianduiy2"
+        ]
+    },
+    "yijiesan": {
+        "doc": "已解散",
+        "roi": [
+            427,
+            153,
+            344,
+            558
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\yijiesan.png",
+        "next": [
+            "shuahuabiandui",
+            "shuahuaxuanze"
+        ]
+    },
+    "bianduiy2": {
+        "doc": "第三部队解散",
+        "recognition": "TemplateMatch",
+        "roi": [
+            744,
+            588,
+            222,
+            132
+        ],
+        "template": "丸内事务\\biandui\\buduijiesan.png",
+        "action": "Click",
+        "next": "bianduiy3"
+    },
+    "bianduiy3": {
+        "doc": "确认解散部队3?",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\biandui\\buduijiesan2.png",
+        "target": [
+            375,
+            405,
+            297,
+            143
+        ],
+        "action": "Click",
+        "next": "shuahuabiandui"
+    }
+}

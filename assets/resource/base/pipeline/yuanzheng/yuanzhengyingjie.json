@@ -1,0 +1,352 @@
+{
+    "yuanzhengyingjie": {
+        "doc": "刷图或者刷活动后自动回城时刚好遇到远征返回,自动迎接,自动远征",
+        "doc": "我的队伍一般是一队2-3太刀,二队2-3打刀,四队总等级220以上4-4",
+        "doc": "pre_wait_freeze:13000",
+        "recognition": "TemplateMatch",
+        "template": [
+            "startup\\yuanzhengdiqu.png",
+            "丸内事务\\neifan\\neifanaa.png"
+        ],
+        "roi": [
+            0,
+            0,
+            345,
+            421
+        ],
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "target": [
+            702,
+            548,
+            169,
+            145
+        ],
+        "threshold": 0.5,
+        "action": "Click",
+        "next": [
+            "yuanzhengjinxingzhong",
+            "neifanxia1",
+            "yuanzheng1dui",
+            "yuanzheng2dui",
+            "yuanzheng4dui",
+            "yuanzhengyingjie"
+        ]
+    },
+    "yuanzhengjinxingzhong": {
+        "roi": [
+            74,
+            418,
+            279,
+            302
+        ],
+        "green_mask": true,
+        "doc": "全三队送去远征了,可以继续刷图,活动图或者出阵普通图",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\yuanzhengyingjie\\yuanzhengjinxingzhong.png",
+        "threshold": 0.98,
+        "next": [
+            "huodongchuzhen"
+        ]
+    },
+    "yuanzheng1dui": {
+        "doc": "待机中还是远征中",
+        "roi": [
+            77,
+            432,
+            291,
+            149
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\yuanzhengyingjie\\1duidaiji.png",
+        "next": "123zidongyuanzheng"
+    },
+    "yuanzheng2dui": {
+        "roi": [
+            77,
+            490,
+            285,
+            142
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\yuanzhengyingjie\\2duidaiji.png",
+        "next": "222zidongyuanzheng"
+    },
+    "yuanzheng4dui": {
+        "roi": [
+            81,
+            570,
+            280,
+            150
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\yuanzhengyingjie\\4duidaiji.png",
+        "next": "444zidongyuanzheng"
+    },
+    "zidongkaishi": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "远征\\yuanzhengkaishi.png"
+        ],
+        "roi": [
+            780,
+            547,
+            298,
+            173
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "zidongshi"
+        ]
+    },
+    "zidongshi": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzhengshi.png",
+        "roi": [
+            362,
+            320,
+            308,
+            149
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": "zidongbackhome"
+    },
+    "zidongbackhome": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\backhome.png",
+        "action": "Click",
+        "next": [
+            "yuanzhengjinxingzhong",
+            "yuanzheng1dui",
+            "yuanzheng2dui",
+            "yuanzheng4dui"
+        ]
+    },
+    "123zidongyuanzheng": {
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务，next yuanzhengrike",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "123zidongyuanzheng1"
+    },
+    "123zidongyuanzheng1": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzheng.png",
+        "action": "Click",
+        "roi": [
+            165,
+            373,
+            321,
+            277
+        ],
+        "next": "123zidongyuanzheng2"
+    },
+    "123zidongyuanzheng2": {
+        "doc": "识别主菜单",
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter2.png",
+        "action": "Click",
+        "roi": [
+            282,
+            160,
+            210,
+            171
+        ],
+        "next": [
+            "123zidongyuanzheng3"
+        ]
+    },
+    "123zidongyuanzheng3": {
+        "doc": "识别次级菜单",
+        "recognition": "TemplateMatch",
+        "template": "远征\\2_3.png",
+        "roi": [
+            86,
+            439,
+            295,
+            155
+        ],
+        "action": "Click",
+        "next": [
+            "123zidongyuanzheng3",
+            "zidongyuanzhengteam1"
+        ]
+    },
+    "zidongyuanzhengteam1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team1.png",
+            "team1_1.png"
+        ],
+        "roi": [
+            135,
+            13,
+            138,
+            251
+        ],
+        "action": "Click",
+        "next": [
+            "zidongkaishi",
+            "zidongyuanzhengteam1"
+        ]
+    },
+    "222zidongyuanzheng": {
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务，next yuanzhengrike",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "222zidongyuanzheng1"
+    },
+    "222zidongyuanzheng1": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzheng.png",
+        "action": "Click",
+        "roi": [
+            165,
+            373,
+            321,
+            277
+        ],
+        "next": "222zidongyuanzheng2"
+    },
+    "222zidongyuanzheng2": {
+        "doc": "识别主菜单",
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter2.png",
+        "action": "Click",
+        "roi": [
+            282,
+            160,
+            210,
+            171
+        ],
+        "next": [
+            "222zidongyuanzheng3"
+        ]
+    },
+    "222zidongyuanzheng3": {
+        "doc": "识别次级菜单",
+        "recognition": "TemplateMatch",
+        "template": "远征\\2_2.png",
+        "roi": [
+            436,
+            281,
+            369,
+            151
+        ],
+        "action": "Click",
+        "next": [
+            "222zidongyuanzheng3",
+            "zidongyuanzhengteam2"
+        ]
+    },
+    "zidongyuanzhengteam2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team2.png",
+            "team2_1.png"
+        ],
+        "roi": [
+            137,
+            177,
+            135,
+            247
+        ],
+        "action": "Click",
+        "next": [
+            "zidongkaishi",
+            "zidongyuanzhengteam2"
+        ]
+    },
+    "444zidongyuanzheng": {
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "doc": "进入丸外事务，next yuanzhengrike",
+        "roi": [
+            1093,
+            28,
+            187,
+            152
+        ],
+        "action": "Click",
+        "next": "444zidongyuanzheng1"
+    },
+    "444zidongyuanzheng1": {
+        "recognition": "TemplateMatch",
+        "template": "远征\\yuanzheng.png",
+        "action": "Click",
+        "roi": [
+            165,
+            373,
+            321,
+            277
+        ],
+        "next": "444zidongyuanzheng2"
+    },
+    "444zidongyuanzheng2": {
+        "doc": "识别主菜单",
+        "recognition": "TemplateMatch",
+        "template": "远征\\chapter4.png",
+        "action": "Click",
+        "roi": [
+            577,
+            156,
+            209,
+            180
+        ],
+        "next": [
+            "444zidongyuanzheng3"
+        ]
+    },
+    "444zidongyuanzheng3": {
+        "doc": "识别次级菜单",
+        "recognition": "TemplateMatch",
+        "template": "远征\\4_4.png",
+        "roi": [
+            443,
+            435,
+            330,
+            154
+        ],
+        "action": "Click",
+        "next": [
+            "444zidongyuanzheng3",
+            "zidongyuanzhengteam4"
+        ]
+    },
+    "zidongyuanzhengteam4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "team4.png",
+            "team4_1.png"
+        ],
+        "roi": [
+            135,
+            481,
+            142,
+            239
+        ],
+        "action": "Click",
+        "next": [
+            "zidongkaishi",
+            "zidongyuanzhengteam4"
+        ]
+    }
+}

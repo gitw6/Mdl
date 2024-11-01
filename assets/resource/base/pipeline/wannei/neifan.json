@@ -1,0 +1,130 @@
+{
+    "neifanxia1": {
+        "roi": [
+            1120,
+            562,
+            160,
+            158
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\neifanxia.png",
+        "action": "Click",
+        "next": [
+            "neifanxia1",
+            "neifanbaogao",
+            "closeannouncement"
+        ]
+    },
+    "neifanbaogao": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\neifanbaogao.png",
+        "roi": [
+            536,
+            278,
+            206,
+            134
+        ],
+        "action": "Click",
+        "doc": "内番报告后进入内番入口,暂时不清楚内番迎接和远征迎接的先后,待改",
+        "next": [
+            "neifan",
+            "yuanzhengyingjie",
+            "closeannouncement"
+        ]
+    },
+    "neifan": {
+        "roi": [
+            1096,
+            443,
+            184,
+            159
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\neifan.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300
+        },
+        "post_delay": 500,
+        "next": [
+            "feiliaoxuanze",
+            "wanwurike"
+        ]
+    },
+    "feiliaoxuanze": {
+        "roi": [
+            428,
+            203,
+            306,
+            136
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\feiliaoxuanze.png",
+        "action": "Click",
+        "next": "feiliaoshiyong"
+    },
+    "feiliaoshiyong": {
+        "roi": [
+            690,
+            208,
+            253,
+            138
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\feiliaoshiyong.png",
+        "action": "Click",
+        "next": "feiliaoqueding"
+    },
+    "feiliaoqueding": {
+        "roi": [
+            484,
+            457,
+            288,
+            147
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\feiliaoqueding.png",
+        "action": "Click",
+        "next": "neifankaishi"
+    },
+    "neifankaishi": {
+        "roi": [
+            791,
+            548,
+            298,
+            172
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\neifankaishi.png",
+        "action": "Click",
+        "next": "neifanqueding"
+    },
+    "neifanqueding": {
+        "roi": [
+            429,
+            428,
+            260,
+            150
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\neifanqueding.png",
+        "action": "Click",
+        "next": "neifanxia2"
+    },
+    "neifanxia2": {
+        "roi": [
+            1120,
+            562,
+            160,
+            158
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\neifan\\neifanxia.png",
+        "action": "Click",
+        "next": [
+            "neifanxia2",
+            "closeannouncement",
+            "backhome"
+        ]
+    }
+}

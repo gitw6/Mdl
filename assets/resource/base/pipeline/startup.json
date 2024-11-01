@@ -1,0 +1,339 @@
+{
+    "StartUp": {
+        "doc": "",
+        "next": [
+            "start_end",
+            "yuanzhengyingjiejieshu",
+            "bilibili游戏",
+            "updating_yu",
+            "updating",
+            "download",
+            "startgame",
+            "远征迎接日课",
+            "neifanbaogao",
+            "neifanxia1",
+            "closeannouncement",
+            "Sub_Start_djlw"
+        ]
+    },
+    "start_end": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "startup\\start_end.png",
+            "startup\\start_end1.png"
+        ],
+        "action": "DoNothing",
+        "roi": [
+            75,
+            410,
+            484,
+            310
+        ],
+        "green_mask": true
+    },
+    "backhome": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\backhome.png",
+        "action": "Click"
+    },
+    "bilibili游戏": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "startup\\bilibili游戏.png",
+        "roi": [
+            288,
+            231,
+            716,
+            272
+        ]
+    },
+    "远征迎接日课": {
+        "doc": "蜻蛉切会挡住远征结果,改到远征地区,再测试就只能改等级了",
+        "recognition": "TemplateMatch",
+        "template": [
+            "startup\\yuanzhengdiqu.png"
+        ],
+        "roi": [
+            0,
+            0,
+            345,
+            421
+        ],
+        "target": [
+            924,
+            619,
+            101,
+            101
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "远征迎接日课",
+            "neifanxia1",
+            "closeannouncement"
+        ]
+    },
+    "yuanzhengyingjiejieshu": {
+        "doc": "暂时废弃",
+        "recognition": "TemplateMatch",
+        "template": "startup\\yingjiejieshu.png",
+        "roi": [
+            75,
+            410,
+            484,
+            310
+        ],
+        "action": "DoNothing",
+        "post_wait_freezes": {
+            "time": 300
+        },
+        "next": [
+            "start_end",
+            "出阵日课"
+        ]
+    },
+    "closeannouncement": {
+        "doc": "每天打开游戏要点两次",
+        "recognition": "TemplateMatch",
+        "template": "startup\\closeannouncement.png",
+        "roi": [
+            948,
+            0,
+            160,
+            166
+        ],
+        "action": "DoNothing",
+        "next": [
+            "yuanzhengyingjiejieshu",
+            "close1",
+            "close2"
+        ]
+    },
+    "close1": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\closeannouncement.png",
+        "roi": [
+            948,
+            0,
+            160,
+            166
+        ],
+        "next": [
+            "close1_0",
+            "close1_1",
+            "lingliwuz"
+        ]
+    },
+    "close1_0": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\close1.png",
+        "threshold": 0.8,
+        "roi": [
+            800,
+            588,
+            136,
+            132
+        ],
+        "action": "Click",
+        "next": [
+            "close2"
+        ]
+    },
+    "close1_1": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\close1_1.png",
+        "threshold": 0.8,
+        "roi": [
+            801,
+            590,
+            132,
+            130
+        ],
+        "action": "DoNothing",
+        "next": [
+            "close2"
+        ]
+    },
+    "gameloading": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\gameloading.png",
+        "roi": [
+            0,
+            567,
+            161,
+            153
+        ],
+        "is_sub": true
+    },
+    "lingliwuz": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\closeannouncement.png",
+        "roi": [
+            948,
+            0,
+            160,
+            166
+        ],
+        "next": [
+            "lingliwuwan",
+            "lingliwu"
+        ]
+    },
+    "lingliwu": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            743,
+            515,
+            300,
+            176
+        ],
+        "template": "startup\\lingliwu.png",
+        "action": "Click",
+        "next": "lingliwu1"
+    },
+    "lingliwuwan": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            743,
+            515,
+            300,
+            176
+        ],
+        "threshold": 0.9,
+        "template": "startup\\lingliwuwan.png",
+        "action": "DoNothing",
+        "next": "close2"
+    },
+    "lingliwu1": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\lingliwu1.png",
+        "action": "Click",
+        "roi": [
+            837,
+            25,
+            147,
+            158
+        ],
+        "next": [
+            "close2",
+            "lingliwu1"
+        ]
+    },
+    "close2": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\closeannouncement.png",
+        "roi": [
+            948,
+            0,
+            160,
+            166
+        ],
+        "action": "Click",
+        "next": [
+            "closeannouncement",
+            "yuanzhengyingjiejieshu",
+            "start_end"
+        ]
+    },
+    "homeflag": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\homeflag.png",
+        "action": "DoNothing",
+        "roi": [
+            529,
+            205,
+            210,
+            202
+        ]
+    },
+    "updating_yu": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\jiazaizhong.png",
+        "roi": [
+            533,
+            484,
+            224,
+            230
+        ],
+        "next": [
+            "updating_yu",
+            "updating"
+        ]
+    },
+    "updating": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\updating.png",
+        "roi": [
+            500,
+            593,
+            218,
+            127
+        ],
+        "post_delay": 5000,
+        "next": [
+            "download",
+            "updating",
+            "startgame"
+        ]
+    },
+    "download": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\download.png",
+        "roi": [
+            352,
+            378,
+            305,
+            156
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "updating",
+            "download1",
+            "startgame"
+        ]
+    },
+    "download1": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            411,
+            581,
+            232,
+            139
+        ],
+        "template": "startup\\download1.png",
+        "action": "DoNothing",
+        "next": [
+            "download1",
+            "updating"
+        ]
+    },
+    "startgame": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\startgame.png",
+        "roi": [
+            361,
+            461,
+            541,
+            200
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "startgame",
+            "远征迎接日课",
+            "closeannouncement"
+        ]
+    },
+    "Sub_Start_djlw": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": " com.youzu.djlw.bili/org.cocos2dx.lua.AppActivity"
+    }
+}

@@ -1,0 +1,173 @@
+{
+    "zidongxiufu": {
+        "doc": "刀装掉了暂时无法自动补全，或者不如人工快，慢",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\xiufu.png",
+        "roi": [
+            1094,
+            313,
+            186,
+            150
+        ],
+        "action": "Click",
+        "next": "xiufugongfang"
+    },
+    "xiufugongfang": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\xiufu\\xiufugongfang.png",
+        "doc": "",
+        "roi": [
+            320,
+            82,
+            359,
+            213
+        ],
+        "action": "Click",
+        "next": [
+            "shaixuanzhongshangchengdu",
+            "shaixuanzhong"
+        ]
+    },
+    "shaixuanzhong": {
+        "doc": "修复多只时的第二个入口",
+        "roi": [
+            74,
+            588,
+            227,
+            132
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\shaixuanzhong.png",
+        "action": "DoNothing",
+        "next": [
+            "xiufuxuanze",
+            "xiufujieshu"
+        ]
+    },
+    "xiufujieshu": {
+        "doc": "修复结束，修复开始按钮变灰，开始战扩出阵，到时候将代码改到xiufu文件夹,next,huodongchuzhen,",
+        "doc": "dixia89,dixia50,zidongxiufu,xunhuan",
+        "roi": [
+            700,
+            498,
+            346,
+            167
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\xiufukaishi_black.png",
+        "action": "DoNothing"
+    },
+    "shaixuanzhongshangchengdu": {
+        "doc": "筛选面板打开，修复重伤中伤的刀剑，暂时无法识别编队",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\shaixuanpaixu.png",
+        "roi": [
+            66,
+            591,
+            244,
+            129
+        ],
+        "action": "Click",
+        "next": "shaixuanzhognshang"
+    },
+    "shaixuanzhognshang": {
+        "doc": "重伤",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\shaixuanzhognshang.png",
+        "roi": [
+            609,
+            481,
+            254,
+            152
+        ],
+        "action": "Click",
+        "next": "shaixuanzhognshang1"
+    },
+    "shaixuanzhognshang1": {
+        "doc": "中伤",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\shaixuanzhongshang_1.png",
+        "roi": [
+            402,
+            486,
+            256,
+            147
+        ],
+        "action": "Click",
+        "next": "xiufushaixuanqueding"
+    },
+    "xiufushaixuanqueding": {
+        "roi": [
+            836,
+            486,
+            252,
+            144
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\shaixuanqueding.png",
+        "action": "Click",
+        "next": [
+            "xiufuxuanze",
+            "xiufujieshu"
+        ]
+    },
+    "xiufuxuanze": {
+        "roi": [
+            527,
+            75,
+            184,
+            157
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\xiufuxuanze.png",
+        "action": "Click",
+        "next": "xiufukaishi"
+    },
+    "xiufukaishi": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\xiufukaishi.png",
+        "roi": [
+            701,
+            500,
+            344,
+            174
+        ],
+        "action": "Click",
+        "next": [
+            "xiufugongfang",
+            "xiufujiasu"
+        ]
+    },
+    "xiufujiasu": {
+        "doc": "暂时定为第四个加速 加速按钮roi[842, 100, 224, 620]改为这个的话四个都会按",
+        "roi": [
+            847,
+            544,
+            217,
+            176
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\xiufu\\xiufujiasu.png",
+        "action": "Click",
+        "next": "shiyongjiasufu"
+    },
+    "shiyongjiasufu": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            507,
+            79,
+            262,
+            289
+        ],
+        "template": "丸内事务\\xiufu\\shiyongjiasufu.png",
+        "target": [
+            373,
+            446,
+            296,
+            137
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": "xiufugongfang"
+    }
+}

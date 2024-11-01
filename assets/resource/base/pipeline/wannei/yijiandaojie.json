@@ -1,0 +1,112 @@
+{
+    "daozhuang": {
+        "doc": "刀装三个，入口-daozhuangrike",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\daozhuang\\daozhuang.png",
+            "丸内事务\\daozhuang\\daozhuang_black.png"
+        ],
+        "roi": [
+            1077,
+            245,
+            203,
+            151
+        ],
+        "action": "Click",
+        "doc": "进入，开始刀装日课，next,zhizuodaozhuang",
+        "next": "daozhuangjieti"
+    },
+    "daozhuangjieti": {
+        "roi": [
+            47,
+            190,
+            136,
+            236
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\daozhuang\\daozhuangjieti.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "daozhuangzhongshang",
+            "daozhuangjieshu"
+        ]
+    },
+    "daozhuangzhongshang": {
+        "roi": [
+            102,
+            61,
+            1001,
+            655
+        ],
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\daozhuang\\zhong.png",
+            "丸内事务\\daozhuang\\shang.png"
+        ],
+        "target_offset": [
+            294,
+            18,
+            -102,
+            18
+        ],
+        "action": "Click",
+        "next": [
+            "quanxuan",
+            "daozhuangzhongshang",
+            "daozhuangjieti_red"
+        ]
+    },
+    "quanxuan": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\daozhuang\\quanxuan.png",
+        "action": "Click",
+        "roi": [
+            102,
+            61,
+            1001,
+            655
+        ],
+        "next": [
+            "quanxuan",
+            "daozhuangzhongshang",
+            "daozhuangjieti_red"
+        ]
+    },
+    "daozhuangjieti_red": {
+        "roi": [
+            863,
+            589,
+            235,
+            131
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\daozhuang\\daozhuangjieti_red.png",
+        "action": "Click",
+        "next": "daozhuangjietiqueding"
+    },
+    "daozhuangjietiqueding": {
+        "roi": [
+            373,
+            457,
+            275,
+            143
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\daozhuang\\daozhuangjittiqueding.png",
+        "action": "Click",
+        "post_delay": 200,
+        "next": [
+            "daozhuangzhongshang",
+            "daozhuangjieshu"
+        ]
+    },
+    "daozhuangjieshu": {
+        "next": [
+            "duandaorike"
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "Close_djlw": {
+        "action": "StopApp",
+        "package": "com.youzu.djlw.bili"
+    }
+}

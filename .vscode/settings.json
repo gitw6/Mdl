@@ -29,5 +29,6 @@
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
-    }
+    },
+    "typescript.locale": "zh-CN"
 }

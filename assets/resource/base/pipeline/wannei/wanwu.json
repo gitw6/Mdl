@@ -1,0 +1,92 @@
+{
+    "wanwurike": {
+        "doc": "领取万屋奖励，奖励的roi可能因为活动改变，到时候加到数组中",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\wanwu\\qiehuan.png",
+            "丸内事务\\wanwu\\mulu.png"
+        ],
+        "roi": [
+            1065,
+            0,
+            215,
+            148
+        ],
+        "action": "Click",
+        "post_delay": 300,
+        "next": [
+            "wanwu",
+            "wanwurike"
+        ]
+    },
+    "wanwu": {
+        "recognition": "TemplateMatch",
+        "post_delay": 400,
+        "roi": [
+            1077,
+            246,
+            203,
+            151
+        ],
+        "template": [
+            "丸内事务\\wanwu\\wanwu.png",
+            "丸内事务\\wanwu\\wanwu_black.png"
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "lingqu",
+            "qiehuan2"
+        ]
+    },
+    "lingqu": {
+        "doc": "领取按钮暂定为竖式，如为横式再改roi范围",
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\wanwu\\lingqu.png",
+        "threshold": 0.9,
+        "roi": [
+            390,
+            218,
+            253,
+            319
+        ],
+        "action": "Click",
+        "doc": "next,lingqu2",
+        "next": [
+            "lingqu2"
+        ]
+    },
+    "lingqu2": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\wanwu\\lingqu2.png",
+        "roi": [
+            518,
+            423,
+            248,
+            148
+        ],
+        "action": "Click",
+        "doc": "next,qiehuan2",
+        "post_delay": 400,
+        "next": [
+            "qiehuan2"
+        ]
+    },
+    "qiehuan2": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\wanwu\\qiehuan.png",
+        "roi": [
+            1065,
+            0,
+            215,
+            148
+        ],
+        "action": "Click",
+        "doc": "next,回到本丸等待三队远征归来 biandui,yanlian开始演练，丸外事务",
+        "next": [
+            "yanlianrukou"
+        ]
+    }
+}

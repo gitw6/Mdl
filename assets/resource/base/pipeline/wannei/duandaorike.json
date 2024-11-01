@@ -1,0 +1,218 @@
+{
+    "duandaorike": {
+        "doc": "锻刀日课，锻刀三次，刀解一次 下一大段刀装日课，daozhuang",
+        "doc": "duandaorike,duandao,duandaoanniu,duandaokaishi,duandao3,daojie,daojiexuanze,daojiekaishi",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\duandao\\duandao.png",
+            "丸内事务\\duandao\\duandao_black.png"
+        ],
+        "roi": [
+            1083,
+            178,
+            197,
+            152
+        ],
+        "action": "Click",
+        "next": [
+            "duandao3",
+            "wanchenganniu",
+            "duandaoanniu"
+        ]
+    },
+    "wanchenganniu": {
+        "roi": [
+            382,
+            84,
+            252,
+            600
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\wancheng.png",
+        "next": [
+            "daoweimanle",
+            "wanchenganniu2"
+        ]
+    },
+    "wanchenganniu2": {
+        "roi": [
+            382,
+            84,
+            252,
+            600
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\wancheng.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "naxindao_duandao"
+        ]
+    },
+    "naxindao_duandao": {
+        "roi": [
+            901,
+            525,
+            315,
+            192
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\naxindao.png",
+        "action": "Click",
+        "next": [
+            "wanchenganniu",
+            "duandaojieshu"
+        ]
+    },
+    "daoweimanle": {
+        "roi": [
+            889,
+            26,
+            183,
+            130
+        ],
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\daoweimanle.png",
+        "threshold": 0.9,
+        "next": "daojie3"
+    },
+    "daojie3": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\daojie.png",
+        "roi": [
+            51,
+            187,
+            131,
+            243
+        ],
+        "post_delay": 1000,
+        "action": "Click",
+        "next": [
+            "daojiexuanze3"
+        ]
+    },
+    "daojiexuanze3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\duandao\\daojiexuanze.png"
+        ],
+        "roi": [
+            911,
+            71,
+            184,
+            457
+        ],
+        "action": "Click",
+        "times_limit": 3,
+        "runout_next": "daojiekaishi",
+        "next": "daojiexuanze3"
+    },
+    "duandaoanniu": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\duandaoanniu.png",
+        "action": "Click",
+        "next": "duandaokaishi",
+        "doc": "next,duandaokaishi; times_limit 3,runout_next, 刀解"
+    },
+    "duandaokaishi": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\duandaokaishi.png",
+        "roi": [
+            777,
+            554,
+            294,
+            166
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "duandao3",
+            "duandaoanniu"
+        ],
+        "doc": "next,duandaoanniu"
+    },
+    "duandao3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\duandao\\duandao3.png",
+            "丸内事务\\duandao\\duandao3_1.png"
+        ],
+        "threshold": 0.9,
+        "roi": [
+            339,
+            48,
+            342,
+            672
+        ],
+        "action": "DoNothing",
+        "next": "daojie"
+    },
+    "daojie": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\daojie.png",
+        "roi": [
+            51,
+            187,
+            131,
+            243
+        ],
+        "post_delay": 1000,
+        "action": "Click",
+        "next": [
+            "daojiexuanze"
+        ]
+    },
+    "daojiexuanze": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\daojiexuanze.png",
+        "roi": [
+            910,
+            74,
+            185,
+            351
+        ],
+        "action": "Click",
+        "next": "daojiekaishi"
+    },
+    "daojiekaishi": {
+        "recognition": "TemplateMatch",
+        "template": "丸内事务\\duandao\\daojiekaishi.png",
+        "action": "Click",
+        "roi": [
+            866,
+            592,
+            230,
+            128
+        ],
+        "next": "duandaojieshu",
+        "doc": "锻刀刀解完成，开始刀装日课 daozhuang",
+        "doc": "next,daozhuang"
+    },
+    "duandaojieshu": {
+        "post_delay": 300,
+        "next": [
+            "daozhuangrike"
+        ]
+    },
+    "duandao": {
+        "doc": "暂无用，自动抽卡太费资源还是不开发吧",
+        "recognition": "TemplateMatch",
+        "template": [
+            "丸内事务\\duandao\\duandao_zuo.png"
+        ],
+        "roi": [
+            52,
+            19,
+            134,
+            216
+        ],
+        "action": "Click",
+        "next": [
+            "wanchenganniu"
+        ]
+    }
+}
