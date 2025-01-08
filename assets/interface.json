@@ -10,8 +10,9 @@
             "win32": {
 
                
-                "class_regex": ".*",
-                "window_regex": "Visual Studio"
+                "method": "Search",
+                "class_name": ".*",
+                "window_name": "Visual Studio"
 
             }
         }
