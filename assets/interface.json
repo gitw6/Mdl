@@ -8,9 +8,11 @@
             "name": "桌面端",
             "type": "Win32",
             "win32": {
-                "method": "Search",
-                "class_name": ".*",
-                "window_name": "Visual Studio"
+
+               
+                "class_regex": ".*",
+                "window_regex": "Visual Studio"
+
             }
         }
     ],
@@ -18,19 +20,24 @@
         {
             "name": "官服",
             "path": [
+
                 "{PROJECT_DIR}/resource/base"
+
             ]
         },
         {
             "name": "B 服",
             "path": [
+
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/bilibili"
+
             ]
         }
     ],
     "task": [
         {
+
             "name": "打开游戏",
             "entry": "StartUp"
         },
@@ -406,7 +413,9 @@
                         }
                     }
                 },
+           
                 {
+
                     "name": "岩融/日本号搜索",
                     "param": {
                         "zhankuorukou": {
@@ -1024,11 +1033,12 @@
                                 "zhongshangchuzhenjingao",
                                 "jikechuzhen3"
                             ]
-                        }
-                    }
-                }
+        
+                }}}
             ]
         }
+
        
     }
 }
+
