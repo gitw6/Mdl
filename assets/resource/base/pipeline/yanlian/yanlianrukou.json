@@ -7,11 +7,13 @@
     "yanlianjieshu": {
         "doc": "刷检非编队",
         "roi": [
-            789,
-            437,
-            131,
-            141
+            0,
+            3,
+            177,
+            278
         ],
+        "recognition": "TemplateMatch",
+        "template": "演练\\yanlianjieshu.png",
         "action": "Click",
         "next": [
             "bianduij"

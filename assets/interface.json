@@ -133,9 +133,6 @@
                     "next": [
                         "backhome"
                     ]
-                },
-                "backhome": {
-                    "next": []
                 }
             }
         },
@@ -152,13 +149,13 @@
                 "shuajianfeijieshu": {
                     "doc": "默认刷到检非后停止",
                     "next": [
-                        "backhome"
+                        "shuajianfeijieshu1"
                     ]
                 }
             }
         },
         {
-            "name": "编辑记录4队到3队",
+            "name": "4to3",
             "entry": "bianduij",
             "param": {
                 "jianfeishi": {
@@ -172,6 +169,12 @@
             "param": {
                 "yuanzhengjinxingzhong": {
                     "next": "jianfeichuzhen"
+                },
+                "shuajianfeijieshu": {
+                    "doc": "默认刷到检非后停止",
+                    "next": [
+                        "shuajianfeijieshu1"
+                    ]
                 }
             }
         },
@@ -211,14 +214,31 @@
             ]
         },
         {
-            "name": "活动：战扩",
+            "name": "活动：战扩-搜索",
             "entry": "huodongchuzhen",
+            "doc": "默认重伤回城后修复自动使用加速符,刀装打掉了回城就结束",
             "option": [
                 "战扩地图选择"
             ],
             "param": {
                 "huodongchuzhen1": {
                     "next": "zhankuorukou"
+                },
+                "zhongshangchuzhenjingao": {
+                    "next": [
+                        "zidongxiufu"
+                    ]
+                },
+                "xiufubackhome": {
+                    "next": [
+                        "yuanzhengyingjie",
+                        "yuanzhengjinxingzhong"
+                    ]
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": [
+                        "huodongchuzhen"
+                    ]
                 }
             }
         },
@@ -230,10 +250,37 @@
             ],
             "param": {
                 "huodongchuzhen1": {
+                    "doc": "地下城活动不返回本丸可以一直刷,唯一缺点为真实伤害,所以yuanzhengjinxingzhong可以不设置",
                     "next": "dixiarukou"
+                }
+            }
+        },
+        {
+            "name": "活动:联队战-暂时为海边",
+            "entry": "huodongchuzhen",
+            "option": [
+                "是否补充令牌-联队战",
+                "联队战-难度选择",
+                "补充几个"
+            ],
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "lianduirukou"
                 },
                 "yuanzhengjinxingzhong": {
-                    "next": []
+                    "next": [
+                        "huodongchuzhen",
+                        "yuanzhengyingjie"
+                    ]
+                },
+                "huzhizhu": {
+                    "next": [
+                        "huzhizhu",
+                        "zhandouzhongl",
+                        "zhandoujieguol",
+                        "jileishujiangli",
+                        "lianduia4"
+                    ]
                 }
             }
         },
@@ -253,68 +300,42 @@
             }
         },
         {
-            "name": "秘宝出错-剩余多回",
-            "entry": "shengyuduohuim",
-            "param": {
-                "huodongchuzhen1": {
-                    "next": "mibaorukou"
-                },
-                "yuanzhengjinxingzhong": {
-                    "next": "huodongchuzhen"
-                },
-                "jikechuzhen3": {
-                    "next": [
-                        "buchonglingpai",
-                        "shuatum",
-                        "zhandouzhongm",
-                        "mibaochuzhenqueren",
-                        "team_select3a3",
-                        "jikechuzhen3",
-                        "zhengbeidaozhuangzhankuo",
-                        "zhongshangchuzhenjingao"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "秘宝出错-战斗结果继续",
-            "entry": "zhandoujieguom",
-            "param": {
-                "huodongchuzhen1": {
-                    "next": "mibaorukou"
-                },
-                "yuanzhengjinxingzhong": {
-                    "next": "huodongchuzhen"
-                },
-                "jikechuzhen3": {
-                    "next": [
-                        "buchonglingpai",
-                        "shuatum",
-                        "zhandouzhongm",
-                        "mibaochuzhenqueren",
-                        "team_select3a3",
-                        "jikechuzhen3",
-                        "zhengbeidaozhuangzhankuo",
-                        "zhongshangchuzhenjingao"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "编辑记录二队到三队",
+            "name": "2to3",
             "entry": "bianduiact2to3"
         },
         {
+            "name": "3to3",
+            "entry": "shuiqianyuanzhengbiandui",
+            "param": {
+                "shuiqianbianji3to3shi": {
+                    "next": []
+                }
+            }
+        },
+        {
             "name": "自动修复-重伤中伤",
-            "entry": "zidongxiufu"
+            "entry": "zidongxiufu",
+            "option": [
+                "是否使用加速符修复",
+                "是否优先修复重伤中伤"
+            ]
         },
         {
             "name": "三队编队清零,自动编队刷花,极化未极化自选",
             "entry": "bianduiy",
             "param": {
-                "zhuanbbeidaozhuangwanbi": {
-                    "next": "shuayinghua",
+                "zhuanbeidaozhuangwanbi": {
+                    "next": [
+                        "daozhuangempty",
+                        "zhuanbeidaozhuangwanbi",
+                        "shuayinghua"
+                    ],
                     "doc": "运行到装备刀装完毕的一定是疲劳度不满的"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": [
+                        "bianduiy"
+                    ]
                 }
             },
             "option": [
@@ -378,7 +399,7 @@
         "战扩地图选择": {
             "cases": [
                 {
-                    "name": "石切丸搜索",
+                    "name": "石切丸/巴形薙刀搜索",
                     "param": {
                         "zhankuorukou": {
                             "next": "a1"
@@ -386,7 +407,7 @@
                     }
                 },
                 {
-                    "name": "岩融搜索",
+                    "name": "岩融/日本号搜索",
                     "param": {
                         "zhankuorukou": {
                             "next": "a2"
@@ -394,7 +415,7 @@
                     }
                 },
                 {
-                    "name": "大般若长光搜索",
+                    "name": "大般若长光/太阁左文字搜索",
                     "param": {
                         "zhankuorukou": {
                             "next": "a3"
@@ -402,7 +423,7 @@
                     }
                 },
                 {
-                    "name": "骚速剑搜索",
+                    "name": "骚速剑/南泉一文字搜索",
                     "param": {
                         "zhankuorukou": {
                             "next": "a4"
@@ -495,6 +516,95 @@
                                 "chapter2_enter",
                                 "putongyouh",
                                 "putongyou"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否打检非": {
+            "cases": [
+                {
+                    "name": "不打",
+                    "param": {
+                        "jianfeichuxianp": {
+                            "next": "Close_djlw"
+                        }
+                    }
+                },
+                {
+                    "name": "打",
+                    "param": {
+                        "jianfeichuxianp": {
+                            "next": [
+                                "zhandouzhongp",
+                                "zhandoujieguop"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否优先修复重伤中伤": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "xiufugongfang": {
+                            "next": [
+                                "shaixuanzhongshangchengdu",
+                                "shaixuanzhong"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "xiufugongfang": {
+                            "next": [
+                                "xiufuxuanze",
+                                "xiufujieshu"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否使用加速符修复": {
+            "cases": [
+                {
+                    "name": "是",
+                    "param": {
+                        "xiufukaishi": {
+                            "next": [
+                                "xiufugongfang",
+                                "xiufujiasu"
+                            ]
+                        },
+                        "zidongxiufu": {
+                            "next": [
+                                "xiufugongfang",
+                                "xiufujiasu",
+                                "xiufubackhome"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "否",
+                    "param": {
+                        "xiufukaishi": {
+                            "doc": "不使用加速符修复,且修复位占满后暂定修复任务完成",
+                            "next": [
+                                "xiufugongfang",
+                                "xiufubackhome"
+                            ]
+                        },
+                        "zidongxiufu": {
+                            "next": [
+                                "xiufugongfang",
+                                "xiufubackhome"
                             ]
                         }
                     }
@@ -685,6 +795,42 @@
                 }
             ]
         },
+        "联队战-难度选择": {
+            "cases": [
+                {
+                    "name": "易-图一",
+                    "param": {
+                        "lianduirukou": {
+                            "next": "lianduia1"
+                        }
+                    }
+                },
+                {
+                    "name": "普-图二",
+                    "param": {
+                        "lianduirukou": {
+                            "next": "lianduia2"
+                        }
+                    }
+                },
+                {
+                    "name": "难-图三",
+                    "param": {
+                        "lianduirukou": {
+                            "next": "lianduia3"
+                        }
+                    }
+                },
+                {
+                    "name": "超难-图四",
+                    "param": {
+                        "lianduirukou": {
+                            "next": "lianduia4"
+                        }
+                    }
+                }
+            ]
+        },
         "*常": {
             "cases": [
                 {
@@ -760,9 +906,11 @@
                                 "shuatuj",
                                 "zhandouzhongj",
                                 "jianghuchuzhenqueren",
-                                "jikechuzhen3",
                                 "zhengbeidaozhuangzhankuo",
-                                "zhongshangchuzhenjingao"
+                                "zhongshangchuzhenjingao",
+                                "jikechuzhen3",
+                                "team_select3a3"
+                                
                             ]
                         }
                     }
@@ -776,9 +924,67 @@
                                 "shuatuj",
                                 "zhandouzhongj",
                                 "jianghuchuzhenqueren",
-                                "jikechuzhen3",
                                 "zhengbeidaozhuangzhankuo",
-                                "zhongshangchuzhenjingao"
+                                "zhongshangchuzhenjingao",
+                                "jikechuzhen3",
+                                "team_select3a3"
+                                
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "是否补充令牌-联队战": {
+            "cases": [
+                {
+                    "name": "小判消耗",
+                    "param": {
+                        "jikechuzhen3": {
+                            "next": [
+                                "buchonglingpai",
+                                "zhandouzhongl",
+                                "lianduizhanchuzhenqueren",
+                                "team_select3a3",
+                                "jikechuzhen3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不补充",
+                    "param": {
+                        "jikechuzhen3": {
+                            "next": [
+                                "quxiaolingpai",
+                                "zhandouzhongl",
+                                "lianduizhanchuzhenqueren",
+                                "team_select3a3",
+                                "jikechuzhen3"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "补充几个": {
+            "cases": [
+                {
+                    "name": "补充1个,默认,联队战节省时间,其他均默认1个",
+                    "param": {
+                        "buchonglingpai": {
+                            "next": [
+                                "buchong1ge"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "补充3个",
+                    "param": {
+                        "buchonglingpai": {
+                            "next": [
+                                "buchong3ge"
                             ]
                         }
                     }
@@ -797,9 +1003,9 @@
                                 "zhandouzhongm",
                                 "mibaochuzhenqueren",
                                 "team_select3a3",
-                                "jikechuzhen3",
                                 "zhengbeidaozhuangzhankuo",
-                                "zhongshangchuzhenjingao"
+                                "zhongshangchuzhenjingao",
+                                "jikechuzhen3"
                             ]
                         }
                     }
@@ -814,37 +1020,15 @@
                                 "zhandouzhongm",
                                 "mibaochuzhenqueren",
                                 "team_select3a3",
-                                "jikechuzhen3",
                                 "zhengbeidaozhuangzhankuo",
-                                "zhongshangchuzhenjingao"
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        "是否打检非": {
-            "cases": [
-                {
-                    "name": "不打",
-                    "param": {
-                        "jianfeichuxianp": {
-                            "next": "Close_djlw"
-                        }
-                    }
-                },
-                {
-                    "name": "打",
-                    "param": {
-                        "jianfeichuxianp": {
-                            "next": [
-                                "zhandouzhongp",
-                                "zhandoujieguop"
+                                "zhongshangchuzhenjingao",
+                                "jikechuzhen3"
                             ]
                         }
                     }
                 }
             ]
         }
+       
     }
 }

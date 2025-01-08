@@ -1,13 +1,27 @@
 {
     "neifanxia1": {
-        "roi": [
-            1120,
-            562,
-            160,
-            158
-        ],
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\neifan\\neifanxia.png",
+        "template": [
+            "startup\\yuanzhengdiqu.png",
+            "丸内事务\\neifan\\neifan1.png",
+            "丸内事务\\neifan\\neifan2.png",
+            "丸内事务\\neifan\\neifan3.png"
+        ],
+        "roi": [
+            0,
+            0,
+            345,
+            421
+        ],
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "target": [
+            702,
+            548,
+            169,
+            145
+        ],
         "action": "Click",
         "next": [
             "neifanxia1",
@@ -34,21 +48,25 @@
     },
     "neifan": {
         "roi": [
-            1096,
-            443,
-            184,
-            159
+            1045,
+            438,
+            235,
+            169
         ],
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\neifan\\neifan.png",
+        "template": ["丸内事务\\neifan\\neifann.png"],
         "action": "Click",
         "post_wait_freezes": {
             "time": 300
         },
-        "post_delay": 500,
+        "threshold":0.85,
+        "post_delay": 1000,
+        "timeout": 3000,
+        "timeout_next": [
+            "yuanzhengyingjiejieshu1"
+        ],
         "next": [
-            "feiliaoxuanze",
-            "wanwurike"
+            "feiliaoxuanze"
         ]
     },
     "feiliaoxuanze": {
@@ -112,19 +130,29 @@
         "next": "neifanxia2"
     },
     "neifanxia2": {
-        "roi": [
-            1120,
-            562,
-            160,
-            158
-        ],
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\neifan\\neifanxia.png",
+        "template": [
+            "丸内事务\\neifan\\neifan1.png",
+            "丸内事务\\neifan\\neifan2.png",
+            "丸内事务\\neifan\\neifan3.png"
+        ],
+        "roi": [
+            0,
+            0,
+            345,
+            421
+        ],
+        "target": [
+            702,
+            548,
+            169,
+            145
+        ],
         "action": "Click",
         "next": [
             "neifanxia2",
             "closeannouncement",
-            "backhome"
+            "yuanzhengyingjiejieshu1"
         ]
     }
 }

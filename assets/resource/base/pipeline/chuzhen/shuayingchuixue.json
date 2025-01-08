@@ -11,7 +11,11 @@
             152
         ],
         "action": "Click",
-        "next": "shuayinghua1"
+        "next": [
+            "shuayinghua1",
+            "yuanzhengyingjie" ,
+            "shuayinghua"
+        ]
     },
     "shuayinghua1": {
         "recognition": "TemplateMatch",
@@ -217,10 +221,10 @@
         "next": [
             "jixujinjuny",
             "shuatuy",
+            "naxindaoy",
             "zhandoujieguoy",
             "bianduiy",
-            "yuanzhengyingjie",
-            "naxindaoy"
+            "yuanzhengyingjie"
         ]
     },
     "naxindaoy": {
@@ -233,9 +237,9 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\naxindao.png",
         "action": "Click",
-        "post_delay": 200,
         "next": [
             "jixujinjuny",
+            "naxindaoy",
             "bianduiy",
             "yuanzhengyingjie"
         ]
@@ -463,6 +467,7 @@
             130,
             130
         ],
+        "post_delay": 500,
         "action": "DoNothing",
         "next": [
             "tihuan5_1",
@@ -490,16 +495,58 @@
     },
     "tihuan5_1": {
         "doc": "筛选不是修复和远征状态的刀剑,极化右侧有五瓣樱,未极化暂时没有识别方法",
+        "doc": "[290,64,166,637]",
         "doc": "[302,541,143,159],[299,451,146,147],[303,355,147,152],[ 298, 260,149,150],[298,168,149,149],[302,72, 144,147]",
         "roi": [
-            290,
-            64,
-            166,
-            637
+            [
+                302,
+                541,
+                143,
+                159
+            ],
+            [
+                299,
+                451,
+                146,
+                147
+            ],
+            [
+                303,
+                355,
+                147,
+                152
+            ],
+            [
+                298,
+                260,
+                149,
+                150
+            ],
+            [
+                298,
+                168,
+                149,
+                149
+            ],
+            [
+                302,
+                72,
+                144,
+                147
+            ]
         ],
+        "pre_delay": 300,
+        "pre_wait_freezes": {
+            "time": 200
+        },
+        "post_delay": 500,
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\biandui\\wubanying.png",
-        "threshold": 0.4,
+        "template": [
+            "丸内事务\\biandui\\wubanying.png",
+            "丸内事务\\biandui\\wubanying1.png",
+            "丸内事务\\biandui\\wubanying2.png"
+    ],
+       "threshold":0.41,
         "green_mask": true,
         "target_offset": [
             613,
@@ -610,9 +657,9 @@
         "recognition": "TemplateMatch",
         "template": "丸内事务\\biandui\\zidongzhuangbeidaozhuang.png",
         "action": "Click",
-        "next": "zhuanbbeidaozhuangwanbi"
+        "next": "zhuanbeidaozhuangwanbi"
     },
-    "zhuanbbeidaozhuangwanbi": {
+    "zhuanbeidaozhuangwanbi": {
         "recognition": "TemplateMatch",
         "template": "丸内事务\\biandui\\daozhuangwanbi.png",
         "target": [

@@ -408,7 +408,7 @@
         "next": "shuiqianhuadaodierye"
     },
     "shuiqianhuadaodierye": {
-        "doc": "编辑二队到三队",
+        "doc": "编辑3队到三队",
         "action": "Swipe",
         "begin": [
             781,
@@ -426,7 +426,10 @@
         "next": "shuiqianhuadaodierye",
         "post_delay": 500,
         "times_limit": 2,
-        "runout_next": "querenhuadaodisanye"
+        "runout_next": [
+            "querenhuadaodisanye",
+            "shuiqianhuadaodierye"
+        ]
     },
     "querenhuadaodisanye": {
         "roi": [
@@ -479,7 +482,11 @@
         ],
         "action": "Click",
         "doc": "next,biandui2",
-        "next": "bianduiy1"
+        "next": [
+            "bianduiy1",
+            "yuanzhengyingjie",
+            "bianduiy"
+        ]
     },
     "bianduiy1": {
         "doc": "next,bianduiy2;next,查看疲劳度",

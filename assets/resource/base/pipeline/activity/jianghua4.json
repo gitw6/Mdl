@@ -49,7 +49,7 @@
             "team_select3a3"
         ]
     },
-       "quxiaolingpai": {
+    "quxiaolingpai": {
         "roi": [
             601,
             367,
@@ -86,6 +86,20 @@
         ],
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\jianghu\\a4\\buchong1ge.png",
+        "action": "Click",
+        "next": [
+            "buchongqueren"
+        ]
+    },
+    "buchong3ge": {
+        "roi": [
+            513,
+            350,
+            259,
+            191
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\jianghu\\a4\\buchong3ge.png",
         "action": "Click",
         "next": [
             "buchongqueren"
@@ -247,22 +261,17 @@
         ],
         "action": "Click",
         "post_wait_freezes": {
-            "time": 1
+            "time": 100
         },
         "next": [
-            "huifucishu",
             "zhandoujieguoj",
+            "huifucishu",
             "shengyuduohui",
             "huodongchuzhen"
-        ]
+        ],
+        "timeout_next": []
     },
     "huifucishu": {
-        "roi": [
-            0,
-            0,
-            1280,
-            720
-        ],
         "target": [
             1073,
             579,
@@ -274,8 +283,8 @@
         "action": "Click",
         "green_mask": true,
         "next": [
-            "huifucishu",
             "shengyuduohui",
+            "huifucishu",
             "huodongchuzhen"
         ]
     },
@@ -340,7 +349,8 @@
         "action": "Click",
         "green_mask": true,
         "next": [
-            "huodongchuzhen"
+            "huodongchuzhen",
+            "jianghuzongjie"
         ]
     },
     "shengyuduohui": {

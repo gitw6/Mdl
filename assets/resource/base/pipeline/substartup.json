@@ -46,7 +46,7 @@
             "time": 200
         },
         "next": [
-            "远征迎接日课",
+            "远征迎接",
             "closegai"
         ]
     },
@@ -62,11 +62,13 @@
         "action": "Click",
         "next": [
             "closegai",
+            "yuanzhengyingjie",
             "neifanxia1",
-            "yuanzhengjinxingzhong",
             "yuanzheng1dui",
             "yuanzheng2dui",
-            "yuanzheng4dui"
+            "yuanzheng4dui",
+            "neifan",
+            "yuanzhengjinxingzhong"
         ]
     }
 }

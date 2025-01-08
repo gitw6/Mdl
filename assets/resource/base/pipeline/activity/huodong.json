@@ -10,7 +10,11 @@
             152
         ],
         "action": "Click",
-        "next": "huodongchuzhen1"
+        "next": [
+            "huodongchuzhen1",
+            "yuanzhengyingjie",
+            "huodongchuzhen"
+        ]
     },
     "huodongchuzhen1": {
         "recognition": "TemplateMatch",
@@ -28,11 +32,12 @@
         "action": "Click",
         "next_doc": "set in code.",
         "next": [
-            "mibaorukou"
+            "mibaorukou",
+            "jianghurukou"
         ]
     },
     "team_select3a3": {
-        "doc": "江户城部队选择",
+        "doc": "江户城部队选择,活动虚拟伤害使用",
         "roi": [
             137,
             339,
@@ -51,7 +56,7 @@
         ]
     },
     "jikechuzhen3": {
-        "doc": "江户城出阵确认,使用小判",
+        "doc": "江户城出阵确认,使用小判,虚拟伤害",
         "recognition": "TemplateMatch",
         "roi": [
             782,
@@ -60,16 +65,17 @@
             171
         ],
         "template": "出阵\\jiekchuzhen.png",
-        "threshold": 0.9,
+        "threshold": 0.95,
         "action": "Click",
         "post_delay": 500,
         "next": [
             "buchonglingpai",
-            "shuatum",
-            "zhandouzhongm",
-            "mibaochuzhenqueren",
+            "shuatuj",
+            "zhandouzhongj",
+            "jianghuchuzhenqueren",
+            "zhandouzhongl",
+            "lianduizhanchuzhenqueren",
             "team_select3a3",
-            "jikechuzhen3",
             "zhengbeidaozhuangzhankuo",
             "zhongshangchuzhenjingao"
         ]

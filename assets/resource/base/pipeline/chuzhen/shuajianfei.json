@@ -11,7 +11,11 @@
             152
         ],
         "action": "Click",
-        "next": "jianfeichuzhen1"
+        "next": [
+            "jianfeichuzhen1",
+            "yuanzhengyingjie",
+            "jianfeichuzhen"
+        ]
     },
     "jianfeichuzhen1": {
         "recognition": "TemplateMatch",
@@ -154,7 +158,9 @@
             "suodishibai",
             "zhandouzhong",
             "zhandoujieguo",
-            "shuatu"
+            "shuatu",
+            "yuanzhengyingjie",
+            "yuanzhengjinxingzhong"
         ]
     },
     "jianfeichuxian": {
@@ -383,7 +389,11 @@
         ]
     },
     "shuajianfeijieshu": {
-        "doc": "刷到检非才执行"
+        "doc": "刷到检非才执行",
+        "post_delay": 800,
+        "next": [
+            "shuajianfeijieshu1"
+        ]
     },
     "shuajianfeijieshu1": {
         "doc": "刷到资源点或王点后回本丸执行",
@@ -395,11 +405,10 @@
         },
         "next": [
             "yuanzhengyingjie",
-            "yuanzhengjinxingzhong",
             "yuanzheng1dui",
             "yuanzheng2dui",
             "yuanzheng4dui",
-            "neifanxia1"
+            "homeflag"
         ]
     },
     "zhongshangjinggao": {

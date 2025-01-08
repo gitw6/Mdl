@@ -1,0 +1,234 @@
+{
+    "lianduirukou": {
+        "roi": [
+            442,
+            147,
+            413,
+            182
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\lianduizhan\\lianduizhanrukou.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1
+        },
+        "next_doc": "Set in code.",
+        "next": [
+            "a4"
+        ]
+    },
+    "lianduia1": {
+        "roi": [
+            117,
+            220,
+            187,
+            145
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "lianduia1",
+            "jikechuzhen3",
+            "team_select3a3"
+        ]
+    },
+    "lianduia2": {
+        "roi": [
+            446,
+            218,
+            185,
+            144
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "lianduia2",
+            "jikechuzhen3",
+            "team_select3a3"
+        ]
+    },
+    "lianduia3": {
+        "roi": [
+            122,
+            368,
+            178,
+            145
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png"
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "next": [
+            "lianduia3",
+            "jikechuzhen3",
+            "team_select3a3"
+        ]
+    },
+    "lianduia4": {
+        "roi": [
+            439,
+            361,
+            194,
+            150
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_2.png"
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "post_wait_freezes": {
+            "time": 200
+        },
+        "next": [
+            "jikechuzhen3",
+            "team_select3a3",
+            "lianduia4"
+        ]
+    },
+    "lianduizhanchuzhenqueren": {
+        "roi": [
+            483,
+            514,
+            311,
+            150
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\dixiachuzhenqueren.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "post_delay": 1000,
+        "next": [
+            "zhandouzhongl",
+            "zhandoujieguol"
+        ]
+    },
+    "zhandouzhongl": {
+        "roi": [
+            819,
+            0,
+            188,
+            139
+        ],
+        "doc": "roi微调,活动",
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\zhandouzhong.png",
+            "出阵\\activity\\dixia\\zhandouzhong.png"
+        ],
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "huzhizhu",
+            "jixujinjunl",
+            "zhandouzhongl",
+            "zhandoujieguol"
+        ]
+    },
+    "jixujinjunl": {
+        "doc": "默认继续战斗,不同敌刀会不会造成识别失败,中途选择",
+        "roi": [
+            716,
+            177,
+            264,
+            262
+        ],
+        "recognition": "OCR",
+        "expected": "战斗",
+        "action": "Click",
+        "next": [
+            "zhandouzhongl"
+        ]
+    },
+    "zhandoujieguol": {
+        "doc": "联队战一圈结束总结,有拿新刀选项,之后是积累道具数奖励",
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\zhandoujieguoa.png",
+        "roi": [
+            0,
+            47,
+            151,
+            132
+        ],
+        "target": [
+            702,
+            548,
+            169,
+            145
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 100
+        },
+        "next": [
+            "huzhizhu",
+            "naxindaol",
+            "jileishujiangli",
+            "zhandoujieguol"
+        ]
+    },
+    "naxindaol": {
+        "roi": [
+            901,
+            525,
+            315,
+            192
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\naxindao.png",
+        "action": "Click",
+        "next": [
+            "zhandoujieguol",
+            "jileishujiangli",
+            "naxindaol"
+        ]
+    },
+    "jileishujiangli": {
+        "doc": "道具积累数奖励,一圈得到的玉的数量",
+        "roi": [
+            368,
+            18,
+            561,
+            242
+        ],
+        "target": [
+            958,
+            534,
+            159,
+            141
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\lianduizhan\\jileishujiangli.png",
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 150
+        },
+        "next": [
+            "huzhizhu",
+            "jileishujiangli",
+            "lianduia4",
+            "yuanzhengyingjie",
+            "yuanzhengjinxingzhong",
+            "huodongchuzhen",
+            "naxindaol"
+        ]
+    }
+}

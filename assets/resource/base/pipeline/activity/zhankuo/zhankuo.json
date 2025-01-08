@@ -43,11 +43,12 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\zhankuo\\a1.png",
         "roi": [
-            226,
-            232,
-            178,
-            149
+            119,
+            228,
+            338,
+            220
         ],
+        "threshold": 0.4,
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -59,11 +60,12 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\zhankuo\\a2.png",
         "roi": [
-            517,
-            226,
-            180,
-            149
+            432,
+            214,
+            362,
+            237
         ],
+        "threshold": 0.4,
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -75,11 +77,12 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\zhankuo\\a3.png",
         "roi": [
-            298,
-            373,
-            180,
-            155
+            108,
+            363,
+            358,
+            240
         ],
+        "threshold": 0.4,
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -91,11 +94,12 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\zhankuo\\a4.png",
         "roi": [
-            553,
-            379,
-            175,
-            145
+            434,
+            371,
+            402,
+            232
         ],
+        "threshold": 0.4,
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -119,6 +123,10 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
+           
+            "xiufuzhong",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao",
             "jikechuzhena",
             "team_select3a1"
         ]
@@ -140,7 +148,22 @@
             "dixiachuzhenqueren",
             "zhengbeidaozhuangzhankuo",
             "zhongshangchuzhenjingao",
+            "xiufuzhong",
             "team_select3a1"
+        ]
+    },
+    "xiufuzhong": {
+        "roi": [
+            612,
+            587,
+            492,
+            133
+        ],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\xiufuzhong.png",
+        "action": "DoNothing",
+        "next": [
+            "zidongxiufu"
         ]
     },
     "zhongshangchuzhenjingao": {
@@ -246,6 +269,8 @@
         "next": [
             "shoucitongguana",
             "shuatua",
+            "yuanzhengyingjie",
+            "yuanzhengjinxingzhong",
             "huodongchuzhen"
         ]
     },
@@ -264,7 +289,7 @@
         ],
         "action": "DoNothing",
         "post_wait_freezes": {
-            "time": 200
+            "time": 100
         },
         "next": [
             "suodishibaia",
@@ -377,13 +402,14 @@
             260
         ],
         "action": "Click",
-        "times_limit": 1000,
+        "timeout": 20000,
         "post_delay": 1000,
         "next": [
             "shuatua",
-            "zhongshangjinggao"
-        ],
-        "runout_next": "fanhuibenwana1"
+            "zhongshangjinggaoa",
+            "jixuyanlian",
+            "fanhuibenwana1"
+        ]
     },
     "fanhuibenwana1": {
         "recognition": "TemplateMatch",
@@ -394,8 +420,12 @@
             258,
             264
         ],
+        "threshold": 0.4,
         "action": "Click",
-        "next": "fanhuibenwanquerena"
+        "next": [
+            "fanhuibenwanquerena",
+            "fanhuibenwana1"
+        ]
     },
     "fanhuibenwana2": {
         "recognition": "TemplateMatch",

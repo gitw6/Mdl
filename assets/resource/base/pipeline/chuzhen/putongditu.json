@@ -11,7 +11,11 @@
             152
         ],
         "action": "Click",
-        "next": "putongchuzhen1"
+        "next": [
+            "putongchuzhen1",
+            "yuanzhengyingjie",
+            "putongchuzhen"
+        ]
     },
     "putongchuzhen1": {
         "recognition": "TemplateMatch",
@@ -22,7 +26,11 @@
             272
         ],
         "template": "出阵\\chuzhen.png",
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "chapter4_3",
+            "chapter4"
+        ]
     },
     "chapter2": {
         "next": [
@@ -169,7 +177,9 @@
         ]
     },
     "putong2": {
-        "next_doc": "set in code."
+        "next_doc": "set in code.",
+         "next": "chapter4_3"
+
     },
     "putongteam": {
         "recognition": "TemplateMatch",
@@ -221,13 +231,16 @@
             "出阵\\shuatu.png",
             "出阵\\putongtu\\shuatup.png"
         ],
+        "target": [833, 579, 147, 137],
+        "action": "Click",
         "next": [
             "jianfeichuxianp",
             "suodishibaip",
             "zhandouzhongp",
             "zhandoujieguop",
             "shuatup",
-            "putongjieshu"
+            "putongjieshu",
+            "yuanzhengyingjie"
         ]
     },
     "suodishibaip": {
@@ -273,6 +286,7 @@
             "jixujinjunp",
             "naxindaop",
             "putongjieshu",
+            "yuanzhengyingjie",
             "zhandoujieguop"
         ]
     },
@@ -291,6 +305,7 @@
         },
         "next": [
             "jixujinjunp",
+            "yuanzhengyingjie",
             "putongjieshu"
         ]
     },
@@ -304,13 +319,15 @@
             238
         ],
         "action": "Click",
+        "pre_delay": 150,
         "post_wait_freezes": {
-            "time": 1
+            "time": 100
         },
         "next": [
             "shuatup",
             "putongjieshu",
             "zhongshangjinggao",
+            "yuanzhengyingjie",
             "jixujinjunp"
         ]
     },
@@ -332,7 +349,8 @@
             162,
             137
         ],
-        "action": "Click"
+        "action": "Click",
+         "next": "Close_djlw"
     },
     "zhandouzhongp": {
         "recognition": "TemplateMatch",
@@ -362,7 +380,7 @@
         "template": "chuzhen.png",
         "action": "DoNothing",
         "post_wait_freezes": {
-            "time": 200
+            "time": 100
         },
         "next": [
             "yuanzhengyingjie",
@@ -370,7 +388,8 @@
             "yuanzheng1dui",
             "yuanzheng2dui",
             "yuanzheng4dui",
-            "neifanxia1"
+            "neifanxia1",
+            "neifan"
         ]
     },
     "putongyou": {
@@ -405,6 +424,10 @@
             151,
             209,
             172
+        ], "next": [
+            "chapter4_enter",
+            "putongyouh",
+            "putongyou"
         ]
     },
     "putongzuo": {

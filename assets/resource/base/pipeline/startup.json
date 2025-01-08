@@ -86,6 +86,7 @@
             310
         ],
         "action": "DoNothing",
+        "threshold": 0.8,
         "post_wait_freezes": {
             "time": 300
         },
@@ -106,7 +107,6 @@
         ],
         "action": "DoNothing",
         "next": [
-            "yuanzhengyingjiejieshu",
             "close1",
             "close2"
         ]
@@ -120,6 +120,7 @@
             160,
             166
         ],
+        "action": "DoNothing",
         "next": [
             "close1_0",
             "close1_1",
@@ -129,7 +130,7 @@
     "close1_0": {
         "recognition": "TemplateMatch",
         "template": "startup\\close1.png",
-        "threshold": 0.8,
+        "threshold": 0.88,
         "roi": [
             800,
             588,
@@ -144,7 +145,7 @@
     "close1_1": {
         "recognition": "TemplateMatch",
         "template": "startup\\close1_1.png",
-        "threshold": 0.8,
+        "threshold": 0.88,
         "roi": [
             801,
             590,
@@ -164,8 +165,7 @@
             567,
             161,
             153
-        ],
-        "is_sub": true
+        ]
     },
     "lingliwuz": {
         "recognition": "TemplateMatch",
@@ -190,6 +190,7 @@
             176
         ],
         "template": "startup\\lingliwu.png",
+        "threshold": 0.9,
         "action": "Click",
         "next": "lingliwu1"
     },
@@ -217,7 +218,7 @@
             158
         ],
         "next": [
-            "close2",
+            "lingliwuwan",
             "lingliwu1"
         ]
     },
@@ -232,8 +233,11 @@
         ],
         "action": "Click",
         "next": [
-            "closeannouncement",
-            "yuanzhengyingjiejieshu",
+            "close1",
+            "yuanzhengyingjiejieshu"
+        ],
+        "timeout": 30000,
+        "timeout_next": [
             "start_end"
         ]
     },
@@ -322,9 +326,6 @@
             200
         ],
         "action": "Click",
-        "post_wait_freezes": {
-            "time": 200
-        },
         "next": [
             "startgame",
             "远征迎接日课",

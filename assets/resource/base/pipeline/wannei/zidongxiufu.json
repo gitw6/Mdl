@@ -10,22 +10,27 @@
             150
         ],
         "action": "Click",
-        "next": "xiufugongfang"
+        "next": [
+            "xiufujiasu",
+            "xiufugongfang",
+            "xiufubackhome"
+        ]
     },
     "xiufugongfang": {
+        "doc": "默认不筛选重伤程度,不使用加速符,修复位满了返回界面",
         "recognition": "TemplateMatch",
         "template": "出阵\\xiufu\\xiufugongfang.png",
         "doc": "",
         "roi": [
             320,
-            82,
-            359,
-            213
+            48,
+            370,
+            672
         ],
         "action": "Click",
         "next": [
-            "shaixuanzhongshangchengdu",
-            "shaixuanzhong"
+            "xiufuxuanze",
+            "xiufujieshu"
         ]
     },
     "shaixuanzhong": {
@@ -55,7 +60,10 @@
         ],
         "recognition": "TemplateMatch",
         "template": "丸内事务\\xiufu\\xiufukaishi_black.png",
-        "action": "DoNothing"
+        "action": "DoNothing",
+        "next": [
+            "xiufubackhome"
+        ]
     },
     "shaixuanzhongshangchengdu": {
         "doc": "筛选面板打开，修复重伤中伤的刀剑，暂时无法识别编队",
@@ -133,20 +141,32 @@
             174
         ],
         "action": "Click",
+        "post_delay": 500,
         "next": [
+            "xiufujiasu",
             "xiufugongfang",
-            "xiufujiasu"
+            "xiufubackhome"
+        ]
+    },
+    "xiufubackhome": {
+        "recognition": "TemplateMatch",
+        "template": "startup\\backhome.png",
+        "action": "Click",
+        "next": [
+            "yuanzhengyingjie",
+            "start_end"
         ]
     },
     "xiufujiasu": {
         "doc": "暂时定为第四个加速 加速按钮roi[842, 100, 224, 620]改为这个的话四个都会按",
         "roi": [
-            847,
-            544,
-            217,
-            176
+            837,
+            75,
+            232,
+            645
         ],
         "recognition": "TemplateMatch",
+        "threshold": 0.9,
         "template": "丸内事务\\xiufu\\xiufujiasu.png",
         "action": "Click",
         "next": "shiyongjiasufu"

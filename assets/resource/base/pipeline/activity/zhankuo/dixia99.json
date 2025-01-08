@@ -84,6 +84,9 @@
         "action": "Click",
         "post_delay": 300,
         "next": [
+            "xiufuzhong",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao",
             "jikechuzhena",
             "team_select3a2"
         ]
