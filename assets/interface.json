@@ -222,6 +222,16 @@
             ]
         },
         {
+            "name": "活动:夜花夺还作战",
+            "doc":"无令牌,为真伤,需要返回本丸,战斗结果接shoucitongguan",
+            "entry": "huodongchuzhen",
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "yehuarukou"
+                }
+            }
+        },
+        {
             "name": "活动：战扩-搜索",
             "entry": "huodongchuzhen",
             "doc": "默认重伤回城后修复自动使用加速符,刀装打掉了回城就结束",
@@ -524,6 +534,27 @@
                         "putong1": {
                             "next": [
                                 "chapter2_enter",
+                                "putongyouh",
+                                "putongyou"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "4-2 砥石",
+                    "param": {
+                        "putong2": {
+                            "next": "chapter4_2"
+                        },
+                        "putongchuzhen1": {
+                            "next": [
+                                "chapter4_2",
+                                "chapter4"
+                            ]
+                        },
+                        "putong1": {
+                            "next": [
+                                "chapter4_enter",
                                 "putongyouh",
                                 "putongyou"
                             ]

@@ -28,7 +28,7 @@
         "template": "出阵\\chuzhen.png",
         "action": "Click",
         "next": [
-            "chapter4_3",
+            "chapter4_2",
             "chapter4"
         ]
     },
@@ -42,12 +42,7 @@
     "chapter2_enter": {
         "recognition": "TemplateMatch",
         "template": "出阵\\putongtu\\chapter2.png",
-        "roi": [
-            271,
-            151,
-            210,
-            173
-        ],
+        "roi": [130, 147, 731, 183],
         "action": "Click",
         "next": "putong2"
     },
@@ -61,12 +56,7 @@
     "chapter3_enter": {
         "recognition": "TemplateMatch",
         "template": "出阵\\putongtu\\chapter3.png",
-        "roi": [
-            141,
-            152,
-            205,
-            173
-        ],
+        "roi": [130, 147, 731, 183],
         "action": "Click",
         "next": "putong2"
     },
@@ -90,22 +80,46 @@
             "chapter3_3"
         ]
     },
+    "chapter5_3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\putongtu\\5-3.png",
+            "出阵\\putongtu\\5-3-1.png"
+        ],
+        "action": "Click",
+        "threshold": 0.8,
+        "roi":[111, 439, 184, 149],
+        "next": [
+            "jikechuzhen2",
+            "putongteam",
+            "chapter5_3"
+        ]
+    },
+    "chapter5": {
+        "next": [
+            "chapter5_enter",
+            "putong1",
+            "putongzuo"
+        ]
+    },
+    "chapter5_enter": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\putongtu\\chapter5.png",
+        "roi":[130, 147, 731, 183],
+        "action": "Click",
+        "next": "putong2"
+    },
     "chapter4": {
         "next": [
             "chapter4_enter",
             "putong1",
             "putongzuo"
         ]
-    },
+    },                                                  
     "chapter4_enter": {
         "recognition": "TemplateMatch",
         "template": "出阵\\putongtu\\chapter4.png",
-        "roi": [
-            271,
-            150,
-            205,
-            173
-        ],
+        "roi": [130, 147, 731, 183],
         "action": "Click",
         "next": "putong2"
     },
@@ -129,6 +143,21 @@
             "chapter4_3"
         ]
     },
+    "chapter4_2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\putongtu\\4-2.png",
+            "出阵\\putongtu\\4-2-1.png"
+        ],
+        "action": "Click",
+        "threshold": 0.98,
+        "roi": [449, 290, 230, 160],
+        "next": [
+            "jikechuzhen2",
+            "putongteam",
+            "chapter4_2"
+        ]
+    },
     "chapter7": {
         "next": [
             "chapter7_enter",
@@ -137,12 +166,7 @@
         ]
     },
     "chapter7_enter": {
-        "roi": [
-            273,
-            154,
-            205,
-            173
-        ],
+        "roi":[130, 147, 731, 183],
         "recognition": "TemplateMatch",
         "template": "出阵\\putongtu\\chapter7.png",
         "action": "Click",
@@ -178,7 +202,7 @@
     },
     "putong2": {
         "next_doc": "set in code.",
-         "next": "chapter4_3"
+         "next": "chapter4_2"
 
     },
     "putongteam": {
@@ -232,7 +256,7 @@
             "出阵\\putongtu\\shuatup.png"
         ],
         "target": [833, 579, 147, 137],
-        "action": "Click",
+        
         "next": [
             "jianfeichuxianp",
             "suodishibaip",
@@ -285,8 +309,8 @@
         "next": [
             "jixujinjunp",
             "naxindaop",
-            "putongjieshu",
             "yuanzhengyingjie",
+            "putongjieshu",
             "zhandoujieguop"
         ]
     },
@@ -424,7 +448,8 @@
             151,
             209,
             172
-        ], "next": [
+        ],
+         "next": [
             "chapter4_enter",
             "putongyouh",
             "putongyou"

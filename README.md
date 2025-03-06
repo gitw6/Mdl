@@ -9,6 +9,14 @@ tips
 
 新ui上了我也不能打包票多久能改成新ui
 
+##### 下载
+
+https://github.com/gitw6/Mdl/releases
+
+##### 打开
+
+install/maaPiCli.exe
+
 ## 功能列表
 
 1. 打开游戏(点击不再显示公告,不确定是否有内番确认功能,远征迎接但不自动远征,公告查看完毕后会暂停30秒左右)

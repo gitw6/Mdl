@@ -9,12 +9,14 @@
         "recognition": "TemplateMatch",
         "template": [
             "出阵\\activity\\jianghu\\jianghurukou.png",
-            "出阵\\activity\\temingdiaocha\\qingyingjiafu.png"
+            "出阵\\activity\\temingdiaocha\\qingyingjiafu.png",
+            "出阵\\activity\\jianghu\\wenjiutuzuo.png"
         ],
         "action": "Click",
         "next": [
             "jianghua4",
-            "huodongzuo"
+            "huodongzuo",
+            "huodongyou"
         ]
     },
     "huodongzuo": {
@@ -26,6 +28,15 @@
             130,
             191
         ],
+        "action": "Click",
+        "next": [
+            "jianghua4"
+        ]
+    },
+    "huodongyou": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\jianghu\\huodongyou.png",
+        "roi": [965, 63, 135, 197],
         "action": "Click",
         "next": [
             "jianghua4"
@@ -383,7 +394,9 @@
             "dianjidian16",
             "dianjidian17",
             "dianjidian18",
-            "dianjidian19"
+            "dianjidian19",
+            "zhandouzhongj",
+            "zhandoujieguoj"
         ]
     },
     "dianjidian1": {
