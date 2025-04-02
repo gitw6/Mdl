@@ -198,7 +198,7 @@ install/maaPiCli.exe
 
 命令行界面使用方法
 
-| switch controller | 默认win32,其他的我不会用,选择模拟器及端口号    |
+| switch controller | 启动下载有刀剑乱舞的模拟器,1.安卓端;1.auto detect;选择相应的路径端口号    |
 | ----------------- | ---------------------------------------------- |
 | switch resource   | 官服b服选择                                    |
 | add task          | 添加任务到任务列表                             |
