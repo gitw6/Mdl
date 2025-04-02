@@ -11,6 +11,7 @@
             152
         ],
         "action": "Click",
+        "post_wait_freezes":{"time": 200},
         "next": [
             "shuayinghua1",
             "yuanzhengyingjie" ,
@@ -296,7 +297,7 @@
         ],
         "action": "Click",
         "post_delay": 1000,
-        "next": "shuahuaxuanze"
+        "next": ["shuahuaxuanze"]
     },
     "shuahuaxuanze": {
         "roi": [
@@ -313,7 +314,8 @@
         "post_delay": 800,
         "next": [
             "pilaodu1_100",
-            "shuayinghua"
+            "shuayinghua",
+            "shuahuaxuanze"
         ],
         "doc": "可以插一个查看疲劳度,卸载装备,之后再执行替换"
     },
@@ -592,7 +594,7 @@
             665
         ],
         "action": "Click",
-        "next": "shuayinghuadaozhuang"
+        "next": ["shuayinghuadaozhuang","tihuan6"]
     },
     "shuayinghuadaozhuang": {
         "roi": [
@@ -606,7 +608,8 @@
         "doc": "查看疲劳度,满了就停止刷樱花",
         "action": "Click",
         "next": [
-            "pilaodu"
+            "pilaodu",
+            "shuayinghuadaozhuang"
         ]
     },
     "pilaodu": {

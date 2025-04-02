@@ -1,0 +1,99 @@
+{
+    "yehuarukou":{
+        "roi": [
+            442,
+            147,
+            413,
+            182
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+           "出阵\\activity\\yehua\\yehuarukou.png"
+        ],
+        "action": "Click",
+        "next": [
+           "yehuabuduixuanze"
+        ]
+    },
+    "yehuabuduixuanze": {
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\dixia\\buduixuanze.png",
+        "roi": [
+            819,
+            541,
+            252,
+            145
+        ],
+        "action": "Click",
+        "post_delay": 300,
+        "next":[ "team_select3a4","yehuabuduixuanze"]
+    },
+    "team_select3a4": {
+        "doc": "地下城部队选择",
+        "roi": [
+            137,
+            339,
+            139,
+            250
+        ],
+        "recognition": "TemplateMatch",
+        "template": [
+            "出阵\\activity\\zhankuo\\team3.png",
+            "出阵\\activity\\zhankuo\\team3_black.png"
+        ],
+        "action": "Click",
+        "post_delay": 300,
+        "next": [
+            "xiufuzhong",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao",
+            "yhjikechuzhena",
+            "team_select3a4"
+        ]
+    },
+    "yhjikechuzhena": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            782,
+            548,
+            295,
+            171
+        ],
+        "template": "出阵\\jiekchuzhen.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 500,
+        "next": [
+            "shuatua",
+            "yhchuzhenqueren",
+            "zhengbeidaozhuangzhankuo",
+            "zhongshangchuzhenjingao",
+            "xiufuzhong",
+            "team_select3a4"
+        ]
+    },
+    "yhchuzhenqueren": {
+        "roi":  [363, 449, 302, 151],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\yehua\\yhchuzhenqueren.png",
+        "action": "Click",
+        "next": [
+            "yhchuzhenqueren",
+            "shuatua"
+        ]
+    },
+    "yhdachengbaochou":{
+        "recognition": "TemplateMatch",
+        "roi": [502, 44, 279, 155],
+        "template": "出阵\\activity\\yehua\\yhdachengbaochou.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 500,
+        "next": [
+            "yuanzhengyingjie",
+            "huodongchuzhen",
+            "shoucitongguana",
+            "yhdachengbaochou"
+        ]
+    }
+}

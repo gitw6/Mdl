@@ -267,10 +267,12 @@
         "action": "Click",
         "green_mask": true,
         "next": [
-            "shoucitongguana",
+            "jixujinjuna",
             "shuatua",
             "yuanzhengyingjie",
             "yuanzhengjinxingzhong",
+            "yhdachengbaochou",
+            "shoucitongguana",
             "huodongchuzhen"
         ]
     },
@@ -324,9 +326,11 @@
             "jixuyanlian",
             "naxindaoa",
             "yuanzhengyingjie",
+            "huodongchuzhen",
             "huzhizhu",
             "huode",
             "shoucitongguana",
+            "yhdachengbaochou",
             "zhandoujieguoa"
         ]
     },
@@ -345,7 +349,9 @@
             "huode",
             "zhandoujieguoa",
             "jixuyanlian",
-            "huodongchuzhen"
+            "huodongchuzhen",
+            "yhdachengbaochou",
+            "naxindaoa"
         ]
     },
     "jixujinjuna": {

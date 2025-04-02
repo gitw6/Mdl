@@ -222,6 +222,16 @@
             ]
         },
         {
+            "name": "活动:夜花夺还作战",
+            "doc":"无令牌,为真伤,需要返回本丸,战斗结果接shoucitongguan",
+            "entry": "huodongchuzhen",
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "yehuarukou"
+                }
+            }
+        },
+        {
             "name": "活动：战扩-搜索",
             "entry": "huodongchuzhen",
             "doc": "默认重伤回城后修复自动使用加速符,刀装打掉了回城就结束",
@@ -308,6 +318,32 @@
             }
         },
         {
+            "name": "活动:秘宝之里-花牌出错",
+            "entry": "shengyuduohuim",
+           
+            "param": {
+                "huodongchuzhen1": {
+                    "next": "mibaorukou"
+                },
+                "yuanzhengjinxingzhong": {
+                    "next": "huodongchuzhen"
+                },
+                "jikechuzhen3": {
+                    "next": [
+                        "quxiaolingpai",
+                        "shuatum",
+                        "zhandouzhongm","zhandoujieguom",
+                        "mibaochuzhenqueren",
+                        "team_select3a3",
+                        "zhengbeidaozhuangzhankuo",
+                        "zhongshangchuzhenjingao",
+                        "jikechuzhen3"
+                    ]
+        
+                }
+            }
+        },
+        {
             "name": "2to3",
             "entry": "bianduiact2to3"
         },
@@ -316,7 +352,10 @@
             "entry": "shuiqianyuanzhengbiandui",
             "param": {
                 "shuiqianbianji3to3shi": {
-                    "next": []
+                    "next": ["shuiqianbianji3to3shi", "backhome"]
+                },
+                "backhome":{
+                    "next":["backhome","yuanzhengyingjie","start_end"]
                 }
             }
         },
@@ -524,6 +563,27 @@
                         "putong1": {
                             "next": [
                                 "chapter2_enter",
+                                "putongyouh",
+                                "putongyou"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "4-2 砥石",
+                    "param": {
+                        "putong2": {
+                            "next": "chapter4_2"
+                        },
+                        "putongchuzhen1": {
+                            "next": [
+                                "chapter4_2",
+                                "chapter4"
+                            ]
+                        },
+                        "putong1": {
+                            "next": [
+                                "chapter4_enter",
                                 "putongyouh",
                                 "putongyou"
                             ]
@@ -1010,7 +1070,7 @@
                             "next": [
                                 "buchonglingpai",
                                 "shuatum",
-                                "zhandouzhongm",
+                                "zhandouzhongm","zhandoujieguom",
                                 "mibaochuzhenqueren",
                                 "team_select3a3",
                                 "zhengbeidaozhuangzhankuo",
@@ -1027,7 +1087,7 @@
                             "next": [
                                 "quxiaolingpai",
                                 "shuatum",
-                                "zhandouzhongm",
+                                "zhandouzhongm","zhandoujieguom",
                                 "mibaochuzhenqueren",
                                 "team_select3a3",
                                 "zhengbeidaozhuangzhankuo",
@@ -1035,7 +1095,9 @@
                                 "jikechuzhen3"
                             ]
         
-                }}}
+                }
+                }
+            }
             ]
         }
 

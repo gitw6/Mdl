@@ -241,7 +241,9 @@
         "next": [
             "naxindaojf",
             "fanhuibenwan",
-            "zhandoujieguojf"
+            "zhandoujieguojf",
+            "homeflag",
+            "yuanzhengyingjie"
         ]
     },
     "naxindaojf": {
@@ -256,7 +258,10 @@
         "action": "Click",
         "next": [
             "zhandoujieguojf",
-            "shuajianfeijieshu"
+            "shuajianfeijieshu",
+            "naxindaojf",
+            "homeflag",
+            "yuanzhengyingjie"
         ]
     },
     "suodishibai": {

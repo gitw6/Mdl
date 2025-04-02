@@ -9,6 +9,9 @@
         ],
         "action": "Click",
         "template": "出阵\\activity\\mibaozhili\\mibaorukou.png",
+        "post_wait_freezes":{
+            "time": 200
+        },
         "next": [
             "mibaoa4"
         ]
@@ -131,10 +134,10 @@
         },
         "green_mask": true,
         "next": [
-            "xuanpai_cai",
-            "xuanpai_guang",
-            "xuanpai_black",
             "xuanpai_jixu",
+            "xuanpai_cai",
+            "xuanpai_black",
+            "xuanpai_guang",
             "xuanpai_duan",
             "zhandouzhongm"
         ]
@@ -151,8 +154,9 @@
             "出阵\\activity\\mibaozhili\\cai0.png"
         ],
         "green_mask": true,
-        "action": "Click",
+        "action": "Click", "threshold":0.5,
         "next": [
+            "xuanpai_black",
             "xuanpai_guang",
             "zhandouzhongm"
         ]
@@ -188,6 +192,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\mibaozhili\\cai0.png",
             "出阵\\activity\\mibaozhili\\xuanpai_black0.png",
             "出阵\\activity\\mibaozhili\\xuanpai_black1.png",
             "出阵\\activity\\mibaozhili\\xuanpai_black.png"
@@ -224,12 +229,12 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\dixia\\zhandouzhong.png",
             "出阵\\activity\\zhankuo\\zhandouzhonga.png",
-            "出阵\\zhandouzhong.png",
-            "出阵\\activity\\dixia\\zhandouzhong.png"
+            "出阵\\zhandouzhong.png"
         ],
         "post_wait_freezes": {
-            "time": 100
+            "time": 200
         },
         "next": [
             "zhandoujieguom",
@@ -252,7 +257,8 @@
         "next": [
             "shuatum",
             "zhandouzhongm",
-            "zhandoujieguom"
+            "zhandoujieguom",
+            "mibaochuzhenqueren"
         ]
     },
     "zhandoujieguom": {
@@ -297,7 +303,7 @@
             150
         ],
         "next": [
-            "xuanheika1"
+            "xuanheika1","shenglibaochou"
         ]
     },
     "xuanheika1": {
@@ -410,6 +416,7 @@
             "huapai",
             "xuanheika1",
             "shenglibaochou",
+            "zhandoujieguom",
             "naxindaom",
             "jixujinjunm",
             "yuanzhengyingjie",
@@ -434,7 +441,8 @@
             "huapai",
             "shenglibaochou",
             "diaochawanle",
-            "dachengbaochou"
+            "dachengbaochou",
+            "naxindaom"
         ]
     },
     "huapai": {

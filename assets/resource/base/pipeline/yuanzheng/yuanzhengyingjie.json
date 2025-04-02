@@ -66,7 +66,8 @@
         "threshold": 0.9,
         "next": [
             "124zidongyuanzheng",
-            "123zidongyuanzheng"
+            "123zidongyuanzheng",
+            "134zidongyuanzheng"
         ]
     },
     "yuanzheng2dui": {
@@ -134,6 +135,7 @@
         "recognition": "TemplateMatch",
         "template": "startup\\backhome.png",
         "action": "Click",
+        "post_wait_freezes":{"time": 200},
         "next": [
             "yuanzhengjinxingzhong",
             "yuanzheng1dui",

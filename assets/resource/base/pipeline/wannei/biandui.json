@@ -15,7 +15,14 @@
         "action": "Click",
         "post_delay": 1000,
         "doc": "next,biandui2",
-        "next": "biandui2"
+        "next": ["biandui2","biandui_2"]
+    },
+    "biandui_2":{
+        "doc":"编队黑屏等待",
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "next":["biandui2","biandui_2"]
     },
     "biandui2": {
         "doc": "3队演练，先存队伍到2，再演练，再回队伍，再刷城管",
@@ -107,7 +114,13 @@
         "action": "Click",
         "post_delay": 1000,
         "doc": "next,biandui2",
-        "next": "biandui12"
+        "next": ["biandui12","biandui1_2"]
+    },
+    "biandui1_2":{
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "next":["biandui12","biandui1_2"]
     },
     "biandui12": {
         "doc": "3队演练，先存队伍到2，再演练，再回队伍，再刷城管",
@@ -181,7 +194,17 @@
         "doc": "next,biandui2",
         "next": [
             "shuajianfeibiandui",
-            "bianduij"
+            "bianduij",
+            "bianduij_1"
+        ]
+    },
+    "bianduij_1":{
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "next":[
+            "shuajianfeibiandui",
+            "bianduij_1"
         ]
     },
     "shuajianfeibiandui": {
@@ -291,7 +314,16 @@
         ],
         "action": "Click",
         "doc": "next,biandui2",
-        "next": "shuahuodongbianduiact2to3"
+        "next": ["shuahuodongbianduiact2to3","bianjiact2to3_1"]
+    },
+    "bianjiact2to3_1":{
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "next":[
+            "shuahuodongbianduiact2to3",
+            "bianjiact2to3_1"
+        ]
     },
     "shuahuodongbianduiact2to3": {
         "recognition": "TemplateMatch",
@@ -378,7 +410,7 @@
             154
         ],
         "action": "Click",
-        "next": "shuiqianbianduiteam3"
+        "next":[ "shuiqianbianduiteam3","shuiqianyuanzhengbiandui"]
     },
     "shuiqianbianduiteam3": {
         "recognition": "TemplateMatch",
@@ -393,7 +425,7 @@
             245
         ],
         "action": "Click",
-        "next": "shuiqianjiluteam3"
+        "next": ["shuiqianjiluteam3","shuiqianbianduiteam3"]
     },
     "shuiqianjiluteam3": {
         "recognition": "TemplateMatch",
@@ -405,7 +437,7 @@
             223,
             128
         ],
-        "next": "shuiqianhuadaodierye"
+        "next": ["shuiqianhuadaodierye","shuiqianjiluteam3"]
     },
     "shuiqianhuadaodierye": {
         "doc": "编辑3队到三队",
@@ -423,10 +455,12 @@
             103
         ],
         "duration": 1000,
-        "next": "shuiqianhuadaodierye",
+        "next": [
+            "querenhuadaodisanye","shuiqianhuadaodierye"
+        ],
         "post_delay": 500,
-        "times_limit": 2,
-        "runout_next": [
+        "times_limit":2,
+        "runout_next":[
             "querenhuadaodisanye",
             "shuiqianhuadaodierye"
         ]
@@ -439,8 +473,10 @@
             131
         ],
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\biandui\\bianji3dui.png",
-        "next": "shuiqianbianji3to3"
+        "template": "丸内事务\\biandui\\bianji3dui.png" ,
+        "threshold":0.95,
+        
+        "next":["shuiqianbianji3to3","querenhuadaodisanye"]
     },
     "shuiqianbianji3to3": {
         "roi": [
@@ -452,7 +488,7 @@
         "recognition": "TemplateMatch",
         "template": "丸内事务\\biandui\\bianjibudui.png",
         "action": "Click",
-        "next": "shuiqianbianji3to3shi"
+        "next": ["shuiqianbianji3to3shi","shuiqianbianji3to3"]
     },
     "shuiqianbianji3to3shi": {
         "recognition": "TemplateMatch",
@@ -465,7 +501,10 @@
         "template": "丸内事务\\biandui\\jilushi.png",
         "action": "Click",
         "post_delay": 1000,
-        "next": "shuiqianyuanzheng"
+        "next": [
+            "shuiqianyuanzheng",
+            "shuiqianbianji3to3shi"
+        ]
     },
     "bianduiy": {
         "doc": "三队编队清零",
@@ -485,8 +524,17 @@
         "next": [
             "bianduiy1",
             "yuanzhengyingjie",
-            "bianduiy"
+            "bianduiy",
+            "bianduiy_1"
         ]
+    },
+    "bianduiy_1":{
+        "post_wait_freezes":{"time": 200},
+        "next":[
+            "bianduiy1",
+            "yuanzhengyingjie",
+            "bianduiy",
+            "bianduiy_1"]
     },
     "bianduiy1": {
         "doc": "next,bianduiy2;next,查看疲劳度",

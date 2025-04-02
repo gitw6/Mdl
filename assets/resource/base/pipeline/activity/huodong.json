@@ -69,15 +69,14 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "buchonglingpai",
-            "shuatuj",
-            "zhandouzhongj",
-            "jianghuchuzhenqueren",
-            "zhandouzhongl",
-            "lianduizhanchuzhenqueren",
+           "buchonglingpai",
+            "shuatum",
+            "zhandouzhongm","zhandoujieguom",
+            "mibaochuzhenqueren",
             "team_select3a3",
             "zhengbeidaozhuangzhankuo",
-            "zhongshangchuzhenjingao"
+            "zhongshangchuzhenjingao",
+            "jikechuzhen3"
         ]
     }
 }
