@@ -93,9 +93,9 @@
         "action": "Click",
         "post_delay": 800,
         "next": [
-            "jikechuzhen1",
             "jianfei2",
-            "jianfeiteam"
+            "jianfeiteam",
+            "jikechuzhen1"
         ]
     },
     "jianfeiteam": {

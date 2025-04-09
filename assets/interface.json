@@ -40,7 +40,15 @@
         {
 
             "name": "打开游戏",
-            "entry": "StartUp"
+            "entry": "StartUp",
+            "pipeline_override": {
+                "backhome":{
+                    "next":[
+                        "start_end"
+                       
+                    ]
+                }
+            }
         },
         {
             "name": "远征迎接日课和关通知",
@@ -69,7 +77,8 @@
             "param": {
                 "hechengkaishi": {
                     "next": [
-                        "neifan"
+                        "neifan",
+                        "wanwurike"
                     ]
                 },
                 "shuajianfeijieshu": {
