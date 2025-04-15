@@ -86,7 +86,8 @@
         "action": "Click",
         "doc": "next,回到本丸等待三队远征归来 biandui,yanlian开始演练，丸外事务",
         "next": [
-            "yanlianrukou"
+            "yanlianrukou",
+            "qiehuan2"
         ]
     }
 }

@@ -11,8 +11,8 @@
         ],
         "action": "Click",
         "next": [
-            "xiufujiasu",
             "xiufugongfang",
+            "xiufujiasu",
             "xiufubackhome"
         ]
     },
@@ -143,8 +143,8 @@
         "action": "Click",
         "post_delay": 500,
         "next": [
-            "xiufujiasu",
             "xiufugongfang",
+            "xiufujiasu",
             "xiufubackhome"
         ]
     },
@@ -166,7 +166,7 @@
             645
         ],
         "recognition": "TemplateMatch",
-        "threshold": 0.9,
+        "threshold": 0.98,
         "template": "丸内事务\\xiufu\\xiufujiasu.png",
         "action": "Click",
         "next": "shiyongjiasufu"

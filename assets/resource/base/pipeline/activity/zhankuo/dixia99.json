@@ -87,6 +87,7 @@
             "xiufuzhong",
             "zhengbeidaozhuangzhankuo",
             "zhongshangchuzhenjingao",
+            "duizhangzhongshang",
             "jikechuzhena",
             "team_select3a2"
         ]
@@ -134,6 +135,6 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\dixia\\huode.png",
         "action": "Click",
-        "next": "jixujinjuna"
+        "next": ["huzhizhu","jixujinjuna","huode"]
     }
 }

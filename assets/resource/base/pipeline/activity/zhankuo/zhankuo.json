@@ -127,6 +127,7 @@
             "xiufuzhong",
             "zhengbeidaozhuangzhankuo",
             "zhongshangchuzhenjingao",
+            "duizhangzhongshang",
             "jikechuzhena",
             "team_select3a1"
         ]
@@ -183,6 +184,17 @@
         "recognition": "TemplateMatch",
         "template": "出阵\\activity\\zhankuo\\zhongshangchuzhenjingago.png",
         "next": "backhome"
+    },
+    "duizhangzhongshang":{
+        "doc":"队长重伤后自动修复吧,点击返回的话,会出现循环的情况",
+        "roi": [667, 588, 441, 132],
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\zhankuo\\duizhangzhongshang.png",
+        "next":[
+            "zidongxiufu"
+        ]
+        
+
     },
     "zhengbeidaozhuangzhankuo": {
         "roi": [

@@ -779,6 +779,24 @@
                     }
                 },
                 {
+                    "name": "80层,刷白山",
+                    "param": {
+                        "dixiarukou": {
+                            "next": "shiweixia"
+                        },
+                        "shiweixia": {
+                            "next": "shiweixia",
+                            "times_limit": 1,
+                            "runout_next": "geweishang"
+                        },
+                        "geweishang": {
+                            "times_limit": 1,
+                            "next": "geweishang",
+                            "runout_next": "dixiabuduixuanze"
+                        }
+                    }
+                },
+                {
                     "name": "89层,刷白山",
                     "param": {
                         "dixiarukou": {
