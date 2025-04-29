@@ -69,7 +69,7 @@
         ],
         "action": "Click",
         "doc": "next,qiehuan2",
-        "post_delay": 400,
+        "post_delay": 600,
         "next": [
             "qiehuan2"
         ]

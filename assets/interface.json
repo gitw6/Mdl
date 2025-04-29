@@ -597,14 +597,21 @@
                     "param": {
                         "xiufukaishi": {
                             "next": [
-                                "xiufugongfang",
-                                "xiufujiasu"
+                                "xiufujiasu",
+                                "xiufugongfang"
+                            ]
+                        },
+                        "xiufugongfang":{
+                            "next":[
+                                "xiufujiasu",
+                                "xiufuxuanze",
+                                "xiufujieshu"
                             ]
                         },
                         "zidongxiufu": {
                             "next": [
-                                "xiufugongfang",
                                 "xiufujiasu",
+                                "xiufugongfang",
                                 "xiufubackhome"
                             ]
                         }

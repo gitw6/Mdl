@@ -10,9 +10,12 @@
             150
         ],
         "action": "Click",
+        "post_wait_freezes":{
+            "time": 800
+        },
         "next": [
-            "xiufugongfang",
             "xiufujiasu",
+            "xiufugongfang",
             "xiufubackhome"
         ]
     },
@@ -52,14 +55,9 @@
     "xiufujieshu": {
         "doc": "修复结束，修复开始按钮变灰，开始战扩出阵，到时候将代码改到xiufu文件夹,next,huodongchuzhen,",
         "doc": "dixia89,dixia50,zidongxiufu,xunhuan",
-        "roi": [
-            700,
-            498,
-            346,
-            167
-        ],
+        "roi": [210, 379, 398, 45],
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\xiufu\\xiufukaishi_black.png",
+        "template": "丸内事务\\xiufu\\xiufujieshu.png",
         "action": "DoNothing",
         "next": [
             "xiufubackhome"
@@ -148,6 +146,16 @@
             "xiufubackhome"
         ]
     },
+    "xiufuback":{
+        "recognition": "DirectHit",
+        "roi": [567, 137, 70, 550],
+        "action": "Click",
+        "next":[
+
+            "xiufujiasu",
+            "xiufugongfang"
+        ]
+    },
     "xiufubackhome": {
         "recognition": "TemplateMatch",
         "template": "startup\\backhome.png",
@@ -158,18 +166,19 @@
         ]
     },
     "xiufujiasu": {
-        "doc": "暂时定为第四个加速 加速按钮roi[842, 100, 224, 620]改为这个的话四个都会按",
-        "roi": [
-            837,
-            75,
-            232,
-            645
-        ],
+        "doc": "暂时定为第四个加速[837,75,232,645] 加速按钮roi[842, 100, 224, 620]改为这个的话四个都会按 ,next: [shiyongjiasufu,xiufujieshu]",
+        "roi":  [567, 137, 70, 550],
         "recognition": "TemplateMatch",
-        "threshold": 0.98,
-        "template": "丸内事务\\xiufu\\xiufujiasu.png",
+        "template": "丸内事务\\xiufu\\jiasu.png",
+        "green_mask": true,
+        "target_offset": [
+           316,
+            18,
+            69,
+            9
+        ],
         "action": "Click",
-        "next": "shiyongjiasufu"
+        "next": ["shiyongjiasufu","xiufugongfang","xiufujieshu"]
     },
     "shiyongjiasufu": {
         "recognition": "TemplateMatch",
@@ -188,6 +197,6 @@
         ],
         "action": "Click",
         "post_delay": 800,
-        "next": "xiufugongfang"
+        "next": ["xiufujiasu","xiufugongfang","xiufujieshu"]
     }
 }
