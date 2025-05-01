@@ -7,7 +7,10 @@
             182
         ],
         "recognition": "TemplateMatch",
-        "template": "出阵\\activity\\lianduizhan\\lianduizhanrukou.png",
+        "template": [
+            "出阵\\activity\\lianduizhan\\lianduizhanrukou.png",
+        "出阵\\activity\\lianduizhan\\lianduizhanrukou1.png"
+    ],
         "action": "Click",
         "post_wait_freezes": {
             "time": 1
@@ -26,8 +29,10 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
-            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png"
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_2.png"
         ],
         "action": "Click",
         "post_delay": 800,
@@ -46,8 +51,10 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
-            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png"
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
+           "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_2.png"
         ],
         "action": "Click",
         "post_delay": 800,
@@ -66,8 +73,10 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
-            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
-            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png"
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
+           "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_2.png"
         ],
         "action": "Click",
         "post_delay": 800,
@@ -86,9 +95,11 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_2.png"
+            
         ],
         "action": "Click",
         "post_delay": 1000,
@@ -145,16 +156,13 @@
     },
     "jixujinjunl": {
         "doc": "默认继续战斗,不同敌刀会不会造成识别失败,中途选择",
-        "roi": [
-            716,
-            177,
-            264,
-            262
-        ],
-        "recognition": "OCR",
-        "expected": "战斗",
+        
+        "recognition": "TemplateMatch",
+       "template": "出阵\\activity\\lianduizhan\\zhandou.png",
         "action": "Click",
+        "green_mask": true,
         "next": [
+            "jixujinjunl",
             "zhandouzhongl"
         ]
     },
