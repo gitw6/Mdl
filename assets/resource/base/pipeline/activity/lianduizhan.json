@@ -29,6 +29,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
@@ -51,6 +52,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
@@ -73,6 +75,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
@@ -95,6 +98,7 @@
         ],
         "recognition": "TemplateMatch",
         "template": [
+            "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_3.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4.png",
             "出阵\\activity\\lianduizhan\\nanduxuanze\\a4_1.png",
@@ -145,12 +149,13 @@
             "出阵\\activity\\dixia\\zhandouzhong.png"
         ],
         "post_wait_freezes": {
-            "time": 100
+            "time": 200
         },
         "next": [
             "huzhizhu",
             "jixujinjunl",
             "zhandouzhongl",
+            "jixujinjunlh",
             "zhandoujieguol"
         ]
     },
@@ -160,10 +165,27 @@
         "recognition": "TemplateMatch",
        "template": "出阵\\activity\\lianduizhan\\zhandou.png",
         "action": "Click",
+        "pre_wait_freezes":{
+            "time": 200
+        },
         "green_mask": true,
         "next": [
             "jixujinjunl",
-            "zhandouzhongl"
+            "zhandouzhongl",
+            "jixujinjunlh"
+        ]
+    },
+    "jixujinjunlh":{
+        
+        "recognition": "TemplateMatch",
+        "template": "出阵\\activity\\lianduizhan\\jixujinjunlh.png",
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "action": "Click",
+        "next":[
+            "jixujinjunlh",
+            "jixujinjunl"
         ]
     },
     "zhandoujieguol": {
@@ -227,7 +249,7 @@
         "template": "出阵\\activity\\lianduizhan\\jileishujiangli.png",
         "action": "Click",
         "post_wait_freezes": {
-            "time": 150
+            "time": 200
         },
         "next": [
             "huzhizhu",
@@ -235,7 +257,7 @@
             "lianduia4",
             "yuanzhengyingjie",
             "yuanzhengjinxingzhong",
-            "huodongchuzhen",
+            "bianduiy",
             "naxindaol"
         ]
     }

@@ -49,7 +49,7 @@
         "template": "丸内事务\\yuanzhengyingjie\\yuanzhengjinxingzhong.png",
         "threshold": 0.9,
         "next": [
-            
+            "bianduiy",
             "huodongchuzhen"
         ]
     },

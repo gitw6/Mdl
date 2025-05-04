@@ -674,6 +674,11 @@
             661,
             434
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "daozhuangempty",
+            "zhuanbeidaozhuangwanbi",
+            "shuayinghua"
+        ]
     }
 }

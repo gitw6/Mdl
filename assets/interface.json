@@ -284,8 +284,15 @@
                 "huodongchuzhen1": {
                     "next": "lianduirukou"
                 },
+                "pilaodu100":{
+                    "next":"bianduij"
+                },
+                "jianfeishi":{
+                    "next":"huodongchuzhen"
+                },
                 "yuanzhengjinxingzhong": {
                     "next": [
+                        "bianduiy",
                         "huodongchuzhen",
                         "yuanzhengyingjie"
                     ]
