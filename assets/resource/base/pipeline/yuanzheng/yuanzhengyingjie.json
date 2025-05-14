@@ -26,6 +26,9 @@
             145
         ],
         "post_delay": 200,
+        "post_wait_freezes":{
+            "time": 200
+        },
         "action": "Click",
         "next": [
             "yuanzhengyingjie",

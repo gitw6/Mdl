@@ -27,7 +27,7 @@
         "template": "丸内事务\\daozhuang\\daozhuangjieti.png",
         "action": "Click",
         "post_wait_freezes": {
-            "time": 100
+            "time": 200
         },
         "next": [
             "daozhuangzhongshang",
@@ -99,6 +99,9 @@
         "template": "丸内事务\\daozhuang\\daozhuangjittiqueding.png",
         "action": "Click",
         "post_delay": 200,
+        "post_wait_freezes":{
+            "time": 200
+        },
         "next": [
             "daozhuangzhongshang",
             "daozhuangjieshu"

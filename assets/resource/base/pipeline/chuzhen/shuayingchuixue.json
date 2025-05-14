@@ -223,6 +223,7 @@
             "shuatuy",
             "naxindaoy",
             "zhandoujieguoy",
+            "shuayinghuayuanzheng",
             "bianduiy",
             "yuanzhengyingjie"
         ]
@@ -240,6 +241,7 @@
         "next": [
             "jixujinjuny",
             "naxindaoy",
+            "shuayinghuayuanzheng",
             "bianduiy",
             "yuanzhengyingjie"
         ]
@@ -313,6 +315,7 @@
         "post_delay": 800,
         "next": [
             "pilaodu1_100",
+            "shuayinghuayuanzheng",
             "shuayinghua"
         ],
         "doc": "可以插一个查看疲劳度,卸载装备,之后再执行替换"
@@ -622,6 +625,7 @@
         "next": [
             "pilaodu100",
             "daozhuangempty",
+            "shuayinghuayuanzheng",
             "shuayinghua"
         ]
     },
@@ -678,7 +682,25 @@
         "next": [
             "daozhuangempty",
             "zhuanbeidaozhuangwanbi",
+            "shuayinghuayuanzheng",
             "shuayinghua"
+        ]
+    },
+    "shuayinghuayuanzheng":{
+        "doc":"一般是整备刀装完毕后,回到本丸,再查看远征迎接,然后再shuayinghua",
+        "recognition": "TemplateMatch",
+        "template": "startup\\backhome.png",
+        "action": "Click",
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "next":[
+            "yuanzhengyingjie",
+            "yuanzheng1dui",
+            "yuanzheng2dui",
+            "yuanzheng4dui",
+            "neifan",
+            "yuanzhengjinxingzhong"
         ]
     }
 }

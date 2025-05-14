@@ -166,7 +166,7 @@
        "template": "出阵\\activity\\lianduizhan\\zhandou.png",
         "action": "Click",
         "pre_wait_freezes":{
-            "time": 200
+            "time": 300
         },
         "green_mask": true,
         "next": [
@@ -257,8 +257,25 @@
             "lianduia4",
             "yuanzhengyingjie",
             "yuanzhengjinxingzhong",
-            "bianduiy",
+            "huodongyuanzheng",
             "naxindaol"
+        ]
+    },
+    "huodongyuanzheng":{
+        "doc":"一般是整备刀装完毕后,回到本丸,再查看远征迎接,然后再shuayinghua",
+        "recognition": "TemplateMatch",
+        "template": "startup\\backhome.png",
+        "action": "Click",
+        "post_wait_freezes":{
+            "time": 200
+        },
+        "next":[
+            "yuanzhengyingjie",
+            "yuanzheng1dui",
+            "yuanzheng2dui",
+            "yuanzheng4dui",
+            "neifan",
+            "yuanzhengjinxingzhong"
         ]
     }
 }

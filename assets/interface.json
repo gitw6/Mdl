@@ -8,15 +8,15 @@
             "name": "桌面端",
             "type": "Win32",
             "win32": {
-
-               
-                "method": "Search",
+                "doc":"controller不要随便改",
+               "method": "Search",
                 "class_name": ".*",
                 "window_name": "Visual Studio"
 
             }
         }
     ],
+
     "resource": [
         {
             "name": "官服",
@@ -41,11 +41,17 @@
 
             "name": "打开游戏",
             "entry": "StartUp",
-            "pipeline_override": {
+            "param": {
                 "backhome":{
                     "next":[
                         "start_end"
                        
+                    ]
+                },
+                "qiehuan2":{
+                    "next":[
+                        "start_end1",
+                        "qiehuan2"
                     ]
                 }
             }
@@ -102,7 +108,7 @@
             "entry": "duandaorike",
             "param": {
                 "daojiekaishi": {
-                    "next": "backhome"
+                    "next": ["backhome"]
                 },
                 "naxindao_duandao": {
                     "next": [
@@ -126,7 +132,7 @@
             "entry": "hechengrike",
             "param": {
                 "hechengkaishi": {
-                    "next": "backhome"
+                    "next": ["backhome"]
                 }
             }
         },
@@ -135,7 +141,7 @@
             "entry": "wanwurike",
             "param": {
                 "qiehuan2": {
-                    "next": "backhome"
+                    "next": ["backhome"]
                 }
             }
         },
@@ -158,10 +164,10 @@
             "entry": "bianduij",
             "param": {
                 "jianfeishi": {
-                    "next": "jianfeichuzhen"
+                    "next": ["jianfeichuzhen"]
                 },
                 "yuanzhengjinxingzhong": {
-                    "next": "jianfeichuzhen"
+                    "next":[ "jianfeichuzhen"]
                 },
                 "shuajianfeijieshu": {
                     "doc": "默认刷到检非后停止",
@@ -185,7 +191,7 @@
             "entry": "jianfeichuzhen",
             "param": {
                 "yuanzhengjinxingzhong": {
-                    "next": "jianfeichuzhen"
+                    "next": ["jianfeichuzhen"]
                 },
                 "shuajianfeijieshu": {
                     "doc": "默认刷到检非后停止",
@@ -211,10 +217,10 @@
             ],
             "param": {
                 "yuanzhengjinxingzhong": {
-                    "next": "putongchuzhen"
+                    "next": ["putongchuzhen"]
                 },
                 "Close_djlw": {
-                    "next": "Sub_StartUp"
+                    "next":[ "Sub_StartUp"]
                 }
             }
         },
@@ -223,7 +229,7 @@
             "entry": "huodongchuzhen",
             "param": {
                 "huodongchuzhen1": {
-                    "next": "jianghurukou"
+                    "next": ["jianghurukou"]
                 }
             },
             "option": [
@@ -239,7 +245,7 @@
             ],
             "param": {
                 "huodongchuzhen1": {
-                    "next": "zhankuorukou"
+                    "next": ["zhankuorukou"]
                 },
                 "zhongshangchuzhenjingao": {
                     "next": [
@@ -268,7 +274,7 @@
             "param": {
                 "huodongchuzhen1": {
                     "doc": "地下城活动不返回本丸可以一直刷,唯一缺点为真实伤害,所以yuanzhengjinxingzhong可以不设置",
-                    "next": "dixiarukou"
+                    "next": ["dixiarukou"]
                 }
             }
         },
@@ -278,17 +284,18 @@
             "option": [
                 "是否补充令牌-联队战",
                 "联队战-难度选择",
-                "补充几个"
+                "补充几个",
+                "是否刷完一次后刷樱吹雪"
             ],
             "param": {
                 "huodongchuzhen1": {
-                    "next": "lianduirukou"
+                    "next": ["lianduirukou"]
                 },
                 "pilaodu100":{
-                    "next":"bianduij"
+                    "next":["bianduij"]
                 },
                 "jianfeishi":{
-                    "next":"huodongchuzhen"
+                    "next":["huodongchuzhen"]
                 },
                 "yuanzhengjinxingzhong": {
                     "next": [
@@ -316,10 +323,10 @@
             ],
             "param": {
                 "huodongchuzhen1": {
-                    "next": "mibaorukou"
+                    "next": ["mibaorukou"]
                 },
                 "yuanzhengjinxingzhong": {
-                    "next": "huodongchuzhen"
+                    "next": ["huodongchuzhen"]
                 }
             }
         },
@@ -352,13 +359,14 @@
                     "next": [
                         "daozhuangempty",
                         "zhuanbeidaozhuangwanbi",
+                        "shuayinghuayuanzheng",
                         "shuayinghua"
                     ],
                     "doc": "运行到装备刀装完毕的一定是疲劳度不满的"
                 },
                 "yuanzhengjinxingzhong": {
                     "next": [
-                        "bianduiy"
+                        "shuayinghua"
                     ]
                 }
             },
@@ -371,7 +379,7 @@
             "entry": "shuayinghua",
             "param": {
                 "yuanzhengjinxingzhong": {
-                    "next": "shuayinghua"
+                    "next": ["shuayinghua"]
                 }
             },
             "option": [
@@ -383,7 +391,7 @@
             "entry": "huanbiandui",
             "param": {
                 "tihuan1": {
-                    "next": "tihuan2"
+                    "next": ["tihuan2"]
                 },
                 "tihuan50": {
                     "next": [
@@ -403,7 +411,7 @@
                         "huandaozhuang"
                     ]
                 },
-                "zhuanbbeidaozhuangwanbi": {
+                "zhuanbeidaozhuangwanbi": {
                     "next": [
                         "budaozhuang"
                     ]
@@ -426,7 +434,7 @@
                     "name": "石切丸/巴形薙刀搜索",
                     "param": {
                         "zhankuorukou": {
-                            "next": "a1"
+                            "next": ["a1"]
                         }
                     }
                 },
@@ -436,7 +444,7 @@
                     "name": "岩融/日本号搜索",
                     "param": {
                         "zhankuorukou": {
-                            "next": "a2"
+                            "next": ["a2"]
                         }
                     }
                 },
@@ -444,7 +452,7 @@
                     "name": "大般若长光/太阁左文字搜索",
                     "param": {
                         "zhankuorukou": {
-                            "next": "a3"
+                            "next": ["a3"]
                         }
                     }
                 },
@@ -452,7 +460,7 @@
                     "name": "骚速剑/南泉一文字搜索",
                     "param": {
                         "zhankuorukou": {
-                            "next": "a4"
+                            "next": ["a4"]
                         }
                     }
                 }
@@ -464,7 +472,7 @@
                     "name": "3-3 木炭玉钢 练低级刀和薙刀",
                     "param": {
                         "putong2": {
-                            "next": "chapter3_3"
+                            "next":[ "chapter3_3"]
                         },
                         "putongchuzhen1": {
                             "next": [
@@ -485,7 +493,7 @@
                     "name": "4-3 木炭玉钢冷却材 资源多城管少",
                     "param": {
                         "putong2": {
-                            "next": "chapter4_3"
+                            "next":[ "chapter4_3"]
                         },
                         "putongchuzhen1": {
                             "next": [
@@ -506,7 +514,7 @@
                     "name": "7-1 木炭玉钢委托符 练高等级刀",
                     "param": {
                         "putong2": {
-                            "next": "chapter7_1"
+                            "next": ["chapter7_1"]
                         },
                         "putong1": {
                             "next": [
@@ -554,7 +562,7 @@
                     "name": "不打",
                     "param": {
                         "jianfeichuxianp": {
-                            "next": "Close_djlw"
+                            "next": ["Close_djlw"]
                         }
                     }
                 },
@@ -650,7 +658,7 @@
                     "name": "极化模式",
                     "param": {
                         "tihuan1": {
-                            "next": "tihuan2"
+                            "next": ["tihuan2"]
                         },
                         "tihuan50": {
                             "next": [
@@ -698,15 +706,15 @@
                     "name": "10层,刷博多",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweishang"
+                            "next": ["shiweishang"]
                         },
                         "shiweishang": {
-                            "next": "shiweishang",
+                            "next":[ "shiweishang"],
                             "times_limit": 2,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
-                            "next": "dixiabuduixuanze"
+                            "next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -714,15 +722,15 @@
                     "name": "20层,刷后藤",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweishang"
+                            "next":[ "shiweishang"]
                         },
                         "shiweishang": {
-                            "next": "shiweishang",
+                            "next":[ "shiweishang"],
                             "times_limit": 3,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
-                            "next": "dixiabuduixuanze"
+                            "next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -730,15 +738,15 @@
                     "name": "30层,刷信浓",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweishang"
+                            "next": ["shiweishang"]
                         },
                         "shiweishang": {
-                            "next": "shiweishang",
+                            "next": ["shiweishang"],
                             "times_limit": 4,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
-                            "next": "dixiabuduixuanze"
+                            "next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -746,15 +754,15 @@
                     "name": "40层,刷包丁",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweixia"
+                            "next": ["shiweixia"]
                         },
                         "shiweixia": {
-                            "next": "shiweixia",
+                            "next": ["shiweixia"],
                             "times_limit": 5,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
-                            "next": "dixiabuduixuanze"
+                            "next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -762,15 +770,15 @@
                     "name": "50层,刷毛利",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweixia"
+                            "next": ["shiweixia"]
                         },
                         "shiweixia": {
-                            "next": "shiweixia",
+                            "next": ["shiweixia"],
                             "times_limit": 4,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
-                            "next": "dixiabuduixuanze"
+                            "next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -778,17 +786,17 @@
                     "name": "51层,刷白山",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweixia"
+                            "next": ["shiweixia"]
                         },
                         "shiweixia": {
-                            "next": "shiweixia",
+                            "next": ["shiweixia"],
                             "times_limit": 4,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
                             "times_limit": 2,
-                            "next": "geweishang",
-                            "runout_next": "dixiabuduixuanze"
+                            "next": ["geweishang"],
+                            "runout_next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -796,17 +804,17 @@
                     "name": "80层,刷白山",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweixia"
+                            "next": ["shiweixia"]
                         },
                         "shiweixia": {
-                            "next": "shiweixia",
+                            "next": ["shiweixia"],
                             "times_limit": 1,
-                            "runout_next": "geweishang"
+                            "runout_next": ["geweishang"]
                         },
                         "geweishang": {
                             "times_limit": 1,
-                            "next": "geweishang",
-                            "runout_next": "dixiabuduixuanze"
+                            "next": ["geweishang"],
+                            "runout_next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -814,12 +822,12 @@
                     "name": "89层,刷白山",
                     "param": {
                         "dixiarukou": {
-                            "next": "shiweixia"
+                            "next": ["shiweixia"]
                         },
                         "shiweixia": {
-                            "next": "shiweixia",
+                            "next": ["shiweixia"],
                             "times_limit": 1,
-                            "runout_next": "dixiabuduixuanze"
+                            "runout_next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -827,12 +835,12 @@
                     "name": "95刷鬼丸国纲",
                     "param": {
                         "dixiarukou": {
-                            "next": "geweixia"
+                            "next": ["geweixia"]
                         },
                         "geweixia": {
-                            "next": "geweixia",
+                            "next": ["geweixia"],
                             "times_limit": 4,
-                            "runout_next": "dixiabuduixuanze"
+                            "runout_next": ["dixiabuduixuanze"]
                         }
                     }
                 },
@@ -840,7 +848,7 @@
                     "name": "刷图模式or99层,鬼丸,白山",
                     "param": {
                         "dixiarukou": {
-                            "next": "dixiabuduixuanze"
+                            "next": ["dixiabuduixuanze"]
                         }
                     }
                 }
@@ -852,7 +860,7 @@
                     "name": "易-图一",
                     "param": {
                         "lianduirukou": {
-                            "next": "lianduia1"
+                            "next": ["lianduia1"]
                         }
                     }
                 },
@@ -860,7 +868,7 @@
                     "name": "普-图二",
                     "param": {
                         "lianduirukou": {
-                            "next": "lianduia2"
+                            "next": ["lianduia2"]
                         }
                     }
                 },
@@ -868,7 +876,7 @@
                     "name": "难-图三",
                     "param": {
                         "lianduirukou": {
-                            "next": "lianduia3"
+                            "next": ["lianduia3"]
                         }
                     }
                 },
@@ -876,7 +884,7 @@
                     "name": "超难-图四",
                     "param": {
                         "lianduirukou": {
-                            "next": "lianduia4"
+                            "next":[ "lianduia4"]
                         }
                     }
                 }
@@ -888,7 +896,7 @@
                     "name": "日常",
                     "param": {
                         "renwurukou": {
-                            "next": "richangrenwu"
+                            "next": ["richangrenwu"]
                         }
                     }
                 },
@@ -896,7 +904,7 @@
                     "name": "月常",
                     "param": {
                         "renwurukou": {
-                            "next": "yuechangrenwu"
+                            "next": ["yuechangrenwu"]
                         }
                     }
                 },
@@ -904,7 +912,7 @@
                     "name": "活动",
                     "param": {
                         "renwurukou": {
-                            "next": "huodongrenwu"
+                            "next": ["huodongrenwu"]
                         }
                     }
                 },
@@ -912,7 +920,7 @@
                     "name": "主线:在其他奖励前执行",
                     "param": {
                         "renwurukou": {
-                            "next": "zhuxian"
+                            "next": ["zhuxian"]
                         }
                     }
                 }
@@ -924,7 +932,7 @@
                     "name": "记录3队到2队,演练",
                     "param": {
                         "yanlianrukou": {
-                            "next": "biandui"
+                            "next": ["biandui"]
                         }
                     }
                 },
@@ -932,7 +940,7 @@
                     "name": "清空3队配置,演练",
                     "param": {
                         "yanlianrukou": {
-                            "next": "biandui1"
+                            "next": ["biandui1"]
                         }
                     }
                 },
@@ -940,7 +948,7 @@
                     "name": "3队已配置,演练",
                     "param": {
                         "yanlianrukou": {
-                            "next": "yanlian2"
+                            "next": ["yanlian2"]
                         }
                     }
                 }
@@ -1063,6 +1071,7 @@
                 },
                 {
                     "name": "不补充",
+                    
                     "param": {
                         "jikechuzhen3": {
                             "next": [
@@ -1077,6 +1086,42 @@
                             ]
         
                 }}}
+            ]
+        },
+        "是否刷完一次后刷樱吹雪":{
+            "cases": [
+                {
+                    "name": "否",
+                    "param": {
+                        "yuanzhengjinxingzhong":{
+                            "next":[
+                               
+                                "huodongchuzhen"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "是",
+                    "param": {
+                         
+                        "yuanzhengjinxingzhong":{
+                            "next":[
+                                 "shuayinghua"
+                            ]
+                        },
+                        "pilaodu100":{
+                            "next":[
+                                "bianduij"
+                            ]
+                        },
+                        "jianfeishi":{
+                            "next":[
+                                "huodongchuzhen"
+                            ]
+                        }
+                    }
+                }
             ]
         }
 

@@ -14,6 +14,7 @@
             "neifanxia1",
             "closeannouncement",
             "backhome",
+           
             "Sub_Start_djlw"
         ]
     },
@@ -30,7 +31,17 @@
             484,
             310
         ],
-        "green_mask": true
+        "green_mask": true,
+        "next":[
+            "start_end1",
+            "qiehuan2"
+        ]
+    },
+    "start_end1":{
+        "recognition": "TemplateMatch",
+        "template": "chuzhen.png",
+        "action": "DoNothing"
+
     },
     "backhome": {
         "recognition": "TemplateMatch",

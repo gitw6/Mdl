@@ -76,7 +76,10 @@
     },
     "qiehuan2": {
         "recognition": "TemplateMatch",
-        "template": "丸内事务\\wanwu\\qiehuan.png",
+        "template": [
+            "丸内事务\\wanwu\\qiehuan.png",
+            "丸内事务\\wanwu\\mulu.png"
+    ],
         "roi": [
             1065,
             0,
